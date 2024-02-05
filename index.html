@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasha Chochua's Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the page fills the viewport height */
+        }
+
+        
+        header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: #007BFF;
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                
+        }
+
+
+
+        nav {
+            position: fixed;
+            top: 60px; /* Adjust the top position as needed to avoid overlap with the header */
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        
+
+        .container {
+            flex: 1; /* Expand and fill available space */
+            max-width: 1000px;
+            margin: 120px auto 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .home-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .home-image {
+            position: relative; /* Use relative positioning */
+            top: -140px; /* Adjust the top position */
+            left: 20px; /* Adjust the left position */
+        }
+
+        .home-image img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain the aspect ratio */
+            max-height: 300px; /* Set a maximum height for the image */
+        }
+
+        .home-text {
+            flex: 1;
+            margin-left: 80px; /* Add margin to move the text down */
+            margin-right: 30px;
+        }
+
+        h1 {
+            color: #007BFF;
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .interest-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .interest-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .interest-description {
+            flex: 2;
+            padding-left: 20px; /* Add some space between the image and text */
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        Lasha Chochua
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('research')">Research</a>
+        <a href="#" onclick="showSection('teaching')">Teaching</a>
+        <a href="#" onclick="showSection('interests')">Interests</a>
+        
+    </nav>
+
+    <div class="container" id="home">
+        <div class="home-content">
+            <div class="home-image">
+                <img src="profile-pic-5.png" alt="Your Image">
+            </div>
+    
+            <div class="home-text">
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                <div id="header">
+                    <h1>Lasha Chochua</h1>
+                    <br> <!-- Add a line break for space -->
+                    <p style="line-height: 0.5;">Postdoctoral Researcher</p>
+                    <p style="line-height: 0.5;"><a href="https://www.ifw-kiel.de" target="_blank">Kiel Institute for the World Economy</a></p>
+
+                </div>
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                
+                
+                <div id="overview">
+                   
+                    <p style="font-size: 1rem; text-align: justify; line-height: 1.5; margin: 0 auto; max-width: 800px; text-indent: 1rem;">
+                        I'm an economist specializing in international trade, conducting research at the intersection of trade policy, applied game theory, political economy, 
+                        and empirical economics. My work explores how trade agreements affect global liberalization, including their impact on global supply chains.
+                        
+                    </p>
+                    
+
+                
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+
+                <p style="text-align: justify; line-height: 1.5; margin: 0 auto; max-width: 800px; text-indent: 1rem;">
+                    Download <a href="academic_cv.pdf#zoom=50" target="_blank"><span style="text-transform: uppercase;">CV</span></a>
+                </p>
+                
+                
+                </div>
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                <br> <!-- Add a line break for space -->
+                
+    
+                <div id="contact">
+                    
+                    <div class="contact-info">
+                        <p style="line-height: 0.5;">Contact: <a href="mailto:lasha.chochua@ifw-kiel.de">lasha.chochua@ifw-kiel.de</a></p>
+                        <p style="line-height: 0.2;">Social Media: 
+                            <a href="https://www.linkedin.com/in/lchochua/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Lchochua" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+
+
+
+    <style>
+        .paper {
+            margin-bottom: 20px; /* Adjust the value as needed to create the desired spacing */
+        }
+    
+        h3 {
+            margin: 0; /* Remove default margin */
+        }
+    </style>
+    <div class="container" id="research" style="display: none;">
+        <h2 style="text-align: center; color: #007BFF;">Research Papers</h2>
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+    
+            <h3>
+                U<span style="text-transform: lowercase;">npacking Commitment and Trade Effects in Plurilateral Cooperation</span>
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="https://ioire.github.io" target="_blank">Irene Iodice</a></span>
+                <span style="font-size: smaller;"><a href="mailto:lasha.chochua@ifw-kiel.de">[Draft Upon Request]</a></span>
+            </h3>
+    
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                The paper investigates issue-specific trade liberalization under plurilateral agreements,
+                focusing on the Information Technology Agreement (ITA). It examines the commitment mechanism's
+                importance in inclusive plurilateral agreements and addresses deviations from promised actions by countries.
+                The study contributes to quantifying the impacts of non-discriminatory trade policy changes,
+                analyzing the effects of reduced uncertainty in trade agreements, and offering novel insights
+                into the ITA's effects. By considering commitment deviations within plurilateral agreements and
+                focusing on a trade agreement without cross-issue linkages, we offer a cleaner setup for the understanding
+                of trade liberalization outcomes.
+            </p>
+        </div>
+        <br> <!-- Add a line break for space -->
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+            
+            <h3>
+                C<span style="text-transform: lowercase;">an plurilateral agreements facilitate global trade liberalization?</span> 
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="http://volweb.utk.edu/~jlake7/" target="_blank">James Lake</a> and <a href="http://willmann.com/~gerald/" target="_blank">Gerald Willmann</a></span> 
+                <span style="font-size: smaller;"><a href="mailto:lasha.chochua@ifw-kiel.de">[Draft Upon Request]</a></span>
+            </h3>
+            
+                
+            
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                The last successful global trade negotiations were the 1994 Uruguay Round, and there's uncertainty about the timing of the next successful round. 
+                While Preferential Trade Agreements have been reducing bilateral trade barriers, evidence suggests that "plurilateral agreements" can significantly 
+                lower MFN tariffs for most countries in specific sectors. In this paper, we expand existing models of endogenous trade agreements to analyze the network of trade 
+                agreements among three countries. We demonstrate how plurilateral agreements can promote global trade liberalization by overcoming exclusion incentives that 
+                dominant countries might have or addressing free-riding incentives that could deter dominant countries from participating in trade liberalization negotiations.
+            </p>
+            
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+            
+            <h3>
+                <a href="Stability_AEJ_Micro_2023.pdf#zoom=50" target="_blank">T<span style="text-transform: lowercase;">he Farsighted Stability of Global Trade Policy Arrangements</span></a>
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="https://www.linkedin.com/in/stefan-berens/?originalSubdomain=de" target="_blank">Stefan Berens</a> and <a href="http://willmann.com/~gerald/" target="_blank">Gerald Willmann</a></span>
+                
+            </h3>
+
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                In this paper, we study the stability of trade policy arrangements under different regulatory scenarios. 
+                Unlike previous papers, we consider an extensive set of trade policy arrangements and 
+                unlimited farsightedness of negotiating parties. In the standard three-country setup, 
+                global free trade (GFT) is uniquely stable under symmetric endowments. When two countries are small (large), 
+                the availability of Preferential Trade Agreements decreases (increases) the stability of GFT. 
+                Furthermore, in equilibrium strategic complementarity between Customs Unions (CUs) and Free Trade Agreements (FTAs) 
+                can ensure GFT stability. As asymmetry increases, GFT becomes unattainable, and the MFN regime is the only 
+                stable outcome without PTAs.
+            </p>
+            <p style="font-size: smaller;">
+                <a href="https://www.cesifo.org/en/publications/2021/working-paper/farsighted-stability-global-tade-policy-arrangements" target="_blank">CESifo Working Paper Version</a>
+            </p>
+            
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+            <h3>
+                <a href="endogenous_trade_policy_webpage.pdf#zoom=50" target="_blank">E<span style="text-transform: lowercase;">ndogenous Trade Policy in the presence of Lobbying and Heterogeneously Ignorant Voters</span></a>
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="https://iset-pi.ge/en/about-us/our-team/12-giorgi-papava" target="_blank">Giorgi Papava</a></span>
+                
+            </h3>
+            
+        
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                Based on the Protection for Sale approach of <a href="https://www.jstor.org/stable/2118033" target="_blank">Grossman and Helpman (1994)</a>, we develop a theoretical model in which exogenously 
+                organised groups provide political contributions to influence trade policy. The incumbent government cares about contributions 
+                yet simultaneously takes into account the potential reactions of voters. We formally consider citizens' voting decisions, 
+                assuming they have heterogeneous ignorance thresholds, and explicitly derive the objective function of the policy-maker. 
+                We find that the resulting equilibrium structure of protection differs from the standard case. Free trade obtains only if no 
+                group lobbies and ignorance levels are the same. On average, more ignorant groups will have lower (if any) protection from the 
+                policy-maker and, also, groups represented by lobbies will not always be supported by the incumbent government.
+            </p>
+
+
+
+        <br> <!-- Add a line break for space -->
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+            
+            <h3>
+                <a href="uncertaintyHarsanyi.pdf#zoom=50" target="_blank">T<span style="text-transform: lowercase;">he Impartial Observer under Uncertainty</span></a>
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="https://www.linkedin.com/in/stefan-berens/?originalSubdomain=de" target="_blank">Stefan Berens</a></span>
+            </h3>
+        
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                This paper extends Harsanyi's Impartial Observer Theorem by introducing Knightian Uncertainty in the form of 
+                individual belief systems. It features an axiomatic framework of societal decision-making in the presence of 
+                individual uncertainty. The model allows the analysis of scenarios where individuals agree on the ranking 
+                but not on the likelihood of social outcomes. The preferences of the impartial observer are expressed by a 
+                weighted sum of utilities - each representing individual preferences with different belief systems. 
+                To incorporate common criticism of the framework of <a href="https://www.journals.uchicago.edu/doi/abs/10.1086/257416"  target="_blank"> Harsanyi (1953)</a>, our approach is based on the generalized 
+                version by <a href="https://www.jstor.org/stable/40928466"  target="_blank"> Grant et al. (2010)</a>. 
+                The belief systems are introduced as second-order beliefs following <a href="https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA6727"  target="_blank"> Seo (2009)</a>. 
+            </p>
+            <p style="font-size: smaller;">
+                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3032924" target="_blank">Old Working Paper Version</a>
+            </p>
+
+
+        </div>
+        
+        
+            
+        </div>
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+        <h2 style="text-align: center; color: #007BFF;">Work In Progress</h2>
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+
+
+        <div class="paper">
+
+
+            <br> <!-- Add a line break for space -->
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+            <h3>
+                S<span style="text-transform: lowercase;">ectoral Labor Mobility and Trade Policy</span> 
+                
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="https://iset-pi.ge/en/about-us/our-team/28-ana-burduli" target="_blank">Ana Burduli</a> and <a href="https://iset-pi.ge/en/about-us/our-team/12-giorgi-papava" target="_blank">Giorgi Papava</a></span>
+                
+            </h3>
+            
+        
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                <a href="https://dave-donaldson.com/wp-content/uploads/ACDS.pdf" target="_blank">Adão et al. (2023)</a> show that redistributive trade protection significantly 
+                contributes to US tariff variation and results in substantial monetary transfers among US individuals. This effect is primarily driven by differences in the 
+                revealed weights decision-makers assign to various sectors. We construct a political economy model for trade policy determination, incorporating workers' sectoral 
+                mobility capacity, and test whether this variable plays a crucial role in trade policy decisions. Within the United States context, for the 1996-1999 period, we demonstrate 
+                that the government prioritized protecting sectors with lower sectoral mobility capacity.
+            </p>
+
+
+
+        <br> <!-- Add a line break for space -->
+
+
+
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+            
+            <h3>
+                G<span style="text-transform: lowercase;">lobal Supply Chains under plurilateral cooperation</span> 
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="https://ioire.github.io" target="_blank">Irene Iodice</a> and <a href="https://sites.google.com/view/dariataglioni/home?authuser=0" target="_blank">Daria Taglioni</a></span> 
+                
+            </h3>               
+            
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                In the context of inclusive plurilateral cooperation, where bound Most-Favored-Nation (MFN) tariffs are reduced to zero as in Information technology Agreement, 
+                we investigate the evolution of global supply chain networks. This form of cooperation enables us to identify various pathways through 
+                which inclusive multilateral liberalization can impact the development of global production networks. 
+                By contrasting supply chain networks under plurilateral cooperation with those governed by deep free trade agreements, 
+                we can discern the effects of inclusive liberalization. Furthermore, the fact that plurilateral cooperation is implemented 
+                through international agreements with zero bound MFN tariffs allows us to pinpoint the effects of trade policy uncertainty on 
+                global production networks. We consider employing the dynamic graph neural networks model to construct a counterfactual.
+            </p>
+            
+        </div>
+
+        <br> <!-- Add a line break for space -->
+
+
+
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+    
+            <h3>
+                F<span style="text-transform: lowercase;">ree trade agreements versus customs unions: welfare decomposition</span>
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="http://willmann.com/~gerald/" target="_blank">Gerald Willmann</a></span>
+                
+            </h3>
+    
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                Free trade agreements allow members to trade freely among themselves while setting individual tariffs for other countries. 
+                In contrast, customs unions involve trade liberalization among members and coordinated external tariffs. Existing models often struggle to 
+                include common external tariff constraints, a crucial issue.
+                In theoretical models, it has been widely documented that a customs union has a welfare advantage over a free trade agreement 
+                (see <a href="https://www.sciencedirect.com/science/article/abs/pii/S0022199612001638" target="_blank">Facchini et al. (2013)</a>). As a means of reconciling the welfare advantages of CU with its empirical scarcity, political problems 
+                have been considered. We think that a proper accounting of common tariff restrictions may be able to resolve the problem. Therefore, We are developing a minimal full competition general equilibrium 
+                model that adequately accounts for the effects of common tariff restriction under a customs union. 
+            </p>
+        </div>
+        <br> <!-- Add a line break for space -->
+
+
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+    
+            <h3>
+                W<span style="text-transform: lowercase;">hy do we observe ‘tariff peaks’ after the preferential liberalization?</span>
+            </h3>
+            <h3>
+                <span style="font-size: smaller;">with <a href="http://willmann.com/~gerald/" target="_blank">Gerald Willmann</a></span>
+                
+            </h3>
+    
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                Over the past few decades, average MFN tariffs have declined significantly, but not uniformly across sectors. 
+                High MFN tariffs persist in agriculture and some manufacturing. Article XXIV of GATT permits FTAs and CUs when import taxes and regulations are 
+                eliminated on most trade within a reasonable time. However, high-tariff sectors often maintain these tariffs post PTA formation. 
+                Over 66% of tariffs above 15% MFN rates remain unchanged in PTAs, making preferential rates no lower than MFN rates.
+                We employ machine learning tools for textual analysis of PTAs and standard econometric methods to understand this phenomenon.
+            </p>
+        </div>
+
+
+        </div>
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+        <h2 style="text-align: center; color: #007BFF;">Selected Policy Related Research</h2>
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+    
+            <h3>
+                Q<span style="text-transform: lowercase;">uantifying the Impact of Foreign Investment Restrictions in Specific Sectors in Jordan</span>
+            </h3>
+            <h3>
+                <span style="font-size: calc(1rem * 0.95); color: #415ea7;">USAID/Jordan, Economic Reform Activity</span>
+                
+            </h3>
+    
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                This is an ongoing project. We are assessing the effects of FDI ownership restrictions in the wholesale and retail trade sectors in Jordan.
+            </p>
+        </div>
+
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+    
+            <h3>
+                T<span style="text-transform: lowercase;">ax Expenditure Analysis for Georgia</span>
+            </h3>
+            <h3>
+                <span style="font-size: calc(1rem * 0.95); color: #415ea7;">USAID, GGI, Georgian Ministry of Finance (2021)</span>
+                
+            </h3>
+    
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                Under this project, I have developed a tax expenditure calculation methodology for Georgia and used it to calculate tax expenditures.
+            </p>
+        </div>
+
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+    
+            <h3>
+                C<span style="text-transform: lowercase;">osts of Establishing the Employment Mechanism in Georgia</span>
+            </h3>
+            <h3>
+                <span style="font-size: calc(1rem * 0.95); color: #415ea7;">PMCG, GIZ (2016)</span>
+                
+            </h3>
+    
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                Under this project, I have estimated the costs associated with the introduction of various employment mechanisms in Georgia.
+            </p>
+        </div>
+
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+    
+            <h3>
+                E<span style="text-transform: lowercase;">stonian Corporate Income Tax Model Implementation in Georgia</span>
+            </h3>
+            <h3>
+                <span style="font-size: calc(1rem * 0.95); color: #415ea7;">USAID, GFG, Association of Young Economists of Georgia (2017)</span>
+                
+            </h3>
+    
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                Under this project, I have constructed a dynamic general equilibrium model, calibrated it for the Georgian economy, 
+                and analyzed a counterfactual scenario for the introduction of Estonian corporate income tax (CIT) in Georgia.
+                The Estonian CIT model has been in force since January 1, 2017.
+            </p>
+        </div>
+
+        <div class="paper">
+            <style>
+                h3 {
+                    margin: 0; /* Remove default margin */
+                }
+            </style>
+    
+            <h3>
+                J<span style="text-transform: lowercase;">oint Feasibility Study on Georgia-China Possible Free Trade Agreement</span>
+            </h3>
+            <h3>
+                <span style="font-size: calc(1rem * 0.95); color: #415ea7;">PMC Research Center, University of International Business and Economics (China) (2015)</span>
+                
+            </h3>
+    
+            <p style="font-size: calc(1rem * 0.90); text-align: justify; word-spacing: 0.025rem; padding-left: 20px;">
+                This was a joint project with economists from China in which we estimated the effects of the potential Free Trade Agreement (FTA) 
+                between Georgia and China. The FTA agreement has been in force since January 1, 2018.
+            </p>
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+
+
+        
+
+
+
+        
+    </div>
+
+    <div class="container" id="teaching" style="display: none;">
+        <h2 style="text-align: center; color: #007BFF;">Courses Taught</h2>
+        <br> <!-- Add a line break for space -->
+        <p style="text-align: center; font-size: 1.1rem; margin: 0 50px 50px 20px;">I have taught various courses over the last 10 years. Here is a list of courses I have taught at 
+            different institutions:</p>
+        
+        <ul style="list-style-type: disc; padding-left: 20px; padding-left: 150px;">
+            <li>International Trade (Bachelor &amp; Graduate Courses)<br><em>Bielefeld University</em></li>
+            <br> <!-- Add a line break for space -->
+            <li>Economics of European Integration (Graduate Course)<br><em>Bielefeld University</em></li>
+            <br> <!-- Add a line break for space -->
+            <li>Law and Economics (Bachelor Course)<br><em>Free University of Tbilisi</em></li>
+            <br> <!-- Add a line break for space -->
+            <li>Industrial Organization (Bachelor Course, practice sessions)<br><em>Universidad Carlos III de Madrid</em></li>
+            <br> <!-- Add a line break for space -->
+            <li>Principles of Economics<br><em>Free University of Tbilisi</em></li>
+        </ul>
+    </div>
+
+
+    
+    <div class="container" id="interests" style="display: none;">
+
+        
+        <h2 style="font-size: 1.1rem; text-align: center; line-height: 1.5; margin-left: 20px; max-width: 9500px;">
+            My non-academic interests include machine/deep learning and reading popular science books on physics. Here are some book recommendations:
+        </h2>
+        
+        
+
+        
+        <br> <!-- Add a line break for space -->
+        <h2 style="font-size: 20px; text-align: center; color: #007BFF;">Machine/Deep Learning Books</h2>
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+        <div class="interest-content">
+            <div class="interest-image">
+                <img src="image_1.png" alt="Book Image" style="max-width: 200px; height: auto;">
+            </div>
+            <div class="interest-description">
+                <p style="font-size: 17px; text-align: justify; word-spacing: 0.05rem;">
+                    This is a nice, concise book introducing the theory behind deep learning. 
+                    You can find more information about the book 
+                    <a href="https://www.cambridge.org/highereducation/books/the-science-of-deep-learning/23B3CE5B09590BD9E30474C850FA5358#overview" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <div class="interest-content">
+            <div class="interest-image">
+                <img src="image_2.png" alt="Book Image" style="max-width: 200px; height: auto;">
+            </div>
+            <div class="interest-description">
+                <p style="font-size: 17px; text-align: justify; word-spacing: 0.05rem;">
+                    This is a more extensive book in the theory behind deep learning. 
+                    You can find more information about the book 
+                    <a href="https://link.springer.com/book/10.1007/978-3-031-45468-4" target="_blank">here</a>.
+                </p>
+            </div>  
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <div class="interest-content">
+            <div class="interest-image">
+                <img src="image_3.png" alt="Book Image" style="max-width: 200px; height: auto;">
+            </div>
+            <div class="interest-description">
+                <p style="font-size: 17px; text-align: justify; word-spacing: 0.05rem;">
+                    Another nice book in the theory behind deep learning. It covers a lot of topics in the modern deep learning architecture. 
+                    You can find more information about the book 
+                    <a href="https://mitpress.mit.edu/9780262048644/understanding-deep-learning/" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <div class="interest-content">
+            <div class="interest-image">
+                <img src="image_4.png" alt="Book Image" style="max-width: 200px; height: auto;">
+            </div>
+            <div class="interest-description">
+                <p style="font-size: 17px; text-align: justify; word-spacing: 0.05rem;">
+                    This book is written from a practical standpoint and provides a lot of coding examples for the main deep learning architectures. 
+                    You can find more information about the book 
+                    <a href="https://www.manning.com/books/deep-learning-with-python-second-edition" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <div class="interest-content">
+            <div class="interest-image">
+                <img src="image_7.png" alt="Book Image" style="max-width: 200px; height: auto;">
+            </div>
+            <div class="interest-description">
+                <p style="font-size: 17px; text-align: justify; word-spacing: 0.05rem;">
+                    Here's another interesting book from a practical standpoint. It also covers classical machine learning tools. 
+                    You can find more information about the book 
+                    <a href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+        <h2 style="font-size: 20px;text-align: center; color: #007BFF;">Popular Science Books on Physics</h2>
+        <br> <!-- Add a line break for space -->
+        <br> <!-- Add a line break for space -->
+        <div class="interest-content">
+            <div class="interest-image">
+                    <img src="image_5.png" alt="Book Image" style="max-width: 200px; height: auto;">
+            </div>
+            <div class="interest-description">
+                <p style="font-size: 17px; text-align: justify; word-spacing: 0.05rem;">
+                    A very interesting book on the many-world interpretation of quantum physics. It includes a nice discussion about quantum uncertainty as well. 
+                    You can find more information about the book 
+                    <a href="https://en.wikipedia.org/wiki/Something_Deeply_Hidden" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <div class="interest-content">
+            <div class="interest-image">
+                    <img src="image_6.png" alt="Book Image" style="max-width: 200px; height: auto;">
+            </div>
+            <div class="interest-description">
+                <p style="font-size: 17px; text-align: justify; word-spacing: 0.05rem;">
+                    This book covers the entire path of physics development and then introduces the string theory.
+                    You can find more information about the book 
+                    <a href="https://en.wikipedia.org/wiki/The_Elegant_Universe" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+
+        <br> <!-- Add a line break for space -->
+        <div class="interest-content">
+            <div class="interest-image">
+                    <img src="image_8.png" alt="Book Image" style="max-width: 200px; height: auto;">
+            </div>
+            <div class="interest-description">
+                <p style="font-size: 17px; text-align: justify; word-spacing: 0.05rem;">
+                    In this book, Penrose criticizes string theory for straying from real physics and suggests quantum mechanics may not fully apply to larger objects, 
+                    proposing potential modifications. A nice read.
+                    You can find more information about the book 
+                    <a href="https://press.princeton.edu/books/hardcover/9780691119793/fashion-faith-and-fantasy-in-the-new-physics-of-the-universe" target="_blank">here</a>.
+                </p>
+            </div>
+        </div>
+        
+        
+        </div>
+    </div>
+    
+
+    
+
+    <footer>
+        &copy; 2023 Lasha Chochua | Contact: lasha.chochua@uni-bielefeld.de
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.container').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
