@@ -106,17 +106,10 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                position: relative; /* If not already */
-                padding: 10px 0; /* Adjusted padding for a more compact header */
-                z-index: 2; /* Ensure the header is above other content */
-            }
-
-            nav {
-                position: relative; /* Ensure it's positioned relative to the viewport */
-                top: 0; /* Remove any top positioning that might create a gap */
-                margin-top: -5px; /* Adjust if there's still a small gap, or remove if not needed */
-                z-index: 1; /* Ensure the navigation bar is right below the header */
+            header, nav {
+                position: relative;
+                padding: 10px;
+                z-index: 2; /* Ensure the header and nav are above the content */
             }
 
             .home-content, .interest-content {
@@ -129,21 +122,26 @@
             }
 
             .home-image {
-                margin: 20px auto; /* Adjust the margin around the image */
+                margin: 40px auto 0 auto; /* Increase top margin to push the image down */
+                text-align: center; /* Center the image */
             }
 
             .home-image img {
                 max-height: 200px; /* Adjust the image size for smaller screens */
                 width: auto; /* Maintain aspect ratio */
-                max-width: 100%; /* Ensure it fits within the container */
+                max-width: 100%; /* Ensure it doesn't overflow the screen width */
             }
 
             .container {
-                margin-top: 80px; /* Adjust this value to ensure there's no overlap with the nav */
+                margin: 70px auto 70px auto; /* Adjust top and bottom margin for space */
                 width: 90%; /* Adjust the width on smaller screens */
-                padding-top: 20px; /* Provide some space at the top inside the container */
+                padding: 20px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             }
-        
+
+            footer {
+                margin-top: 20px; /* Ensure space above the footer */
+            }
         }
     </style>
 </head>
