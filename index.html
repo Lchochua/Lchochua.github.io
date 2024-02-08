@@ -106,9 +106,22 @@
         }
 
         @media (max-width: 768px) {
-            header, nav {
-                position: relative;
+            header {
+                position: fixed; /* Keep it fixed or make it relative based on your design */
+                top: 0;
+                left: 0;
+                right: 0;
                 padding: 10px;
+                z-index: 2; /* Ensure it stays above other content */
+            }
+
+            nav {
+                position: fixed; /* Adjust if you prefer it scrolling with the page */
+                top: 50px; /* Adjust based on the actual height of your header */
+                left: 0;
+                right: 0;
+                padding: 10px;
+                z-index: 2; /* Maintain high z-index but ensure navigation is accessible */
             }
 
             .home-content, .interest-content {
@@ -121,7 +134,7 @@
             }
 
             .home-image {
-                margin: 40px auto 0 auto; /* Increase top margin to push the image down */
+                margin: 40px auto 0 auto; /* This pushes the image down without overlapping the navigation */
                 text-align: center; /* Center the image */
             }
 
@@ -131,17 +144,16 @@
                 max-width: 100%; /* Ensure it doesn't overflow the screen width */
             }
 
-            .container {
-                margin: 70px auto 70px auto; /* Adjust top and bottom margin for space */
-                width: 90%; /* Adjust the width on smaller screens */
-                padding: 20px;
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            }
+    }
 
-            footer {
-                margin-top: 10px; /* Ensure space above the footer */
-            }
-        }
+    .container {
+        margin: 120px auto 20px auto; /* Increase top margin to account for fixed nav */
+        width: 90%; /* Adjust the width on smaller screens */
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 1; /* Ensure content is below fixed elements but above the page background */
+    }
+}
     </style>
 </head>
 <body>
