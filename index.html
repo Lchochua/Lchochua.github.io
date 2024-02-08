@@ -118,13 +118,30 @@
 
             .home-text, .interest-description {
                 margin-left: 0;
+                text-align: center; /* Optional: Center the text on smaller screens */
+            }
+
+            .home-image {
+                top: 0; /* Reset the top position */
+                left: 0; /* Reset the left position */
+                text-align: center; /* Center the image */
+                margin: 0 auto; /* Center the image within its container */
+            }
+
+            .home-image img {
+                max-height: 200px; /* Optionally reduce the max height for smaller screens */
+                width: auto; /* Maintain aspect ratio */
+                max-width: 100%; /* Ensure it doesn't overflow the screen width */
             }
 
             .container {
                 margin: 20px auto;
-                width: 90%;
+                width: 90%; /* Adjust the width on smaller screens */
+                padding-top: 60px; /* Add space for the fixed header */
             }
-        }
+        
+
+}
     </style>
 </head>
 <body>
