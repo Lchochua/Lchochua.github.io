@@ -28,6 +28,7 @@
             font-size: 24px;
             font-weight: bold;
             letter-spacing: 2px;
+            
         }
 
         nav {
@@ -39,6 +40,7 @@
             color: #fff;
             text-align: center;
             padding: 10px;
+            
         }
 
         nav a {
@@ -55,6 +57,7 @@
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            
         }
 
         .home-content, .interest-content {
@@ -139,17 +142,17 @@
                 width: auto; /* Maintain aspect ratio */
                 max-width: 100%; /* Ensure it doesn't overflow the screen width */
             }
+    
 
-    }
+            .container {
+                margin: 20px auto 20px auto; /* Increase top margin to account for fixed nav */
+                width: 90%; /* Adjust the width on smaller screens */
+                padding: 20px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                z-index: 1; /* Ensure content is below fixed elements but above the page background */
+            }
 
-    .container {
-        margin: 120px auto 20px auto; /* Increase top margin to account for fixed nav */
-        width: 90%; /* Adjust the width on smaller screens */
-        padding: 20px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        z-index: 1; /* Ensure content is below fixed elements but above the page background */
-    }
-
+        }
     </style>
 </head>
 <body>
@@ -806,7 +809,7 @@
     
 
     <footer>
-        &copy; 2023 Lasha Chochua | Contact: lasha.chochua@uni-bielefeld.de
+        &copy; 2023 Lasha Chochua | All Rights Reserved.
     </footer>
 
     <script>
