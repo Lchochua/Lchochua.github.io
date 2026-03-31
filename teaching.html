@@ -100,6 +100,8 @@
             header {
                 position: relative;
                 padding: 10px 0;
+                font-size: 18px;
+                letter-spacing: 1px;
                 z-index: 2;
             }
 
@@ -107,7 +109,19 @@
                 position: relative;
                 top: 0;
                 margin-top: -5px;
+                padding: 8px 4px;
                 z-index: 1;
+            }
+
+            nav a {
+                font-size: 15px;
+                margin: 6px;
+            }
+
+            .courses-grid {
+                flex-direction: column !important;
+                gap: 0 !important;
+                align-items: flex-start;
             }
 
             .container {
@@ -137,7 +151,7 @@
 
         <h3 style="color: #007BFF; text-align: center;">Current Courses</h3>
         <p style="margin: 4px 0 12px 0; text-align: center;"><em>International School of Economics (ISET)</em></p>
-        <div style="display: flex; gap: 60px; justify-content: center;">
+        <div class="courses-grid" style="display: flex; gap: 60px; justify-content: center;">
             <div>
                 <p style="margin: 0 0 4px 0;"><strong>Master</strong></p>
                 <ul style="list-style-type: disc; padding-left: 16px;">
