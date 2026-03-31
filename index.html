@@ -14,10 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lasha Chochua — Associate Professor at the International School of Economics (ISET), economist specializing in international trade, trade policy, applied game theory, and political economy.">
     <title>Lasha Chochua</title>
+    <link rel="icon" type="image/png" href="profile-pic-5.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
@@ -31,15 +35,14 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: #1054ca;
+            background: linear-gradient(135deg, #0d47c4 0%, #1a6dd4 100%);
             color: #fff;
             text-align: center;
             padding: 15px;
             font-size: 22px;
-            font-weight: bold;
+            font-weight: 700;
             letter-spacing: 2px;
             z-index: 100;
-
         }
 
         nav {
@@ -47,7 +50,7 @@
             top: 55px;
             left: 0;
             right: 0;
-            background-color: #333;
+            background-color: #2b2b2b;
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -55,15 +58,23 @@
         }
 
         nav a {
-            color: #fff;
+            color: #ccc;
             text-decoration: none;
             margin: 10px;
             font-size: 18px;
+            font-weight: 500;
             z-index: 100;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #fff;
         }
 
         nav a.active {
-            text-decoration: underline;
+            color: #fff;
+            border-bottom: 2px solid #7eb3ff;
+            padding-bottom: 2px;
         }
 
         .container {
@@ -72,9 +83,9 @@
             margin: 110px auto 15px auto;
             padding: 5px;
             background-color: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.10);
+            border-radius: 8px;
             z-index: 1;
-
         }
 
         .home-content {
@@ -85,23 +96,26 @@
 
         .home-image {
             margin-left: 20px;
+            flex-shrink: 0;
         }
 
         .home-image img {
-            max-width: 100%;
-            height: auto;
-            max-height: 300px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .home-text {
             flex: 1;
-            margin-left: 80px;
+            margin-left: 60px;
             margin-right: 30px;
         }
 
         h1 {
-            color: #007BFF;
-            font-size: 36px;
+            color: #2b2b2b;
+            font-size: 34px;
+            font-weight: 700;
         }
 
         p {
@@ -109,18 +123,41 @@
             line-height: 1.5;
         }
 
-        .social-icons a {
-            margin-right: 20px;
+        .cv-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 9px 22px;
+            background-color: #1054ca;
+            color: #fff;
             text-decoration: none;
-            color: #333;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+        }
+
+        .cv-btn:hover {
+            background-color: #0d3fa0;
+        }
+
+        .social-icons a {
+            margin-right: 16px;
+            text-decoration: none;
+            color: #555;
             font-size: 24px;
+            transition: color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: #1054ca;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: #fff;
+            background-color: #2b2b2b;
+            color: #aaa;
             font-size: 14px;
         }
 
@@ -157,9 +194,8 @@
             }
 
             .home-image img {
-                max-height: 200px;
-                width: auto;
-                max-width: 100%;
+                width: 160px;
+                height: 160px;
             }
 
             .home-text {
@@ -203,7 +239,7 @@
                     <h1>Lasha Chochua</h1>
                     <p style="line-height: 0.5;">Associate Professor</p>
                     <p style="line-height: 0.5;">
-                        <a href="https://iset.tsu.ge" target="_blank">International School of Economics</a>
+                        <a href="https://iset.tsu.ge" target="_blank" style="color: #2b2b2b; text-decoration: underline;">International School of Economics at TSU</a>
                     </p>
                 </div>
 
@@ -215,8 +251,8 @@
                     <p style="font-size: 1rem; text-align: justify; line-height: 1.5; margin: 0 auto; max-width: 800px; text-indent: 1rem;">
                         My work explores how trade agreements in general affect global liberalization, including their impact on global supply chains.
                     </p>
-                    <p style="text-align: justify; line-height: 1.5; margin: 28px auto 0 auto; max-width: 800px; text-indent: 1rem;">
-                        Download <a href="academic_cv.pdf#zoom=50" target="_blank"><span style="text-transform: uppercase;">CV</span></a>
+                    <p style="margin: 20px auto 0 auto;">
+                        <a href="academic_cv.pdf#zoom=50" target="_blank" class="cv-btn">Download CV</a>
                     </p>
                 </div>
 

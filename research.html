@@ -13,10 +13,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Research papers and work in progress by Lasha Chochua, economist specializing in international trade, trade policy, and applied game theory.">
     <title>Research | Lasha Chochua</title>
+    <link rel="icon" type="image/png" href="profile-pic-5.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
@@ -30,12 +34,12 @@
             top: 0;
             left: 0;
             right: 0;
-            background-color: #1054ca;
+            background: linear-gradient(135deg, #0d47c4 0%, #1a6dd4 100%);
             color: #fff;
             text-align: center;
             padding: 15px;
             font-size: 22px;
-            font-weight: bold;
+            font-weight: 700;
             letter-spacing: 2px;
             z-index: 100;
         }
@@ -45,7 +49,7 @@
             top: 55px;
             left: 0;
             right: 0;
-            background-color: #333;
+            background-color: #2b2b2b;
             color: #fff;
             text-align: center;
             padding: 10px;
@@ -53,15 +57,23 @@
         }
 
         nav a {
-            color: #fff;
+            color: #ccc;
             text-decoration: none;
             margin: 10px;
             font-size: 18px;
+            font-weight: 500;
             z-index: 100;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #fff;
         }
 
         nav a.active {
-            text-decoration: underline;
+            color: #fff;
+            border-bottom: 2px solid #7eb3ff;
+            padding-bottom: 2px;
         }
 
         .container {
@@ -70,13 +82,15 @@
             margin: 110px auto 15px auto;
             padding: 5px;
             background-color: #fff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.10);
+            border-radius: 8px;
             z-index: 1;
         }
 
         h1 {
-            color: #007BFF;
+            color: #1054ca;
             font-size: 36px;
+            font-weight: 700;
         }
 
         p {
@@ -87,17 +101,38 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
-            color: #fff;
+            background-color: #2b2b2b;
+            color: #aaa;
             font-size: 14px;
         }
 
         .paper {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
+            border: 1px solid #e5e9f2;
+            border-radius: 8px;
+            padding: 16px 20px;
+            transition: box-shadow 0.2s;
         }
+
+        .paper:hover {
+            box-shadow: 0 4px 16px rgba(16, 84, 202, 0.10);
+        }
+
+        .paper-pub  { border-left: 4px solid #1054ca; }
+        .paper-wip  { border-left: 4px solid #e8a020; }
+        .paper-policy { border-left: 4px solid #2e9e6b; }
 
         h3 {
             margin: 0;
+        }
+
+        h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        h3 a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -145,9 +180,9 @@
     </nav>
 
     <div class="container" id="research">
-        <h2 style="text-align: center; color: #007BFF;">Research Papers</h2>
+        <h2 style="text-align: center; color: #2b2b2b;">Research Papers</h2>
         <br>
-        <div class="paper">
+        <div class="paper paper-pub">
             <h3>
                 P<span style="text-transform: lowercase;">lurilateral Trade Agreements: A Complementary Margin to Preferential Liberalization</span>
             </h3>
@@ -171,7 +206,7 @@
         </div>
 
         <br>
-        <div class="paper">
+        <div class="paper paper-pub">
             <h3>
                 T<span style="text-transform: lowercase;">ariff Cuts, Uncertainty Reduction, and the Force of Many: The Impact of Plurilateral
                     Agreements</span>
@@ -188,7 +223,7 @@
         </div>
 
         <br>
-        <div class="paper">
+        <div class="paper paper-pub">
             <h3>
                 <a href="Stability_AEJ_Micro_2023.pdf#zoom=50" target="_blank">T<span style="text-transform: lowercase;">he Farsighted Stability of Global Trade Policy Arrangements</span></a>
             </h3>
@@ -213,7 +248,7 @@
         </div>
 
         <br>
-        <div class="paper">
+        <div class="paper paper-pub">
             <h3>
                 <a href="endogenous_trade_policy_webpage.pdf#zoom=50" target="_blank">E<span style="text-transform: lowercase;">ndogenous Trade Policy in the presence of Lobbying and Heterogeneously Ignorant Voters</span></a>
             </h3>
@@ -232,7 +267,7 @@
         </div>
 
         <br>
-        <div class="paper">
+        <div class="paper paper-pub">
             <h3>
                 <a href="uncertaintyHarsanyi.pdf#zoom=50" target="_blank">T<span style="text-transform: lowercase;">he Impartial Observer under Uncertainty</span></a>
             </h3>
@@ -256,13 +291,12 @@
 
         <br>
         <br>
-        <h2 style="text-align: center; color: #007BFF;">Work In Progress</h2>
+        <h2 style="text-align: center; color: #2b2b2b;">Work In Progress</h2>
         <br>
         <br>
 
-        <div class="paper">
-            <br>
-            <div class="paper">
+        <div>
+            <div class="paper paper-wip">
                 <h3>
                     S<span style="text-transform: lowercase;">ectoral Labor Mobility and Trade Policy</span>
                 </h3>
@@ -276,9 +310,11 @@
                     mobility capacity, and test whether this variable plays a crucial role in trade policy decisions. Within the United States context, for the 1996-1999 period, we demonstrate
                     that the government prioritized protecting sectors with lower sectoral mobility capacity.
                 </p>
+            </div>
 
-                <br>
+            <br>
 
+            <div class="paper paper-wip">
                 <h3>
                     G<span style="text-transform: lowercase;">lobal Supply Chains under plurilateral cooperation</span>
                 </h3>
@@ -298,7 +334,7 @@
 
             <br>
 
-            <div class="paper">
+            <div class="paper paper-wip">
                 <h3>
                     F<span style="text-transform: lowercase;">ree trade agreements versus customs unions: welfare decomposition</span>
                 </h3>
@@ -317,7 +353,7 @@
             </div>
             <br>
 
-            <div class="paper">
+            <div class="paper paper-wip">
                 <h3>
                     W<span style="text-transform: lowercase;">hy do we observe 'tariff peaks' after the preferential liberalization?</span>
                 </h3>
@@ -336,11 +372,11 @@
 
         <br>
         <br>
-        <h2 style="text-align: center; color: #007BFF;">Selected Policy Related Research</h2>
+        <h2 style="text-align: center; color: #2b2b2b;">Selected Policy Related Research</h2>
         <br>
         <br>
 
-        <div class="paper">
+        <div class="paper paper-policy">
             <h3>
                 Q<span style="text-transform: lowercase;">uantifying the Impact of Foreign Investment Restrictions in Specific Sectors in Jordan</span>
             </h3>
@@ -352,7 +388,7 @@
             </p>
         </div>
 
-        <div class="paper">
+        <div class="paper paper-policy">
             <h3>
                 T<span style="text-transform: lowercase;">ax Expenditure Analysis for Georgia</span>
             </h3>
@@ -364,7 +400,7 @@
             </p>
         </div>
 
-        <div class="paper">
+        <div class="paper paper-policy">
             <h3>
                 C<span style="text-transform: lowercase;">osts of Establishing the Employment Mechanism in Georgia</span>
             </h3>
@@ -376,7 +412,7 @@
             </p>
         </div>
 
-        <div class="paper">
+        <div class="paper paper-policy">
             <h3>
                 E<span style="text-transform: lowercase;">stonian Corporate Income Tax Model Implementation in Georgia</span>
             </h3>
@@ -390,7 +426,7 @@
             </p>
         </div>
 
-        <div class="paper">
+        <div class="paper paper-policy">
             <h3>
                 J<span style="text-transform: lowercase;">oint Feasibility Study on Georgia-China Possible Free Trade Agreement</span>
             </h3>
