@@ -202,6 +202,100 @@
 
         .supplementary .material-card { border-left-color: #6c8ebf; }
 
+        .section-note {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.55;
+            margin: -6px 0 16px;
+        }
+
+        .recitation-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .recitation-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border: 1px solid #e5e9f2;
+            border-left: 4px solid #2e9e6b;
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        .recitation-number {
+            display: grid;
+            place-items: center;
+            flex: 0 0 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: #eaf7f1;
+            color: #247d56;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .recitation-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .recitation-title {
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .recitation-label {
+            display: block;
+            color: #777;
+            font-size: 12px;
+            margin-top: 2px;
+        }
+
+        .recitation-links {
+            display: flex;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        .recitation-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid #c9d5e8;
+            border-radius: 6px;
+            padding: 7px 10px;
+            color: #1054ca;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .recitation-link:hover,
+        .recitation-link:focus-visible {
+            background-color: #1054ca;
+            border-color: #1054ca;
+            color: #fff;
+            outline: none;
+        }
+
+        .recitation-link.solution {
+            border-color: #b9ddcb;
+            color: #247d56;
+        }
+
+        .recitation-link.solution:hover,
+        .recitation-link.solution:focus-visible {
+            background-color: #247d56;
+            border-color: #247d56;
+            color: #fff;
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -235,6 +329,14 @@
 
             h1 { font-size: 27px; }
             .materials { grid-template-columns: 1fr; }
+
+            .recitation-row {
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .recitation-info { flex-basis: calc(100% - 54px); }
+            .recitation-links { width: 100%; padding-left: 54px; }
         }
     </style>
 </head>
@@ -293,6 +395,53 @@
                 <a class="material-card" href="game_theory_webpage/seu_note.pdf" target="_blank" rel="noopener">
                     <span class="material-number"><i class="fa-solid fa-book-open" aria-hidden="true"></i></span><span class="material-content"><span class="material-title">Subjective Expected Utility</span><span class="material-description">The Anscombe-Aumann approach to subjective probabilities.</span></span><span class="pdf-label">PDF</span>
                 </a>
+            </div>
+        </section>
+
+        <section aria-labelledby="recitations">
+            <h2 id="recitations">Recitations and Solutions</h2>
+            <p class="section-note">Problem sets for guided practice. Try each problem set before consulting its solutions.</p>
+            <div class="recitation-list">
+                <div class="recitation-row">
+                    <span class="recitation-number">01</span>
+                    <span class="recitation-info"><span class="recitation-title">Decision-Theoretic Foundations</span><span class="recitation-label">Recitation 1</span></span>
+                    <span class="recitation-links">
+                        <a class="recitation-link" href="game_theory_webpage/Recitation_1_2026.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Problem Set</a>
+                        <a class="recitation-link solution" href="game_theory_webpage/Recitation_1_Solutions_2026.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-check" aria-hidden="true"></i> Solutions</a>
+                    </span>
+                </div>
+                <div class="recitation-row">
+                    <span class="recitation-number">02</span>
+                    <span class="recitation-info"><span class="recitation-title">Basic Models of Game Theory</span><span class="recitation-label">Recitation 2</span></span>
+                    <span class="recitation-links">
+                        <a class="recitation-link" href="game_theory_webpage/recitation_2_2026.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Problem Set</a>
+                        <a class="recitation-link solution" href="game_theory_webpage/recitation_2_solution_2026.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-check" aria-hidden="true"></i> Solutions</a>
+                    </span>
+                </div>
+                <div class="recitation-row">
+                    <span class="recitation-number">03</span>
+                    <span class="recitation-info"><span class="recitation-title">Equilibria of Strategic-Form Games</span><span class="recitation-label">Recitation 3</span></span>
+                    <span class="recitation-links">
+                        <a class="recitation-link" href="game_theory_webpage/recitation_3_2026.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Problem Set</a>
+                        <a class="recitation-link solution" href="game_theory_webpage/recitation_3_solution_2026.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-check" aria-hidden="true"></i> Solutions</a>
+                    </span>
+                </div>
+                <div class="recitation-row">
+                    <span class="recitation-number">04</span>
+                    <span class="recitation-info"><span class="recitation-title">Equilibria of Extensive-Form Games</span><span class="recitation-label">Recitation 4</span></span>
+                    <span class="recitation-links">
+                        <a class="recitation-link" href="game_theory_webpage/recitation_4_2026.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Problem Set</a>
+                        <a class="recitation-link solution" href="game_theory_webpage/recitation_4_solution_2026.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-check" aria-hidden="true"></i> Solutions</a>
+                    </span>
+                </div>
+                <div class="recitation-row">
+                    <span class="recitation-number">05</span>
+                    <span class="recitation-info"><span class="recitation-title">Equilibrium Refinements and Bayesian Games</span><span class="recitation-label">Recitation 5</span></span>
+                    <span class="recitation-links">
+                        <a class="recitation-link" href="game_theory_webpage/recitation_5_2026.pdf" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf" aria-hidden="true"></i> Problem Set</a>
+                        <a class="recitation-link solution" href="game_theory_webpage/recitation_5_solution_2026.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-check" aria-hidden="true"></i> Solutions</a>
+                    </span>
+                </div>
             </div>
         </section>
     </main>
