@@ -26,6 +26,11 @@
     <changefreq>yearly</changefreq>
   </url>
   <url>
+    <loc>https://lchochua.github.io/econometrics-2-bachelor.html</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+  <url>
     <loc>https://lchochua.github.io/interests.html</loc>
     <priority>0.5</priority>
     <changefreq>yearly</changefreq>
