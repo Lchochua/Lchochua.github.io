@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2W08B3TCZ5"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2W08B3TCZ5');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Examined Society, a reading group led by Lasha Chochua on economics, political philosophy, ethics, and knowledge. Explore the 34-meeting syllabus and readings.">
+    <title>The Examined Society | Lasha Chochua</title>
+    <link rel="icon" type="image/png" href="profile-pic-5.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; background: #f0f0f0; color: #253047; font-family: 'DM Sans', sans-serif; }
+        header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 15px; background: linear-gradient(135deg, #0d47c4, #1a6dd4); color: #fff; text-align: center; font-size: 22px; font-weight: 700; letter-spacing: 2px; }
+        nav { position: fixed; top: 55px; left: 0; right: 0; z-index: 100; padding: 10px; background: #2b2b2b; text-align: center; }
+        nav a { margin: 10px; color: #ccc; font-size: 18px; font-weight: 500; text-decoration: none; transition: color .2s; }
+        nav a:hover, nav a:focus-visible { color: #fff; }
+        nav a.active { color: #fff; border-bottom: 2px solid #7eb3ff; padding-bottom: 2px; }
+        main { flex: 1; width: min(1080px, calc(100% - 32px)); margin: 110px auto 20px; background: #fff; box-shadow: 0 2px 24px #0000001a; border-radius: 8px; overflow: hidden; }
+        .hero { position: relative; padding: 70px clamp(28px, 7vw, 82px) 62px; background: radial-gradient(circle at 88% 17%, #274f87 0, transparent 35%), linear-gradient(135deg, #10243f, #173961); color: #fff; }
+        .eyebrow, .section-label { display: block; color: #90b9f4; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+        h1, h2, .part-title { font-family: 'Libre Baskerville', Georgia, serif; }
+        h1 { max-width: 700px; margin: 16px 0 18px; font-size: clamp(38px, 5.5vw, 62px); line-height: 1.14; letter-spacing: -.04em; }
+        .hero-subtitle { max-width: 640px; margin: 0; color: #d6e5f8; font-size: clamp(17px, 2vw, 21px); line-height: 1.6; }
+        .hero-line { width: 64px; height: 3px; margin: 28px 0; background: #e0b878; }
+        .hero-quote { max-width: 620px; margin: 0; color: #f4eee3; font-family: 'Libre Baskerville', Georgia, serif; font-size: 17px; line-height: 1.7; }
+        .hero-quote cite { display: block; margin-top: 8px; color: #bad0ec; font-family: 'DM Sans', sans-serif; font-size: 13px; font-style: normal; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+        .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 43px; padding: 10px 17px; border: 1px solid #93b7e6; border-radius: 5px; color: #fff; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .2s, transform .2s; }
+        .button:hover, .button:focus-visible { background: #ffffff21; transform: translateY(-2px); }
+        .button.primary { background: #fff; border-color: #fff; color: #173961; }
+        .button.primary:hover, .button.primary:focus-visible { background: #eaf2ff; }
+        .content { padding: 0 clamp(24px, 6vw, 72px) 64px; }
+        section { scroll-margin-top: 125px; }
+        .intro { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(230px, .8fr); gap: 52px; padding: 56px 0 50px; border-bottom: 1px solid #dce4ee; }
+        h2 { margin: 10px 0 20px; color: #142c4e; font-size: clamp(25px, 3vw, 32px); line-height: 1.3; }
+        .intro p, .reading-note { margin: 0 0 16px; color: #415068; font-size: 16px; line-height: 1.75; }
+        .intro p:last-child { margin-bottom: 0; }
+        .principle { align-self: start; padding: 25px; border-left: 3px solid #c89d5f; background: #f8f7f3; }
+        .principle strong { display: block; margin-bottom: 11px; color: #142c4e; font-family: 'Libre Baskerville', Georgia, serif; font-size: 17px; line-height: 1.5; }
+        .principle p { margin: 0; font-size: 14px; line-height: 1.7; }
+        .section-top { display: flex; align-items: end; justify-content: space-between; gap: 20px; }
+        .text-link { color: #1054ca; font-size: 14px; font-weight: 700; text-decoration: none; }
+        .text-link:hover, .text-link:focus-visible { text-decoration: underline; }
+        .featured { padding: 52px 0; border-bottom: 1px solid #dce4ee; }
+        .featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 20px; }
+        .resource { display: flex; flex-direction: column; min-height: 150px; padding: 22px; border: 1px solid #dce4ee; border-left: 4px solid #1054ca; border-radius: 7px; color: inherit; text-decoration: none; transition: box-shadow .2s, transform .2s; }
+        .resource:hover, .resource:focus-visible { box-shadow: 0 8px 22px #1054ca1c; transform: translateY(-2px); }
+        .resource-type { color: #1054ca; font-size: 11px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+        .resource strong { margin: 11px 0 8px; color: #142c4e; font-size: 17px; }
+        .resource span:last-child { color: #56647a; font-size: 14px; line-height: 1.55; }
+        .sequence { padding-top: 52px; }
+        .sequence-intro { max-width: 740px; margin: 0 0 32px; color: #56647a; line-height: 1.7; }
+        .part { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 26px; padding: 25px 0; border-top: 1px solid #dce4ee; }
+        .part-heading { padding-top: 3px; }
+        .part-number { color: #a8763e; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+        .part-title { margin: 8px 0 0; color: #142c4e; font-size: 17px; line-height: 1.5; }
+        .meetings { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; row-gap: 10px; margin: 0; padding: 0; list-style: none; }
+        .meetings li { display: flex; align-items: baseline; gap: 10px; min-width: 0; line-height: 1.5; }
+        .meeting-number { flex: 0 0 25px; color: #9a6d39; font-size: 12px; font-weight: 700; }
+        .meeting-text { color: #526176; font-size: 13px; }
+        .meeting-text strong { display: block; color: #24324b; font-size: 14px; font-weight: 700; }
+        .meeting-text a { color: #1054ca; text-decoration: none; }
+        .meeting-text a:hover, .meeting-text a:focus-visible { text-decoration: underline; }
+        .final-meeting { margin-top: 12px; padding: 24px; border-radius: 7px; background: #edf3fb; }
+        .final-meeting .part { border: 0; padding: 0; }
+        .final-meeting .meeting-text { line-height: 1.65; }
+        .format { margin-top: 50px; padding: 31px 34px; border-radius: 7px; background: #f8f7f3; }
+        .format h2 { margin-bottom: 12px; font-size: 25px; }
+        .format p { max-width: 760px; margin: 0; color: #415068; line-height: 1.75; }
+        footer { padding: 20px; background: #2b2b2b; color: #aaa; text-align: center; font-size: 14px; }
+        @media (max-width: 768px) {
+            header, nav { position: relative; top: 0; }
+            header { padding: 10px 0; font-size: 18px; letter-spacing: 1px; }
+            nav { margin-top: -5px; padding: 9px 5px; }
+            nav a { display: inline-block; margin: 5px 7px; font-size: 15px; }
+            main { width: min(95%, 600px); margin: 20px auto; }
+            .hero { padding-top: 50px; padding-bottom: 45px; }
+            .intro { grid-template-columns: 1fr; gap: 20px; padding-top: 42px; }
+            .featured-grid, .meetings { grid-template-columns: 1fr; }
+            .part { grid-template-columns: 1fr; gap: 15px; }
+            .part-title { max-width: 360px; }
+            .section-top { align-items: start; flex-direction: column; gap: 0; }
+            .format { padding: 24px; }
+        }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button, .resource { transition: none; } }
+    </style>
+</head>
+<body>
+    <header>Lasha Chochua</header>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="examined-society.html" class="active" aria-current="page">Reading Group</a>
+        <a href="interests.html">Interests</a>
+    </nav>
+    <main>
+        <div class="hero">
+            <span class="eyebrow">Economics · Philosophy · Ethics · Knowledge</span>
+            <h1>The Examined Society</h1>
+            <p class="hero-subtitle">Markets, morals, justice, and knowledge: a year-long argument about how we live together.</p>
+            <div class="hero-line" aria-hidden="true"></div>
+            <blockquote class="hero-quote">“The unexamined life is not worth living.”<cite>— Socrates, in Plato’s <i>Apology</i></cite></blockquote>
+            <div class="hero-actions">
+                <a class="button primary" href="#reading-sequence">Explore the reading sequence ↓</a>
+                <a class="button" href="examined_society/reading_club_syllabus.pdf">Read the syllabus (PDF) ↗</a>
+            </div>
+        </div>
+        <div class="content">
+            <section class="intro" aria-labelledby="about-heading">
+                <div>
+                    <span class="section-label">The idea</span>
+                    <h2 id="about-heading">One question, many traditions</h2>
+                    <p>How can people trade, argue, judge, and decide together? The Examined Society brings economics into conversation with political philosophy, moral philosophy, and the theory of knowledge.</p>
+                    <p>We read thinkers who disagree deeply, treating their arguments seriously and leaving room for participants to make their own connections. The aim is to weigh rival ideas with care, see the trade-offs they reveal, and resist easy answers.</p>
+                </div>
+                <aside class="principle">
+                    <strong>“No tradition is granted the last word.”</strong>
+                    <p>From Hume’s account of justice to contemporary questions about democracy, climate, and artificial intelligence, the sequence follows an argument rather than a single doctrine.</p>
+                </aside>
+            </section>
+
+            <section class="featured" aria-labelledby="first-meeting-heading">
+                <div class="section-top">
+                    <div><span class="section-label">Start reading</span><h2 id="first-meeting-heading">Meeting 1 · David Hume</h2></div>
+                    <a class="text-link" href="#reading-sequence">See all 34 meetings →</a>
+                </div>
+                <p class="reading-note">Custom, sympathy, justice, property, and convention open the series. Read the introductory note alongside Hume’s own words.</p>
+                <div class="featured-grid">
+                    <a class="resource" href="examined_society/hume-notes.pdf">
+                        <span class="resource-type">Guide · PDF</span>
+                        <strong>David Hume’s Science of Human Nature</strong>
+                        <span>An introduction to empiricism, causation, moral sentiments, and justice.</span>
+                    </a>
+                    <a class="resource" href="examined_society/hume-readings.pdf">
+                        <span class="resource-type">Primary text · PDF</span>
+                        <strong>Readings on Justice, Property, and Sympathy</strong>
+                        <span>Selections from Hume’s <i>Enquiry</i> and <i>Treatise</i>.</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="sequence" id="reading-sequence" aria-labelledby="sequence-heading">
+                <span class="section-label">The syllabus</span>
+                <h2 id="sequence-heading">A 34-meeting conversation</h2>
+                <p class="sequence-intro">The route moves from moral sentiments and commercial society through critiques of capitalism, collective choice, justice, and the growth of knowledge. The final meeting brings the whole conversation to bear on seven current strains.</p>
+
+                <div class="part">
+                    <div class="part-heading"><span class="part-number">Part I · Meetings 1–4</span><h3 class="part-title">Sympathy, Commerce, and the Taming of the Passions</h3></div>
+                    <ol class="meetings">
+                        <li><span class="meeting-number">01</span><span class="meeting-text"><strong>Hume</strong>Custom, sympathy, justice, property, convention</span></li>
+                        <li><span class="meeting-number">02</span><span class="meeting-text"><strong>Smith: Moral Sentiments</strong>Sympathy and the impartial spectator</span></li>
+                        <li><span class="meeting-number">03</span><span class="meeting-text"><strong>Smith: Wealth of Nations</strong>Division of labour and commercial society</span></li>
+                        <li><span class="meeting-number">04</span><span class="meeting-text"><strong>Ricardo</strong>Value, rent, and distribution</span></li>
+                    </ol>
+                </div>
+                <div class="part">
+                    <div class="part-heading"><span class="part-number">Part II · Meetings 5–8</span><h3 class="part-title">Freedom, Recognition, and the Critique of Capital</h3></div>
+                    <ol class="meetings">
+                        <li><span class="meeting-number">05</span><span class="meeting-text"><strong>Kant</strong>Autonomy, dignity, and public reason</span></li>
+                        <li><span class="meeting-number">06</span><span class="meeting-text"><strong>Hegel</strong>Recognition, civil society, and freedom</span></li>
+                        <li><span class="meeting-number">07</span><span class="meeting-text"><strong>Mill</strong>Utility, liberty, and equality</span></li>
+                        <li><span class="meeting-number">08</span><span class="meeting-text"><strong>Marx</strong>Alienation, class, and exploitation</span></li>
+                    </ol>
+                </div>
+                <div class="part">
+                    <div class="part-heading"><span class="part-number">Part III · Meetings 9–14</span><h3 class="part-title">How Capitalism Lives, Fails, and Reproduces Itself</h3></div>
+                    <ol class="meetings">
+                        <li><span class="meeting-number">09</span><span class="meeting-text"><strong>The Marginal Revolution</strong>Subjective value and marginal utility</span></li>
+                        <li><span class="meeting-number">10</span><span class="meeting-text"><strong>Schumpeter</strong>Innovation and creative destruction</span></li>
+                        <li><span class="meeting-number">11</span><span class="meeting-text"><strong>Keynes</strong>Uncertainty, demand, and unemployment</span></li>
+                        <li><span class="meeting-number">12</span><span class="meeting-text"><strong>Hayek</strong>The knowledge problem and spontaneous order</span></li>
+                        <li><span class="meeting-number">13</span><span class="meeting-text"><strong>Polanyi</strong>The embedded economy and market society</span></li>
+                        <li><span class="meeting-number">14</span><span class="meeting-text"><strong>Lachmann</strong>Expectations and radical uncertainty</span></li>
+                    </ol>
+                </div>
+                <div class="part">
+                    <div class="part-heading"><span class="part-number">Part IV · Meetings 15–21</span><h3 class="part-title">Economics Beyond the Market</h3></div>
+                    <ol class="meetings">
+                        <li><span class="meeting-number">15</span><span class="meeting-text"><strong>Arrow</strong>Social choice and collective rationality</span></li>
+                        <li><span class="meeting-number">16</span><span class="meeting-text"><strong>Becker</strong>Rational choice beyond markets</span></li>
+                        <li><span class="meeting-number">17</span><span class="meeting-text"><strong>Coase</strong>Transaction costs, property rights, and the firm</span></li>
+                        <li><span class="meeting-number">18</span><span class="meeting-text"><strong>Buchanan</strong>Public choice and constitutional economics</span></li>
+                        <li><span class="meeting-number">19</span><span class="meeting-text"><strong>Sowell</strong>Knowledge, incentives, and trade-offs</span></li>
+                        <li><span class="meeting-number">20</span><span class="meeting-text"><strong>Hirschman</strong>Exit, voice, loyalty, and development</span></li>
+                        <li><span class="meeting-number">21</span><span class="meeting-text"><strong>Ostrom</strong>The commons and self-governance</span></li>
+                    </ol>
+                </div>
+                <div class="part">
+                    <div class="part-heading"><span class="part-number">Part V · Meetings 22–29</span><h3 class="part-title">Justice, Equality, and the Limits of the State</h3></div>
+                    <ol class="meetings">
+                        <li><span class="meeting-number">22</span><span class="meeting-text"><strong>Harsanyi</strong>Impartial observers and utilitarianism</span></li>
+                        <li><span class="meeting-number">23</span><span class="meeting-text"><strong>Rawls</strong>Justice as fairness and the original position</span></li>
+                        <li><span class="meeting-number">24</span><span class="meeting-text"><strong>Nozick</strong>Entitlement and the minimal state</span></li>
+                        <li><span class="meeting-number">25</span><span class="meeting-text"><strong>Cohen</strong>Self-ownership and luck egalitarianism</span></li>
+                        <li><span class="meeting-number">26</span><span class="meeting-text"><strong>Sen</strong>Capabilities and public reasoning</span></li>
+                        <li><span class="meeting-number">27</span><span class="meeting-text"><strong>Berlin</strong>Value pluralism and negative liberty</span></li>
+                        <li><span class="meeting-number">28</span><span class="meeting-text"><strong>Arendt</strong>Plurality, action, and the public realm</span></li>
+                        <li><span class="meeting-number">29</span><span class="meeting-text"><strong>Pettit</strong>Liberty as non-domination</span></li>
+                    </ol>
+                </div>
+                <div class="part">
+                    <div class="part-heading"><span class="part-number">Part VI · Meetings 30–33</span><h3 class="part-title">How Knowledge Grows and Why It Needs Freedom</h3></div>
+                    <ol class="meetings">
+                        <li><span class="meeting-number">30</span><span class="meeting-text"><strong>Russell</strong>Logic, scientific method, and changing one’s mind</span></li>
+                        <li><span class="meeting-number">31</span><span class="meeting-text"><strong>Popper</strong>Falsifiability and the open society</span></li>
+                        <li><span class="meeting-number">32</span><span class="meeting-text"><strong>Kuhn</strong>Paradigms and scientific revolutions</span></li>
+                        <li><span class="meeting-number">33</span><span class="meeting-text"><strong>Probability</strong>Risk, uncertainty, and rational belief</span></li>
+                    </ol>
+                </div>
+                <div class="final-meeting">
+                    <div class="part">
+                        <div class="part-heading"><span class="part-number">Final meeting · 34</span><h3 class="part-title">Seven Modern Strains</h3></div>
+                        <ol class="meetings"><li><span class="meeting-number">34</span><span class="meeting-text">Democratic erosion; the information commons; inequality; climate; artificial intelligence and concentrated power; geopolitical fragmentation and war; demographic and social recession.</span></li></ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="format" aria-labelledby="format-heading">
+                <span class="section-label">Before each meeting</span>
+                <h2 id="format-heading">A guide and an original voice</h2>
+                <p>For meetings 1–33, participants receive a concise note on the thinker and a short excerpt from the original writing. Read them side by side: the note offers orientation; the excerpt lets the author speak. Together they will not exceed 50–60 pages. Meeting 34 uses a longer synthesis note. <a class="text-link" href="examined_society/reading_club_syllabus.pdf">Read the full syllabus →</a></p>
+            </section>
+        </div>
+    </main>
+    <footer>&copy; 2026 Lasha Chochua | All Rights Reserved.</footer>
+</body>
+</html>
