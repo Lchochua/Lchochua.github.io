@@ -62,7 +62,12 @@
         .resource:hover, .resource:focus-visible { box-shadow: 0 8px 22px #1054ca1c; transform: translateY(-2px); }
         .resource-type { color: #1054ca; font-size: 11px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
         .resource strong { margin: 11px 0 8px; color: #142c4e; font-size: 17px; }
-        .resource span:last-child { color: #56647a; font-size: 14px; line-height: 1.55; }
+        .resource > span:not(.resource-type) { color: #56647a; font-size: 14px; line-height: 1.55; }
+        .resource-title { color: inherit; text-decoration: none; }
+        .resource-title:hover { text-decoration: underline; }
+        .resource-button { align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 11px 16px; border-radius: 5px; background: #1054ca; color: #fff; font-size: 14px; font-weight: 700; line-height: 1.4; text-decoration: none; transition: background .2s; }
+        .resource-button:hover { background: #0d429f; }
+        .resource-title:focus-visible, .resource-button:focus-visible { outline: 3px solid #a8763e; outline-offset: 4px; }
         .sequence { padding-top: 52px; }
         .sequence-intro { max-width: 740px; margin: 0 0 12px; color: #56647a; line-height: 1.7; }
         .part { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 26px; padding: 25px 0; border-top: 1px solid #dce4ee; }
@@ -235,11 +240,12 @@
                             <strong>David Hume’s Science of Human Nature</strong>
                             <span>An introduction to empiricism, causation, moral sentiments, and justice.</span>
                         </a>
-                        <a class="resource" href="examined_society/hume-readings.pdf">
+                        <div class="resource">
                             <span class="resource-type">Primary text · PDF</span>
-                            <strong>Readings on Justice, Property, and Sympathy</strong>
+                            <strong><a class="resource-title" href="examined_society/hume-readings.pdf">Readings on Justice, Property, and Sympathy</a></strong>
                             <span>Selections from Hume’s <i>Enquiry</i> and <i>Treatise</i>.</span>
-                        </a>
+                            <a class="resource-button" href="Hume-on-Justice-Property-and-Sympathy.html">Explore the illustrated summary <span aria-hidden="true">→</span></a>
+                        </div>
                     </div>
                 </article>
                 <article class="meeting-materials" id="meeting-2" aria-labelledby="second-meeting-heading">

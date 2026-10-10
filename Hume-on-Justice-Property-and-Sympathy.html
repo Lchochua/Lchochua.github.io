@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hume on Justice, Property and Sympathy: an illustrated summary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECEFF1; --surface:#F8F9FA; --ink:#1C2633; --muted:#556273; --rule:#C5CDD5;
+  --stone:#C9D0D6; --stone-edge:#9AA5B0; --accent:#1F6B66; --accent-soft:#D6E7E4;
+  --ochre:#9A6A15; --ochre-soft:#F1E6CF; --danger:#8B2E2E;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141A21; --surface:#1C242D; --ink:#E3E8ED; --muted:#9AA7B4; --rule:#2E3945;
+    --stone:#34404C; --stone-edge:#4D5B69; --accent:#5FB3AB; --accent-soft:#1E3533;
+    --ochre:#D9A84E; --ochre-soft:#33291A; --danger:#D98080;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141A21; --surface:#1C242D; --ink:#E3E8ED; --muted:#9AA7B4; --rule:#2E3945;
+  --stone:#34404C; --stone-edge:#4D5B69; --accent:#5FB3AB; --accent-soft:#1E3533;
+  --ochre:#D9A84E; --ochre-soft:#33291A; --danger:#D98080;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Libre Caslon Text",Georgia,"Times New Roman",serif;font-size:1.0625rem;line-height:1.7;
+  -webkit-text-size-adjust:100%;}
+img,svg{max-width:100%}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+.wide{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+h1{font-size:clamp(2.3rem,6.5vw,4.1rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,4.2vw,2.6rem);margin-bottom:.6rem}
+h3{font-size:1.35rem;margin:2.2rem 0 .7rem}
+p{margin:0 0 1rem}
+
+/* hero */
+.hero{padding:3.5rem 0 1rem;text-align:center}
+.hero .sub{color:var(--muted);font-style:italic;margin:.9rem auto 0;max-width:34rem}
+.vault{display:block;margin:2.2rem auto 0;width:100%;max-width:680px;height:auto}
+.vault a .st{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:fill .2s}
+.vault a:hover .st,.vault a:focus-visible .st{fill:var(--accent-soft);stroke:var(--accent)}
+.vault a.key .st{fill:var(--accent);stroke:var(--accent)}
+.vault text{font-family:"Libre Caslon Text",Georgia,serif;font-size:14px;fill:var(--ink);pointer-events:none}
+.vault a.key text{fill:var(--paper);font-size:13px}
+.vault .ground{stroke:var(--stone-edge);stroke-width:1.5}
+.vault-cap{color:var(--muted);font-size:.92rem;font-style:italic;margin:.6rem auto 0;max-width:30rem}
+.toc{display:flex;flex-wrap:wrap;gap:.4rem .5rem;justify-content:center;list-style:none;padding:0;margin:1.6rem auto 0;max-width:46rem}
+.toc a{display:inline-block;text-decoration:none;color:var(--ink);border:1px solid var(--rule);background:var(--surface);
+  padding:.25rem .8rem;border-radius:3px;font-size:.92rem}
+.toc a:hover{border-color:var(--accent);color:var(--accent)}
+
+.reminder{margin:2.5rem auto 0;background:var(--surface);border-left:3px solid var(--ochre);padding:1rem 1.2rem;font-size:.97rem}
+.reminder p:last-child{margin:0}
+
+/* sections */
+.theme{padding:4.5rem 0 1rem;border-top:1px solid var(--rule);margin-top:3.5rem}
+.covers{color:var(--muted);font-size:.92rem;margin:0 0 .5rem;display:flex;align-items:center;gap:.55rem}
+.covers .mark{width:16px;height:13px;background:var(--accent);clip-path:polygon(0 0,100% 0,82% 100%,18% 100%);flex:none}
+.lede{font-size:1.15rem;line-height:1.6}
+
+.claims{list-style:none;padding:0;margin:1.4rem 0}
+.claims li{position:relative;padding-left:1.6rem;margin:0 0 1rem}
+.claims li::before{content:"";position:absolute;left:0;top:.62em;width:11px;height:9px;background:var(--stone-edge);
+  clip-path:polygon(0 0,100% 0,82% 100%,18% 100%)}
+.claims li strong{font-weight:700}
+.ref{display:inline-block;font-size:.76em;line-height:1.45;font-style:normal;font-weight:400;font-variant-numeric:lining-nums;
+  color:var(--accent);background:var(--accent-soft);padding:0 .55em;border-radius:999px;margin-left:.35em;white-space:nowrap;vertical-align:.08em}
+
+blockquote{margin:1.4rem 0;padding:.2rem 0 .2rem 1.1rem;border-left:2px solid var(--accent);font-style:italic;color:var(--ink)}
+blockquote .ref{font-style:normal}
+
+.figure{margin:2rem 0;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:1.3rem}
+.figure figcaption{color:var(--muted);font-size:.9rem;font-style:italic;margin-top:.8rem}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* circumstances grid */
+.circ{display:grid;grid-template-columns:7.2rem repeat(3,minmax(9rem,1fr));gap:6px;min-width:560px;font-size:.88rem;line-height:1.4}
+.circ .h{color:var(--muted);font-style:italic;display:flex;align-items:center;justify-content:center;text-align:center;padding:.3rem}
+.circ .rh{justify-content:flex-end;text-align:right}
+.circ .c{border:1px dashed var(--rule);border-radius:4px;padding:.6rem .65rem;min-height:5.2rem}
+.circ .c.on{border:1px solid var(--stone-edge);background:var(--paper)}
+.circ .c.mid{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.circ .c.mid .ref{background:var(--paper);color:var(--accent)}
+.circ .c b{display:block;font-weight:700;margin-bottom:.15rem}
+.circ .c.corner{background:var(--ochre-soft);border:1px solid var(--ochre)}
+.circ .empty{border:none}
+
+/* scarcity strip, rules, ledger */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.8rem}
+.strip div{border-top:3px solid var(--stone-edge);padding-top:.6rem;font-size:.93rem;line-height:1.5}
+.strip div.owned{border-top-color:var(--accent)}
+.strip b{display:block;font-weight:700}
+.strip .tag{display:block;color:var(--muted);font-style:italic;margin:.15rem 0 .25rem}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.8rem}
+.rules div{background:var(--paper);border-radius:4px;padding:.8rem .9rem;font-size:.95rem;line-height:1.5}
+.rules b{display:block;font-weight:700;margin-bottom:.2rem}
+.rules span{color:var(--muted)}
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media (max-width:640px){.ledger{grid-template-columns:1fr}}
+.ledger h4{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:1.15rem;margin:0 0 .5rem}
+.ledger ol{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.55}
+.ledger li{margin-bottom:.55rem}
+.ledger .pro h4{color:var(--accent)} .ledger .con h4{color:var(--ochre)}
+
+/* power spectrum */
+.spectrum{position:relative;padding-top:2.2rem}
+.spectrum .bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--accent),var(--stone-edge) 55%,var(--ochre))}
+.spectrum .ends{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem;font-style:italic;position:absolute;top:0;left:0;right:0}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem;font-size:.93rem;line-height:1.5}
+@media (max-width:640px){.zones{grid-template-columns:1fr}}
+.zones b{display:block;font-weight:700}
+
+/* tables */
+table{border-collapse:collapse;width:100%;font-size:.94rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.65rem .7rem;border-bottom:1px solid var(--rule)}
+th{font-weight:700;font-size:.9rem;color:var(--muted)}
+td.verdict{background:var(--accent-soft)}
+td.bad{background:var(--ochre-soft)}
+.t-wide{min-width:600px}
+
+/* nest/house */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
+@media (max-width:560px){.pair{grid-template-columns:1fr}}
+.pair svg{display:block;width:100%;height:auto;max-height:130px}
+.pair p{font-size:.94rem;margin:.6rem 0 0;line-height:1.5}
+
+/* escalation */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;align-items:end;min-height:16rem}
+.steps .s{display:flex;flex-direction:column;justify-content:flex-end;font-size:.86rem;line-height:1.4}
+.steps .col{border-radius:3px 3px 0 0;margin-bottom:.5rem}
+.steps .p .col{background:var(--accent)} .steps .n .col{background:var(--ochre)}
+.steps b{font-weight:700;display:block}
+@media (max-width:560px){.steps{grid-template-columns:repeat(2,1fr)}}
+
+/* wall & vault */
+.wv{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:end}
+.wv svg{width:100%;height:auto;display:block}
+.wv h4{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:1.2rem;margin:.6rem 0 .2rem}
+.wv p{font-size:.93rem;line-height:1.5;margin:0}
+.brick{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1}
+.brick.out{transition:opacity .5s} .removed .brick.out{opacity:0}
+.vstone{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:transform .8s cubic-bezier(.5,0,.75,0),opacity .8s;transform-box:fill-box;transform-origin:center}
+.vstone.keyst{fill:var(--accent);stroke:var(--accent);transition:opacity .4s}
+.removed .vstone.keyst{opacity:0}
+.removed .vstone:not(.keyst){opacity:.35}
+.btnrow{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:1.2rem}
+button{font:inherit;font-size:.95rem;background:var(--ink);color:var(--paper);border:0;border-radius:3px;padding:.5rem 1rem;cursor:pointer}
+button:hover{background:var(--accent)}
+.status{color:var(--muted);font-style:italic;font-size:.92rem}
+@media (prefers-reduced-motion: reduce){.vstone,.brick.out{transition:none}}
+
+/* coda */
+.coda-fig{display:grid;grid-template-columns:1fr 1.5fr;gap:1.4rem;align-items:center}
+@media (max-width:640px){.coda-fig{grid-template-columns:1fr}}
+.coda-fig svg{width:100%;height:auto;display:block}
+.coda-fig p{font-size:.93rem;line-height:1.5;margin:.5rem 0 0}
+
+/* boxes */
+.takeaway{margin:2rem 0;padding:1.2rem 1.3rem;background:var(--accent);color:var(--paper);border-radius:6px}
+.takeaway h3{margin:0 0 .5rem;font-size:1.25rem}
+.takeaway p:last-child,.takeaway ol:last-child{margin-bottom:0}
+.takeaway .ref{background:var(--paper);color:var(--accent)}
+.takeaway ol{padding-left:1.2rem;margin:.3rem 0 0}
+.takeaway li{margin-bottom:.4rem}
+details.discuss{margin:1.6rem 0 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+details.discuss summary{cursor:pointer;padding:.8rem 1.1rem;font-style:italic;color:var(--ochre)}
+details.discuss[open] summary{border-bottom:1px solid var(--rule)}
+details.discuss ul{margin:0;padding:1rem 1.1rem 1rem 2.2rem;font-size:.96rem;line-height:1.6}
+details.discuss li{margin-bottom:.6rem}
+
+details.answers{margin:.7rem 0 0;border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:6px;background:var(--surface)}
+details.answers summary{cursor:pointer;padding:.8rem 1.1rem;font-style:italic;color:var(--accent)}
+details.answers[open] summary{border-bottom:1px solid var(--rule)}
+details.answers ol{margin:0;padding:1rem 1.1rem 1rem 2.4rem;font-size:.96rem;line-height:1.6}
+details.answers li{margin-bottom:.8rem}
+details.answers li b{font-weight:700}
+.note-ans{color:var(--muted);font-size:.85rem;font-style:italic;padding:0 1.1rem 1rem;margin:0}
+.questions{margin-top:4.5rem;border-top:1px solid var(--rule);padding-top:3rem;padding-bottom:4rem}
+.questions ol{padding-left:1.4rem}
+.questions li{margin-bottom:.8rem}
+footer{color:var(--muted);font-size:.85rem;padding:3rem 0 4rem;text-align:center}
+
+@page{size:A4;margin:16mm 15mm 16mm 15mm}
+@media print{
+  :root,:root:not([data-theme="light"]){--paper:#FFFFFF;--surface:#F6F8F9;--ink:#1C2633;--muted:#556273;--rule:#C5CDD5;
+    --stone:#D3D9DE;--stone-edge:#9AA5B0;--accent:#1F6B66;--accent-soft:#DCEBE8;--ochre:#9A6A15;--ochre-soft:#F3E9D4;--danger:#8B2E2E;}
+  :root{padding:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:10.5pt;line-height:1.55;background:#fff}
+  .hero{padding-top:0}
+  .vault{max-width:520px;margin-top:1.2rem}
+  .toc,.btnrow{display:none}
+  .theme{break-before:page;border-top:none;margin-top:0;padding-top:0}
+  .questions{break-before:page;border-top:none;margin-top:0;padding-top:0}
+  .scroll{overflow:visible}
+  .figure,.takeaway,table,tr,.claims li,details li,.zones>div,.rules>div,.strip>div,.wv,.coda-fig{break-inside:avoid}
+  h2,h3,details summary,.covers{break-after:avoid}
+  .note-ans,details li:last-child{break-before:avoid}
+  details ul>li:first-child,details ol>li:first-child{break-before:avoid}
+  details summary{list-style:none;font-weight:700;font-style:normal}
+  details summary::-webkit-details-marker{display:none}
+  details.discuss summary{color:var(--ochre)} details.answers summary{color:var(--accent)}
+  a{text-decoration:none;color:inherit}
+  footer{padding:1.5rem 0 0}
+}
+</style>
+</head>
+<body>
+
+<header class="hero wide">
+  <h1>Hume on Justice, Property<br>and Sympathy</h1>
+  <p class="sub">An illustrated summary of the Meeting 1 commentary for The Examined Society, following <i>An Enquiry concerning the Principles of Morals</i> (Sections III and V, Appendix III) and one passage of the <i>Treatise</i>.</p>
+
+  <svg class="vault" id="heroVault" viewBox="0 0 600 315" role="navigation" aria-label="Themes of the summary, arranged as a vault"></svg>
+  <p class="vault-cap">Hume's own image: justice is a vault in which no stone stands alone <span class="ref">M App3.5</span>. Public utility is the keystone. Select a stone to jump to its theme.</p>
+
+  <ul class="toc">
+    <li><a href="#justice">Why justice</a></li>
+    <li><a href="#property">Why property rights</a></li>
+    <li><a href="#power">Justice and power</a></li>
+    <li><a href="#source">The source of justice</a></li>
+    <li><a href="#constructs">Constructs and superstition</a></li>
+    <li><a href="#utility">Why utility pleases</a></li>
+    <li><a href="#appendix">Appendix III</a></li>
+    <li><a href="#coda">The meadow</a></li>
+  </ul>
+
+  <div class="reminder wrap" style="text-align:left">
+    <p><b>How to read the references.</b> M = <i>Enquiry</i> (section.paragraph; App3 = Appendix III), T = <i>Treatise</i> (book.part.section.paragraph). Every summary statement ends with the paragraphs it draws on.</p>
+    <p>Hume's "justice" is narrow: respect for property, for transfers by consent, and for promises. It is not fairness or distributive justice in the modern sense.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 -->
+<section class="theme wrap" id="justice">
+  <p class="covers"><span class="mark"></span>Covers M 3.1–3.21</p>
+  <h2>Why there is justice in society</h2>
+  <p class="lede">Justice is not a permanent feature of the moral universe. It exists because a particular combination of human nature and material conditions makes it useful, and Hume proves this by changing the conditions one at a time and watching justice disappear.</p>
+
+  <ul class="claims">
+    <li>That justice is useful is too obvious to argue. The bold thesis is that public utility is the <strong>sole</strong> origin of justice and the sole foundation of its merit, which makes the claim testable: find one case where justice is useless yet binding, and the thesis fails. <span class="ref">M 3.1</span></li>
+    <li>The method is a controlled experiment. Change one variable, hold human nature fixed, and see whether justice survives. The more unusual the angles tried, the more robust the result. <span class="ref">M 3.2–3</span><span class="ref">M 3.17</span></li>
+  </ul>
+
+  <figure class="figure">
+    <div class="scroll">
+      <div class="circ" role="table" aria-label="Hume's thought experiments by external conditions and human disposition">
+        <div class="h"></div>
+        <div class="h">Abundance</div>
+        <div class="h">Moderate scarcity</div>
+        <div class="h">Extreme necessity</div>
+
+        <div class="h rh">Perfect benevolence</div>
+        <div class="c corner"><b>Golden age</b>The poets remove storms from nature and from the heart, and leave out "mine and thine". <span class="ref">M 3.14</span></div>
+        <div class="c on"><b>Universal love</b>No need for contracts or landmarks; families and marriage come close. <span class="ref">M 3.6–7</span></div>
+        <div class="c empty"></div>
+
+        <div class="h rh">Limited generosity</div>
+        <div class="c on"><b>Effortless plenty</b>Taking costs nobody anything, so property is "an idle ceremonial". <span class="ref">M 3.2–5</span></div>
+        <div class="c mid"><b>Our world</b>Partial to ourselves but able to learn; few goods from nature, many from labour. Justice is useful here. <span class="ref">M 3.12–13</span></div>
+        <div class="c on"><b>Shipwreck, siege</b>Society is perishing anyway, so the rules give way to self-preservation. <span class="ref">M 3.8</span></div>
+
+        <div class="h rh">Perfect malice</div>
+        <div class="c empty"></div>
+        <div class="c on"><b>Ruffians, war</b>Justice kept alone protects no one; it lapses where the other side keeps no rules. <span class="ref">M 3.9–11</span></div>
+        <div class="c corner"><b>State of nature</b>The philosophers' war of all against all: no law, no property. <span class="ref">M 3.15–16</span></div>
+      </div>
+    </div>
+    <figcaption>Push either dimension to an extreme and justice becomes useless, so it vanishes. The two shaded corners are the opposite fictions of the poets and the philosophers, and both leave justice out.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>Under abundance, taking my apple costs me nothing because I pick an identical one. Property protects against injury, and where no injury is possible there is nothing to protect. <span class="ref">M 3.2–3</span></li>
+    <li>Under universal benevolence, every person is "a second self" to every other; contracts and boundaries exist only because interests diverge. Communal experiments in moments of zeal returned to separate property as selfishness returned, on Hume's account. <span class="ref">M 3.6–7</span></li>
+    <li>Under extreme necessity, "no greater evil can be dreaded from violence and injustice", so seizing a plank in a shipwreck is no crime, and magistrates may open private granaries even in lesser emergencies. <span class="ref">M 3.8</span></li>
+    <li>Justice is reciprocal. A virtuous man among ruffians must arm himself with whatever sword is at hand, and the laws of war themselves lapse against an enemy who keeps none. <span class="ref">M 3.9</span><span class="ref">M 3.11</span></li>
+    <li>Our actual condition is the medium: limited generosity plus scarce goods that "art, labour, and industry" can multiply. Hence property, hence the usefulness of justice, "and hence alone arises its merit and moral obligation." <span class="ref">M 3.12–13</span></li>
+    <li>Hume doubts the state of nature ever existed, since people are always born into families with some rules, but if it did, justice would be suspended there. <span class="ref">M 3.16</span></li>
+  </ul>
+
+  <h3>The circle of justice widens with interdependence</h3>
+  <figure class="figure">
+    <svg viewBox="0 0 640 250" role="img" aria-label="Concentric circles: solitary being, family, one society, trading societies" style="display:block;width:100%;height:auto">
+      <circle cx="160" cy="125" r="115" fill="var(--accent-soft)" stroke="var(--accent)"/>
+      <circle cx="160" cy="125" r="80" fill="var(--paper)" stroke="var(--stone-edge)"/>
+      <circle cx="160" cy="125" r="45" fill="var(--surface)" stroke="var(--stone-edge)"/>
+      <circle cx="160" cy="125" r="6" fill="var(--ink)"/>
+      <g font-family="Libre Caslon Text, Georgia, serif" font-size="14" fill="var(--ink)">
+        <line x1="166" y1="125" x2="330" y2="40" stroke="var(--rule)"/><text x="336" y="44">Solitary being: no use for justice</text>
+        <line x1="200" y1="110" x2="330" y2="90" stroke="var(--rule)"/><text x="336" y="94">Family: rules for its own survival</text>
+        <line x1="236" y1="140" x2="330" y2="148" stroke="var(--rule)"/><text x="336" y="152">One society: rules stop at its border</text>
+        <line x1="268" y1="170" x2="330" y2="205" stroke="var(--rule)"/><text x="336" y="209">Trading societies: justice extends</text>
+        <text x="336" y="228" fill="var(--muted)" font-style="italic" font-size="13">as far as mutual connexions reach</text>
+      </g>
+    </svg>
+    <figcaption>The boundaries of justice grow "in proportion to the largeness of men's views, and the force of their mutual connexions" <span class="ref">M 3.20–21</span>. Interdependence, not growing kindness, drives the expansion.</figcaption>
+  </figure>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Unique goods (a particular view, a gift from someone you love) have no perfect substitute. Would property survive in the abundant world, shrunk to whatever remains scarce? <span class="ref">M 3.3</span></li>
+    <li>The kibbutzim kept common property for decades, then moved towards private ownership. Does that count for or against Hume's "ardour" that cools? <span class="ref">M 3.7</span></li>
+    <li>Rawls borrows Hume's "circumstances of justice" to say when questions of justice arise. Could questions of fair treatment arise even in the golden age? <span class="ref">M 3.12–13</span></li>
+    <li>Did trade ever contract the circle, as in the slave trade? <span class="ref">M 3.21</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Unique goods.</b> Property would survive but shrink to whatever stays scarce: unique objects and places, and also time, attention and status. That supports Hume rather than refuting him, since justice tracks scarcity wherever it appears. M 3.5 already shows rules attaching to particular scarce goods (wells) and not to plentiful ones (land).</li><li><b>The kibbutz.</b> It counts both ways. Decades of common property show that strong shared commitment, small size and mutual monitoring can sustain sharing far longer than an "ardour" that cools. The later move to differential pay and private ownership fits Hume's mechanism of returning self-interest. The fairest verdict is that Hume overstated the speed, not the direction. Also, the kibbutz was never rule-free: it ran on its own internal rules.</li><li><b>Rawls.</b> Hume's claim is functional: justice is <i>useful</i> only under moderate scarcity and limited generosity. Rawls uses the same conditions to say when questions of justice <i>arise</i>. In a golden age, property questions vanish, but questions of fair treatment (respect, turns, standing, recognition) might remain. Hume's result is easier to reach because his "justice" is so narrow.</li><li><b>The slave trade.</b> Commerce with outsiders coexisted with treating some of them as property. Interdependence extended justice to trading <i>partners</i>, not to those who were traded. That is the logic of M 3.18–19: justice reaches those whose cooperation one needs. The case shows the limit of Hume's optimism. Trade can widen the circle, and an existing circle makes trade possible, but neither guarantees inclusion of the powerless.</li></ol><p class="note-ans">Suggested lines of argument, not settled answers.</p></details>
+</section>
+
+<!-- 2 -->
+<section class="theme wrap" id="property">
+  <p class="covers"><span class="mark"></span>Covers M 3.4–5, M 3.22–3.34, with M App3.10 note</p>
+  <h2>Why property rights</h2>
+  <p class="lede">Part I explained why possessions must be separated at all. Part II asks a second, separate question: which rules should separate them? The answer has the same source. "The good of mankind is the only object of all these laws." <span class="ref">M 3.22</span></p>
+
+  <h3>Property follows scarcity, not importance</h3>
+  <figure class="figure">
+    <div class="strip">
+      <div><b>Air and water</b><span class="tag">Most necessary, yet plentiful</span>Left in common; no lavish use is unjust. <span class="ref">M 3.4</span></div>
+      <div><b>Land in empty, fertile countries</b><span class="tag">Plentiful</span>Treated "on the same footing" as air. <span class="ref">M 3.4</span></div>
+      <div class="owned"><b>Wells in Abraham's land</b><span class="tag">Scarce, while land was not</span>Property in water but none in land: the reverse of Hume's Britain. <span class="ref">M 3.5</span></div>
+      <div class="owned"><b>The sea</b><span class="tag">Free while inexhaustible</span>Hume predicts claims of exclusive dominion once its advantages become exhaustible. <span class="ref">M 3.4</span></div>
+    </div>
+    <figcaption>Grey: left in common. Teal: becomes property. Which goods are owned depends on relative scarcity in a given place and time.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li><strong>Merit-based allocation fails.</strong> A designer ignorant of human nature would give the most to the most virtuous. But merit is obscure and everyone overrates his own, so "no determinate rule of conduct" results. A rule best "in speculation" can be "totally pernicious" in practice. <span class="ref">M 3.23</span></li>
+    <li><strong>Equality is weighed, then rejected.</strong> Hume states the case for equality at its strongest before answering it.</li>
+  </ul>
+
+  <figure class="figure">
+    <div class="ledger">
+      <div class="pro"><h4>What Hume concedes</h4><ol>
+        <li>Nature is generous enough that equal shares, improved by industry, would give everyone the necessaries and most comforts. <span class="ref">M 3.25</span></li>
+        <li>Departing from equality, "we rob the poor of more satisfaction than we add to the rich": diminishing marginal utility, a century early. <span class="ref">M 3.25</span></li>
+        <li>Sparta and the agrarian laws of Rome and Greece show equality was partly practised. <span class="ref">M 3.25</span></li>
+      </ol></div>
+      <div class="con"><h4>Why he rejects perfect equality</h4><ol>
+        <li><b>Instability.</b> Different degrees of "art, care, and industry" break any equal division at once. <span class="ref">M 3.26</span></li>
+        <li><b>Incentives.</b> Checking those virtues makes want "unavoidable to the whole community". <span class="ref">M 3.26</span></li>
+        <li><b>Tyranny.</b> A "rigorous inquisition" would be needed, yet levelling property also levels the authority required to run it. <span class="ref">M 3.26</span></li>
+      </ol></div>
+    </div>
+    <figcaption>The target is <i>perfect</i> equality; the concession about the poor and the rich still stands. The lesson: know human nature and avoid both "selfish avidity" and "extensive enthusiasm" <span class="ref">M 3.27</span>.</figcaption>
+  </figure>
+
+  <h3>Four rules common sense finds useful</h3>
+  <figure class="figure">
+    <div class="rules">
+      <div><b>What you make or improve is yours</b><span>to encourage useful habits of industry</span></div>
+      <div><b>Property passes to children and kin</b><span>for the same useful purpose</span></div>
+      <div><b>Property can be transferred by consent</b><span>to make commerce possible</span></div>
+      <div><b>Contracts and promises must be kept</b><span>to secure mutual trust</span></div>
+    </div>
+    <figcaption>Each rule comes with a reason about consequences <span class="ref">M 3.28</span>. Contrast Locke, for whom you own what you make because you mixed your labour with it.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>Even natural-law writers, whatever principles they start from, end by appealing to "the convenience and necessities of mankind", and a concession made against one's own system carries extra weight. <span class="ref">M 3.29</span></li>
+    <li>When several rules are equally useful, "the slightest analogies" pick one, because having no rule would breed endless dispute. First possession is the standard example, a focal point in Schelling's later sense. <span class="ref">M 3.31</span></li>
+    <li>When utility and analogy both fail, civil law decides: reason cannot say how many years of possession should give title, so legislators set different periods for different assets. <span class="ref">M 3.33</span></li>
+    <li>In extraordinary cases property yields to "the safety of the people", because it was only ever respected because public interest "commonly" requires it. <span class="ref">M 3.32</span></li>
+    <li>Civil laws adapt the rules to each society's government, manners, climate, religion and commerce (Montesquieu), but their only aim remains the interest of society. <span class="ref">M 3.34</span></li>
+    <li>Hume separates the need for <strong>some</strong> stable division, which is "obvious, strong, and invincible", from the rules assigning particular things to particular people, which often rest on slight considerations of utility, humanity or imagination. <span class="ref">M App3.10 note</span></li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Is inheritance the weakest of the four rules? Hume himself later says it rests largely on "connexions of the imagination". <span class="ref">M 3.28</span><span class="ref">M App3.10 note</span></li>
+    <li>Is Hume's real position on equality a rejection or a tradeoff? His essay "Of Commerce" (1752) argues that great inequality weakens a state. <span class="ref">M 3.25–26</span></li>
+    <li>Where do modern merit-based schemes (performance pay, grants, admissions) run into the two problems of M 3.23?</li>
+    <li>Property is inflexible in ordinary cases yet overridable in emergencies. Is the line between a sympathetic exception and suspending the whole system stable? <span class="ref">M 3.32</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Inheritance.</b> It is the weakest of the four on incentive grounds. Whether bequest motives drive effort is contested, inheritance may blunt heirs' incentives, and Hume himself rests it partly on imagination and notes that it exists where the incentive argument cannot apply. Its defence is security of family provision and the danger of the alternative: confiscation at death would need the enforcement apparatus M 3.26 warns against. So the utility question is about <i>degree</i> (estate taxation), not existence.</li><li><b>Rejection or tradeoff.</b> Tradeoff. All three objections in M 3.26 bite at <i>perfect</i> equality, while the diminishing-marginal-utility concession of M 3.25 stands, and "Of Commerce" favours broad enjoyment of the fruits of labour. A utility-based theory implies an interior optimum, something like Okun's leaky bucket. What Hume adds is a caution: because stable titles matter so much, redistribution should work through general rules such as taxes, not reassignment of particular holdings.</li><li><b>Merit-based schemes.</b> All three meet both problems. On information: performance pay rewards noisy, gameable measures (multitasking, teaching to the test); grant review shows low reviewer agreement and a Matthew effect; admissions rely on proxies that track preparation and money. On self-conceit: most people think themselves above average, so honest rankings read as unfair and invite influence activities, appeals, and disputes over what counts as merit. They survive by doing what Hume recommends. They allocate on verifiable proxies under fixed rules, keep stakes bounded within a stable property system, and secure finality, sometimes by lottery among fundable proposals, which is M 3.31 in action.</li><li><b>Inflexible yet overridable.</b> The distinction holds if the trigger is itself rule-governed. An exception for a sympathetic individual invites every claimant to argue he is special (the Cyrus problem). An emergency suspension responds to a public condition, applies generally and is temporary. It becomes unstable when whoever benefits also declares the emergency. Hence constitutional limits and compensation for takings, which preserve expectations even when property is overridden. Hume himself offers little protection here.</li></ol><p class="note-ans">Suggested lines of argument, not settled answers.</p></details>
+</section>
+
+<!-- 3 -->
+<section class="theme wrap" id="power">
+  <p class="covers"><span class="mark"></span>Covers M 3.9–3.11, M 3.18–3.19</p>
+  <h2>Justice and power</h2>
+  <p class="lede">The most uncomfortable consequence of the theory. If justice exists because mutual restraint benefits both sides, it reaches only those who can make restraint worth the other side's while.</p>
+
+  <figure class="figure">
+    <div class="spectrum" aria-hidden="true">
+      <div class="ends"><span>Rough equality of power</span><span>Overwhelming superiority</span></div>
+      <div class="bar"></div>
+    </div>
+    <div class="zones">
+      <div><b>Justice</b>Each can harm the other, so each gains from restraint. "Society" in Hume's sense "supposes a degree of equality". <span class="ref">M 3.18</span></div>
+      <div><b>Rights won by leverage</b>Women, reduced to near slavery in many nations, usually "break the confederacy" through their own influence. <span class="ref">M 3.19</span></div>
+      <div><b>Humanity only</b>Rational but powerless beings are owed "gentle usage", but no justice and no property; the relation is command and obedience. <span class="ref">M 3.18</span></div>
+    </div>
+    <figcaption>On Hume's account, rights track the ability to make one's interests count.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>Imagine rational creatures too weak ever to make us feel their resentment. Restraint brings the stronger party no benefit, so justice has no function; only the separate duty of humanity remains. <span class="ref">M 3.18</span></li>
+    <li>This is "plainly" our relation to animals. Europeans' sense of superiority "tempted us to imagine" the native peoples of the Americas in the same position, and so they threw off justice "and even of humanity", which Hume presents as a moral failure. <span class="ref">M 3.19</span></li>
+    <li>Read that sentence carefully but not generously: Hume also wrote a notorious racist footnote in "Of National Characters". The passage is not evidence of a general anti-racist stance. <span class="ref">M 3.19</span></li>
+    <li>His account of women is condescending in tone but consistent in logic: rights expand as bargaining power expands. <span class="ref">M 3.19</span></li>
+    <li>Reciprocity sets the same limit between enemies. Justice lapses among ruffians, and even the laws of war, which are themselves rules of mutual advantage, lapse against a side that keeps none. <span class="ref">M 3.9</span><span class="ref">M 3.11</span></li>
+    <li>Inside society, punishment applies the logic to the state's own power: for a criminal the ordinary rules are "suspended for a moment", for the benefit of society. <span class="ref">M 3.10</span></li>
+    <li>Later writers call this view "justice as mutual advantage" (Gauthier, 1986), contrasting it with "justice as impartiality" (Barry, 1989).</li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Nussbaum (2006) argues mutual-advantage theories fail exactly here: people with severe disabilities, animals, distant foreigners. Is Hume's duty of "humanity" enough, or does the weaker party need rights? <span class="ref">M 3.18</span></li>
+    <li>Rights have historically expanded with leverage (the franchise, married women's property, labour rights). Does that confirm Hume as history? Does it make him right as a norm? <span class="ref">M 3.19</span></li>
+    <li>The Geneva Conventions bind "in all circumstances" and forbid reprisals. Rejection of Hume's reciprocity, or a firmer rule that cannot unravel? <span class="ref">M 3.11</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Humanity or rights.</b> Humanity alone is fragile. It depends on the stronger party's sympathy, which Hume admits weakens with distance (M 5.41) and yields to interest. Rights give standing that does not wait on anyone's feelings. A Humean reply is that rights for the weak can be useful to everyone: anyone may become old, ill or disabled, and the general point of view can extend approval beyond those who can retaliate. Still, pure mutual advantage leaves a gap that many think only an impartiality principle fills.</li><li><b>History versus norm.</b> As history, there is real support: rights often expanded with organisation, votes and economic weight. As a norm, no, since how rights spread does not show how they ought to. Two complications: Hume himself calls the abandonment of humanity a failure (M 3.19), and many expansions were driven by people who had nothing to gain, such as abolitionists. That is sympathy at work, which Section V would predict.</li><li><b>The Geneva Conventions.</b> They are best read as a more sophisticated application of Hume. A reciprocity-contingent rule unravels, because each side claims the other violated first and reprisals escalate, which is the vault losing a stone. An unconditional rule is more useful than a contingent one, like the inflexible rules of App3.6. But this does go beyond the letter of M 3.11, which explicitly allows dropping the rules against an enemy who keeps none.</li></ol><p class="note-ans">Suggested lines of argument, not settled answers.</p></details>
+</section>
+
+<!-- 4 -->
+<section class="theme wrap" id="source">
+  <p class="covers"><span class="mark"></span>Covers M 3.1, M 3.40–3.48, M App3.7–8</p>
+  <h2>The main source of justice</h2>
+  <p class="lede">Hume poses a dilemma. Our sense of justice either comes from reflecting on its usefulness, or it is a simple instinct "like hunger, thirst, and other appetites". He eliminates the instinct and leaves utility standing. <span class="ref">M 3.40</span></p>
+
+  <ul class="claims">
+    <li>The thesis has two parts. <strong>Origin:</strong> the institution exists because it serves the public good. <strong>Merit:</strong> we approve of just conduct because we reflect on those consequences. <span class="ref">M 3.1</span><span class="ref">M 3.48</span></li>
+    <li>Property is not one relation but many: occupation, labour, prescription, inheritance, contract. An instinct for it would need "ten thousand different instincts" for ideas that a thousand volumes of commentators have failed to define. <span class="ref">M 3.41–42</span></li>
+    <li>Kings, senates and judges change property, and we accept even mistaken verdicts for the sake of peace and finality. Nobody has "innate ideas of prætors and chancellors and juries". <span class="ref">M 3.43</span></li>
+  </ul>
+
+  <figure class="figure">
+    <div class="pair">
+      <div>
+        <svg viewBox="0 0 220 110" role="img" aria-label="Three identical nests">
+          <g fill="none" stroke="var(--stone-edge)" stroke-width="2.2">
+            <path d="M15 70 Q40 100 65 70"/><path d="M18 72 Q40 92 62 72"/>
+            <path d="M85 70 Q110 100 135 70"/><path d="M88 72 Q110 92 132 72"/>
+            <path d="M155 70 Q180 100 205 70"/><path d="M158 72 Q180 92 202 72"/>
+          </g>
+          <g fill="var(--stone-edge)"><circle cx="35" cy="73" r="5"/><circle cx="45" cy="74" r="5"/><circle cx="105" cy="73" r="5"/><circle cx="115" cy="74" r="5"/><circle cx="175" cy="73" r="5"/><circle cx="185" cy="74" r="5"/></g>
+        </svg>
+        <p><b>Instinct:</b> all birds of a species build the same nest, in every age and country. <span class="ref">M 3.44</span></p>
+      </div>
+      <div>
+        <svg viewBox="0 0 220 110" role="img" aria-label="Three different houses, each with roof and walls">
+          <g fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2">
+            <rect x="12" y="55" width="50" height="45"/><path d="M8 57 L37 28 L66 57 Z"/>
+            <rect x="82" y="45" width="56" height="55"/><rect x="78" y="38" width="64" height="8"/>
+            <rect x="158" y="60" width="52" height="40"/><path d="M152 62 Q184 20 216 62 Z"/>
+          </g>
+          <g fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"><rect x="30" y="70" width="12" height="12"/><rect x="95" y="58" width="12" height="12"/><rect x="113" y="58" width="12" height="12"/><rect x="178" y="72" width="12" height="12"/></g>
+        </svg>
+        <p><b>Reason and custom:</b> houses differ across times and places, yet all have roofs, walls and windows because they serve the same needs. So do property laws. <span class="ref">M 3.44–45</span></p>
+      </div>
+    </div>
+  </figure>
+
+  <ul class="claims">
+    <li>Property rules are full of "finer turns and connexions of the imagination" that no instinct could produce. <span class="ref">M 3.46</span></li>
+    <li>The one real difficulty: through education we condemn injustice automatically, without feeling any calculation. Habit hides the origin, yet in daily life we keep asking "<i>What must become of the world, if such practices prevail?</i>" <span class="ref">M 3.47</span></li>
+    <li>Justice arises from convention, but not in the sense of a promise, since we cannot be bound to keep promises by having promised to. It is a <strong>sense of common interest</strong>, felt by each, observed in others, and carrying everyone into a general plan. <span class="ref">M App3.7</span></li>
+    <li>Since utility shows such force in the case of justice, Newton's rule ("to the same effects, the same causes") lets Hume extend it: it is the sole source of approval for justice and fidelity and a large part of the merit of benevolence. <span class="ref">M 3.48</span></li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Maynard Smith's "bourgeois strategy" and the endowment effect suggest a simple instinct favouring possession may exist. Does Hume's argument survive in a narrower form? <span class="ref">M 3.41</span></li>
+    <li>"What if everyone did that?" sounds Kantian, but Hume asks about consequences. Which reading fits how people actually use the question? <span class="ref">M 3.47</span></li>
+    <li>Is extending utility from justice to benevolence a legitimate use of Newton's rule, or an overextension? <span class="ref">M 3.48</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>A possession instinct.</b> Hume's argument survives in a narrower form. A natural bias favouring the possessor may explain the <i>starting points</i> (present and first possession), which Hume himself says the imagination favours (App3.10 note). It cannot explain prescription periods, inheritance, contract or the authority of courts. The modern picture of conventions built on a natural focal point, in Sugden and Skyrms, is Humean in spirit.</li><li><b>"What if everyone did that?"</b> Most everyday uses are consequentialist: people point to the disorder that would follow. Some uses are about fairness: "you are making an exception of yourself", said even when one person's act has negligible effects, which is closer to Kant. Hume's App3.3 bridges the two: utility belongs to the scheme, so the free-rider is blamed for exempting himself from a useful system.</li><li><b>Newton's rule.</b> Partly legitimate. Approval of justice and approval of benevolence are similar effects, so assigning them a common cause is reasonable. Hume claims <i>sole</i> for justice but only <i>a considerable part</i> for benevolence, which shows he sees the risk. The overextension would be to deny that benevolence also pleases immediately, as App3.2 and his later sections on agreeable qualities allow.</li></ol><p class="note-ans">Suggested lines of argument, not settled answers.</p></details>
+</section>
+
+<!-- 5 -->
+<section class="theme wrap" id="constructs">
+  <p class="covers"><span class="mark"></span>Covers M 3.30, M 3.35–3.39 with notes</p>
+  <h2>Social constructs and superstition</h2>
+  <p class="lede">Hume sets a trap for his own theory. The reasoning that exposes superstition seems to expose property just as well: in neither case does anything in the object explain the strength of our feeling.</p>
+
+  <ul class="claims">
+    <li>"Uninstructed nature, surely, never made any such distinction" as mine and yours. Objects are physically separate from us; only "the general interests of society" connect them to an owner. <span class="ref">M 3.30</span></li>
+    <li>What is property? Whatever it is lawful for one person alone to use, as fixed by statutes, customs, precedents and analogies. Ignore their common aim and the laws of property look "whimsical, unnatural, and even superstitious". <span class="ref">M 3.35</span></li>
+  </ul>
+
+  <figure class="figure">
+    <div class="scroll">
+      <table class="t-wide">
+        <thead><tr><th style="width:50%">Superstition <span class="ref">M 3.36</span></th><th>Justice <span class="ref">M 3.37</span></th></tr></thead>
+        <tbody>
+          <tr><td>A Syrian would starve rather than eat pigeon; an Egyptian would not approach bacon.</td><td>I may eat from this tree, but the fruit of an identical tree ten paces off is criminal to touch.</td></tr>
+          <tr><td>Fowl is lawful on Thursday and abominable on Friday; eggs are allowed in this diocese and damnable a hundred paces away.</td><td>An hour ago, wearing this coat deserved punishment; "a few magical syllables" (a sale) have made it mine.</td></tr>
+          <tr><td>A building profane yesterday is holy today, after certain words are muttered over it.</td><td>The same house is lawful to live in on this side of the river, but not across it.</td></tr>
+          <tr><td class="bad" colspan="2">Examine the objects by sight, smell, taste, chemistry or medicine: no difference is found in either column. <span class="ref">M 3.36–37</span></td></tr>
+          <tr><td class="bad"><b>Frivolous, useless, burdensome.</b></td><td class="verdict"><b>"Absolutely requisite to the well-being of mankind and existence of society."</b> <span class="ref">M 3.38</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>Both columns are human constructions. The difference lies not in their metaphysics but in their function.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>The debunking points at superstition are "too obvious to have any influence". Superstitions persist not through ignorance but through "education, prejudice, and passion". <span class="ref">M 3.36</span></li>
+    <li>Strip away usefulness and a sale is as unintelligible as a liturgy that makes bricks sacred. Usefulness is the whole difference. <span class="ref">M 3.38</span></li>
+    <li>Promises show this most clearly. Will alone binds no one; words must express it. Once spoken, words bind even against a secret contrary intention, but not when used without understanding or in evident jest. These rules look inconsistent if promising is about inner intention and make sense if it exists to secure reliable expectations. <span class="ref">M 3.38 note</span></li>
+    <li>The casuists' "secret direction of the intention" outraged people because society could not survive it. Notably, nobody applies the doctrine of the priest's secret intention to civil contracts, which shows that even dogmatic superstition never wins full practical belief. <span class="ref">M 3.38 note</span></li>
+    <li>Debunking strengthens rather than weakens justice: "what stronger foundation can be desired" than that society, even human nature, could not subsist without it? <span class="ref">M 3.39</span></li>
+  </ul>
+
+  <div class="takeaway">
+    <h3>The point in one sentence</h3>
+    <p>Property is a social construct in the same sense as a sacred building (an "institutional fact", in Searle's later term), but a construct that sustains society is not a superstition, and seeing why it exists gives the strongest reason to respect it. <span class="ref">M 3.38–39</span></p>
+  </div>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Once people see property as a convention, might some feel freer to break it when unobserved, as Hume's "sensible knave" in the <i>Enquiry</i>'s Conclusion would? <span class="ref">M 3.39</span></li>
+    <li>Are there features of contract law that protect something other than reliance, such as the promisor's autonomy or fairness? <span class="ref">M 3.38 note</span></li>
+    <li>Money and marriage are also constructs. Where would Hume place a contested convention whose usefulness is disputed?</li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>The sensible knave.</b> Some might. Seeing the function of a system gives reasons to support the system, not to keep every rule when unobserved; the knave can still free-ride. Understanding strengthens commitment in those who already care about society through sympathy, but does little for those who do not. Hence the role of enforcement in the Coda, and Hume's reply in the Conclusion that knaves usually get caught and lose the peace of mind integrity brings.</li><li><b>Beyond reliance.</b> Some doctrines seem to protect fairness or autonomy: refusing to enforce unconscionable bargains or agreements made under duress, and the freedom not to contract at all. Many can be recast in Humean terms as useful general rules. Bargains extracted by pressure, for instance, undermine the trust that promising exists to secure. Whether every such doctrine reduces to utility is the open question.</li><li><b>A contested convention.</b> Hume's test is usefulness on the whole, which is an empirical question and may vary by society (M 3.34). A convention that is "frivolous, useless, and burdensome" deserves the treatment of superstition. But stability is itself valuable, so the case for reform must outweigh the cost of unsettling expectations. Changes in marriage law show conventions being reassessed against what they actually do for people.</li></ol><p class="note-ans">Suggested lines of argument, not settled answers.</p></details>
+</section>
+
+<!-- 6 -->
+<section class="theme wrap" id="utility">
+  <p class="covers"><span class="mark"></span>Covers M 5.1–5.47</p>
+  <h2>Why utility pleases</h2>
+  <p class="lede">Section III showed that we approve of justice because it is useful. Section V asks why usefulness should please us at all, especially when the use goes to other people. Hume's answer is sympathy.</p>
+
+  <ul class="claims">
+    <li>Usefulness pleases everywhere, even in objects: a ship with a swelling prow looks better to a sailor than a geometrically regular one, and square doors would "hurt the eye" because they do not fit the human figure. <span class="ref">M 5.1</span></li>
+    <li>Yet a useful person excites affection and esteem, while a useful object does not; we call herbs "virtuous" only by "the caprice of language". <span class="ref">M 5.1 note</span></li>
+    <li>Morality is not an invention of politicians. Education can strengthen or redirect moral feelings, but without a natural basis words like "honourable" and "shameful" could never have been understood. <span class="ref">M 5.3–4</span></li>
+    <li>So the end that the social virtues promote must please us, either through self-interest or "more generous motives". <span class="ref">M 5.4</span></li>
+    <li>The selfish theory was "excusable": private and public interest usually move together, so everyday cases cannot tell the two explanations apart. <span class="ref">M 5.5–6</span><span class="ref">M 5.16</span></li>
+  </ul>
+
+  <h3>The crucial experiment</h3>
+  <figure class="figure">
+    <div class="scroll">
+      <table class="t-wide">
+        <thead><tr><th>Case</th><th>Self-interest predicts</th><th>What we observe</th></tr></thead>
+        <tbody>
+          <tr><td>Virtue in distant ages and countries <span class="ref">M 5.7</span><span class="ref">M 5.10–11</span></td><td class="bad">Indifference</td><td class="verdict">Approval, without even asking where or when</td></tr>
+          <tr><td>A noble deed by an adversary <span class="ref">M 5.8</span></td><td class="bad">Disapproval</td><td class="verdict">Approval, as the exiled Athenian admired his generous enemy</td></tr>
+          <tr><td>Virtue that also benefits us <span class="ref">M 5.9</span><span class="ref">M 5.17</span></td><td>Approval</td><td class="verdict">Approval plus a distinct extra feeling: gratitude (or, when harmed, revenge)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>Where private and public interest separate, the moral sentiment survives; where they coincide, it grows. This is Hume's <i>experimentum crucis</i> <span class="ref">M 5.17</span>.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>The reply that we imagine ourselves as contemporaries fails: a real feeling cannot arise from an interest known to be imaginary. Fear of heights fades with habit, but moral discrimination grows sharper with practice. <span class="ref">M 5.13–14</span></li>
+    <li>Conclusion: "the interests of society are not, even on their own account, entirely indifferent to us", since nothing pleases as a means when its end leaves us cold. Why we have fellow-feeling at all is a first principle Hume declines to explain further. <span class="ref">M 5.15</span><span class="ref">M 5.17 note</span></li>
+    <li>Sympathy is emotional contagion: "the human countenance … borrows smiles or tears from the human countenance" (Horace). Moved by misery, we cannot be indifferent to its causes. <span class="ref">M 5.18</span></li>
+  </ul>
+
+  <h3>Four scenes, rising feeling</h3>
+  <figure class="figure">
+    <div class="steps" role="img" aria-label="Bar chart of four scenes with rising intensity of feeling">
+      <div class="s p"><div class="col" style="height:3rem"></div><b>A warm apartment</b>pleasure in ideas of ease <span class="ref">M 5.19</span></div>
+      <div class="s p"><div class="col" style="height:5.5rem"></div><b>A happy family</b>"a pleasing sympathy" <span class="ref">M 5.20</span></div>
+      <div class="s n"><div class="col" style="height:8rem"></div><b>An inheritance threatened</b>immediate indignation <span class="ref">M 5.21</span></div>
+      <div class="s n"><div class="col" style="height:11rem"></div><b>Provinces enslaved</b>horror and antipathy <span class="ref">M 5.22</span></div>
+    </div>
+    <figcaption>None of the scenes touches the listener's interest, yet feeling grows with the scale of happiness or misery. Teal: approval; ochre: disapproval.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>Theatre, pastoral and history show sympathy where self-interest is plainly absent. Crowds amplify it; indifferent characters on stage damp it; fishermen's toil spoils Sannazaro's seaside pastoral. <span class="ref">M 5.24–29</span></li>
+    <li>Intensity depends on <strong>scale</strong> (the Athenian army at Syracuse versus Pisa's petty wars) and on <strong>vividness</strong> (Tacitus versus Suetonius on the same tyrants). <span class="ref">M 5.33–34</span></li>
+    <li>Sympathy has a dark side: "popular sedition, party zeal, a devoted obedience to factious leaders" come from the same source. <span class="ref">M 5.35</span></li>
+    <li>Benevolence need not be strong, only present. Where self-interest is silent, even a weak concern for others decides: nobody treads as willingly on a stranger's gouty toes as on the pavement. <span class="ref">M 5.39</span></li>
+    <li>Pure disinterested malice probably exists in no human heart; a creature that had it would invert every moral sentiment. <span class="ref">M 5.40</span></li>
+  </ul>
+
+  <h3>The general point of view</h3>
+  <figure class="figure">
+    <svg viewBox="0 0 620 170" role="img" aria-label="An eye sees two identical towers at different distances; the far one subtends a smaller angle" style="display:block;width:100%;height:auto">
+      <ellipse cx="40" cy="110" rx="20" ry="11" fill="none" stroke="var(--ink)" stroke-width="1.5"/><circle cx="44" cy="110" r="5" fill="var(--ink)"/>
+      <line x1="40" y1="150" x2="600" y2="150" stroke="var(--rule)"/>
+      <rect x="230" y="60" width="30" height="90" fill="var(--accent-soft)" stroke="var(--accent)"/>
+      <rect x="500" y="60" width="30" height="90" fill="var(--accent-soft)" stroke="var(--accent)"/>
+      <g stroke="var(--accent)" stroke-dasharray="4 4"><line x1="50" y1="110" x2="230" y2="60"/><line x1="50" y1="110" x2="230" y2="150"/></g>
+      <g stroke="var(--ochre)" stroke-dasharray="4 4"><line x1="50" y1="110" x2="500" y2="60"/><line x1="50" y1="110" x2="500" y2="150"/></g>
+      <g font-family="Libre Caslon Text, Georgia, serif" font-size="13" fill="var(--muted)" font-style="italic">
+        <text x="205" y="45">our own country, now</text><text x="440" y="45">distant ages and nations</text>
+      </g>
+    </svg>
+    <figcaption>An object twice as far throws half the image on the eye, yet we judge it the same size. Likewise distant virtue moves us less, yet judgment rates its merit equal. <span class="ref">M 5.41</span></figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>We judge by tendencies, not accidents: a peach tree whose fruit the snails destroyed is still a good tree, and good intentions defeated by fortune earn the same general praise. <span class="ref">M 5.41 note</span></li>
+    <li>Why correct our feelings at all? Because language is "formed for general use". People in different positions could never converse about character unless they adopted "some general unalterable standard". The heart does not fully follow it, but it serves "in company, in the pulpit, on the theatre, and in the schools". <span class="ref">M 5.42</span></li>
+    <li>Virtue far away is "like a fixed star": as bright as the sun to reason, but giving neither light nor heat until acquaintance or eloquence brings it close. <span class="ref">M 5.43</span></li>
+    <li>Two routes converge. <i>A priori</i>, creatures like us cannot be indifferent to others' welfare; <i>a posteriori</i>, utility is the observed source of praise, and the sole one for justice, fidelity and allegiance. Each confirms the other. <span class="ref">M 5.43–46</span></li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Do dictator and ultimatum games, or inequity-aversion models (Fehr and Schmidt, 1999), settle the question Hume raised? They measure something narrower than "humanity". <span class="ref">M 5.17</span></li>
+    <li>Slovic's "psychic numbing" suggests concern can fall as victims multiply. Does that contradict Hume's point about scale, or fit his stress on vividness? <span class="ref">M 5.31–34</span></li>
+    <li>If sympathy also drives party zeal, what makes moral sympathy different from crowd feeling? <span class="ref">M 5.35</span><span class="ref">M 5.41–42</span></li>
+    <li>Smith's impartial spectator, Harsanyi's impartial observer, Rawls's original position: what changes when the spectator becomes a formal decision-maker? <span class="ref">M 5.41</span></li>
+    <li>Hume judges a statesman by the good done to his own country, yet in "Of the Jealousy of Trade" he prayed for France's commerce. Are these consistent? <span class="ref">M 5.38 note</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Experiments.</b> They support Hume but do not settle the question. Positive giving to anonymous strangers in dictator games shows other-regarding preferences exist; giving falls when anonymity is tightened, which suggests image concerns matter too. Hume's claim is about a spectator's <i>approval</i>, which third-party punishment experiments track more closely: people pay to punish unfairness done to others. His claim is modest, that concern for others has <i>some</i> weight, and the evidence confirms at least that.</li><li><b>Psychic numbing.</b> It fits Hume. His scale examples work through vivid narrative; Syracuse is a story, not a statistic. Statistics are faint ideas and an identified victim is a lively one, so the identifiable-victim effect is Hume's vividness. The general point of view is then the correction: judgment says harm scales with numbers even when feeling does not, which is a reason for institutions that act on numbers.</li><li><b>Moral sympathy versus crowd feeling.</b> The mechanism is the same; the difference is correction. Party zeal is uncorrected sympathy with one's own group, amplified by contagion. Moral sympathy is corrected for position and partiality, attends to the tendencies of actions for all affected, and must be stable enough to share with people in other positions (M 5.42).</li><li><b>Formal spectators.</b> Smith's spectator is an imagined person whose sentiments we try to match; it still judges characters, as Hume does. Harsanyi's observer, with an equal chance of being anyone, maximises average utility; Rawls's parties behind the veil choose principles for institutions. Formalisation shifts the task from judging characters to choosing institutions, and from sentiment to rational choice. Conclusions become determinate, but now depend on assumptions such as attitudes to risk.</li><li><b>The statesman and the jealousy of trade.</b> The two are consistent wherever trade is positive-sum: a minister who promotes trade serves his country and its partners alike. The footnote concerns cases where "a competition arises", and the essay argues these are rarer than mercantilists think. The tension returns where gains really are at a partner's expense, as with a large country's terms-of-trade-improving tariff. The footnote would praise that minister; the spirit of the essay would not.</li></ol><p class="note-ans">Suggested lines of argument, not settled answers.</p></details>
+</section>
+
+<!-- 7 -->
+<section class="theme wrap" id="appendix">
+  <p class="covers"><span class="mark"></span>Covers M App3.1–3.11</p>
+  <h2>What Appendix III contributes</h2>
+  <p class="lede">The appendix answers the puzzle left open at M 3.1. If justice rests on utility, why must we return a fortune to a miser, or let a bad heir inherit? Because utility belongs to the system of rules, not to each act. <span class="ref">M App3.1–3</span></p>
+
+  <figure class="figure" id="wallVault">
+    <div class="wv">
+      <div>
+        <svg id="wallSvg" viewBox="0 0 240 190" role="img" aria-label="A wall of bricks"></svg>
+        <h4>Benevolence is a wall</h4>
+        <p>Each stone adds height in proportion to each worker's care. Take one away and the wall is one stone lower. <span class="ref">M App3.5</span></p>
+      </div>
+      <div>
+        <svg id="archSvg" viewBox="0 0 240 190" role="img" aria-label="A vault of stones"></svg>
+        <h4>Justice is a vault</h4>
+        <p>Each stone alone would fall; the whole stands only by "the mutual assistance and combination of its corresponding parts". <span class="ref">M App3.5</span></p>
+      </div>
+    </div>
+    <div class="btnrow">
+      <button id="stoneBtn" type="button" aria-pressed="false">Remove one stone</button>
+      <span class="status" id="stoneStatus" aria-live="polite">Both structures are standing.</span>
+    </div>
+  </figure>
+
+  <ul class="claims">
+    <li>Benevolence acts directly on one person; each act is "compleat and entire", and a lone benefactor is admired all the more for his rarity. <span class="ref">M App3.2</span></li>
+    <li>Justice benefits society only as "the whole scheme or system, concurred in by the whole, or the greater part". A single just act can be harmful: riches inherited by a bad man are "the instrument of mischief". <span class="ref">M App3.3</span></li>
+    <li><strong>Cyrus and the coats.</strong> The young Cyrus let a big boy swap his small coat for a small boy's big one, since each now fitted. His teacher corrected him with "general, inflexible rules". The swap improved the fit for both, but a voluntary trade could have achieved it without letting the strong reassign by force. <span class="ref">M App3.4</span></li>
+    <li>Property laws are general and blind to persons: they will take goods acquired without good title from a generous man and give them to a selfish miser. It is enough that the system's good "much preponderate" over its evil. <span class="ref">M App3.6</span></li>
+    <li>Convention means a shared sense of common interest, not a promise. Two men row a boat "without any promise or contract"; gold and silver become money and words become language in the same way. Whatever benefits all only if all perform "can arise from no other principle". Hume says Grotius's account of property is "in the main" the same. <span class="ref">M App3.7–8</span></li>
+    <li>Is justice natural? Not if "natural" means instinctive rather than artificial; yes if it means usual or non-miraculous. For "so sagacious an animal", what necessarily follows from its intellect may fairly be called natural. The dispute is "merely verbal". <span class="ref">M App3.9</span></li>
+    <li>Courts seek general rules free of favour. Precedent binds even when the first decision had no good reason, and analogy fills the gaps, so that in many fine questions there is no truth or falsehood on either side, only a need for some stable rule. <span class="ref">M App3.10</span></li>
+    <li>The assignment rules follow the imagination: small rivers belong to the owners of their banks, the Rhine and Danube to nations of "suitable bulk", slowly deposited land to the adjacent field, and land torn off suddenly only once roots have grown into both. <span class="ref">M App3.10 note</span></li>
+    <li>Once rules exist, every injustice is both a public wrong and a private harm, and the private harm powerfully reinforces our blame. Wrongs with no identifiable victim are "more lightly thought of". <span class="ref">M App3.11</span></li>
+  </ul>
+
+  <div class="takeaway">
+    <h3>Three contributions of the appendix</h3>
+    <ol>
+      <li><b>Utility at the level of rules.</b> It resolves the tension of M 3.1: the scheme is useful even when single acts are not, which is why the rules must be inflexible (rule consequentialism; rules over discretion). <span class="ref">M App3.3–6</span></li>
+      <li><b>A theory of convention.</b> Justice is a self-sustaining pattern of mutual expectations, like rowing, money and language, not a contract. <span class="ref">M App3.7–8</span></li>
+      <li><b>Two levels of property.</b> The need for stable separation is invincible; who gets what is often settled by slight utility, humanity, precedent and imagination. <span class="ref">M App3.10</span></li>
+    </ol>
+  </div>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Is a lone just person, in a society where nobody else respects property, admirable or foolish? Compare the lone benefactor of App3.2 with the ruffians of M 3.9.</li>
+    <li>Rules or standards (Kaplow, 1992)? Are there areas of property law where flexible standards work better than Hume's inflexible rules? <span class="ref">M App3.6</span></li>
+    <li>Rowing is an assurance game, but respecting property looks more like a prisoner's dilemma. When does repeated interaction turn one into the other, and when does it fail? <span class="ref">M App3.8</span></li>
+    <li>Hume says the initial assignment is "pretty indifferent". Compare Coase (1960): indifferent for efficiency only with zero transaction costs, and never for distribution. <span class="ref">M App3.10 note</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>The lone just person.</b> In Hume's extreme case it is foolish: among ruffians, justice is "no longer of use" (M 3.9). Under partial compliance it can be admirable, because a visible example can help establish a convention, and reputation still pays. The asymmetry is the point of the wall and the vault: benevolence gains value from rarity; justice depends on concurrence.</li><li><b>Rules or standards.</b> On Kaplow's logic, standards suit heterogeneous, infrequent situations: nuisance ("reasonable use"), negligence, good faith in contract, unconscionability. Rules suit recurring, high-stakes questions where predictability matters, such as title, transfer and registration. Hume's insistence on inflexible rules fits the core of property better than its margins.</li><li><b>Assurance or dilemma.</b> In a one-shot interaction, respecting property is a prisoner's dilemma. Repetition with patient players who can observe each other makes cooperation an equilibrium through trigger strategies (the folk theorem), and the game behaves like an assurance game. It fails with large numbers, anonymity, present bias (a low discount factor, as in the Coda), or a known last round. That is exactly where Hume brings in government.</li><li><b>Hume and Coase.</b> Hume anticipates half of Coase: for production, what matters is a clear and stable assignment, not who gets what. He has no account of transaction costs, under which the assignment matters for efficiency too. He also says nothing about distribution, where the assignment always matters. His "pretty indifferent" is a claim about society's need for stability, not about welfare.</li></ol><p class="note-ans">Suggested lines of argument, not settled answers.</p></details>
+</section>
+
+<!-- 8 -->
+<section class="theme wrap" id="coda">
+  <p class="covers"><span class="mark"></span>Covers T 3.2.7.8 (optional reading)</p>
+  <h2>Coda: two neighbours and a meadow</h2>
+  <p class="lede">The Enquiry shows how conventions of justice arise. This passage from the <i>Treatise</i> shows where they stop working, and why government is needed.</p>
+
+  <blockquote>Two neighbours may agree to drain a meadow, which they possess in common … But 'tis very difficult, and indeed impossible, that a thousand persons shou'd agree in any such action. <span class="ref">T 3.2.7.8</span></blockquote>
+
+  <figure class="figure">
+    <div class="coda-fig">
+      <div>
+        <svg viewBox="0 0 200 150" role="img" aria-label="Two figures on either side of a shared meadow">
+          <rect x="45" y="60" width="110" height="60" rx="4" fill="var(--accent-soft)" stroke="var(--accent)"/>
+          <g stroke="var(--accent)" stroke-width="1.2" opacity=".7"><line x1="60" y1="75" x2="140" y2="75"/><line x1="60" y1="90" x2="140" y2="90"/><line x1="60" y1="105" x2="140" y2="105"/></g>
+          <g fill="var(--ink)"><circle cx="22" cy="72" r="8"/><rect x="15" y="83" width="14" height="28" rx="5"/><circle cx="178" cy="72" r="8"/><rect x="171" y="83" width="14" height="28" rx="5"/></g>
+          <text x="100" y="142" text-anchor="middle" font-family="Libre Caslon Text, Georgia, serif" font-size="12" fill="var(--muted)" font-style="italic">each is pivotal</text>
+        </svg>
+        <p><b>Two:</b> each knows the other's mind, and each sees that if he fails, the whole project is abandoned.</p>
+      </div>
+      <div>
+        <svg id="dots" viewBox="0 0 300 202" role="img" aria-label="A grid of one thousand dots, none of them pivotal"></svg>
+        <p><b>A thousand:</b> hard to plan, harder to execute, "while each seeks a pretext to free himself of the trouble and expence, and wou'd lay the whole burden on others."</p>
+      </div>
+    </div>
+    <figcaption>The difference between two and a thousand is the difference between being pivotal and being negligible: the free-rider problem, more than two centuries before Olson (1965).</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>Government first gives security in the <strong>execution</strong> and <strong>decision</strong> of justice, protecting us against others' weakness and passion, and against our own. <span class="ref">T 3.2.7.8</span></li>
+    <li>The root flaw is present bias: no quality causes "more fatal errors" than preferring "whatever is present to the distant and remote", judging objects by their nearness rather than their value. The ruffians of M 3.9 showed the same "blindness to future consequences". <span class="ref">T 3.2.7.8</span></li>
+    <li>Government does more than protect existing conventions: it obliges people to make them and to pursue common ends. <span class="ref">T 3.2.7.8</span></li>
+    <li>Magistrates solve both problems. Their own interest is bound to that of many subjects, they need consult no one to form a plan, and any failure in execution harms their interest, so they prevent it. Hence bridges, harbours, ramparts, canals, fleets and armies. <span class="ref">T 3.2.7.8</span></li>
+    <li>Government, "compos'd of men subject to all human infirmities", becomes by "one of the finest and most subtle inventions imaginable" a composition partly exempt from them. <span class="ref">T 3.2.7.8</span></li>
+  </ul>
+
+  <div class="takeaway">
+    <h3>The main idea</h3>
+    <p>Conventions of justice can arise spontaneously where groups are small and each member is pivotal. Scale and present bias break them. Government is the further invention that sustains conventions, and secures collective goods, in groups too large to manage them alone. <span class="ref">T 3.2.7.8</span><span class="ref">M 3.20–21</span></p>
+  </div>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Public choice (Buchanan and Tullock, 1962) says rulers pursue their own interests too, and Hume himself wrote that "every man ought to be supposed a knave" in designing a constitution. Is the "subtle invention" precisely institutional design that makes knaves serve the public?</li>
+    <li>Ostrom (1990) documents large communities managing commons with their own rules, monitoring and graduated sanctions. What lets them escape the thousand-person problem?</li>
+    <li>How does this limit change your reading of Section III's optimistic expanding circle? <span class="ref">M 3.20–21</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Knaves and design.</b> Yes. The two views reconcile if the "subtle invention" is institutional design: assume knaves, then arrange things so that even knaves serve the public, which is what Hume means when magistrates "find an immediate interest" in their subjects' interest. Public choice shows the alignment fails under concentrated interests and weak accountability, so the reconciliation depends on institutions Hume only gestures at.</li><li><b>Ostrom's commons.</b> Her design principles recreate Hume's small-group conditions at larger scale: clear boundaries, rules fitted to local conditions, participation in making them, accountable monitoring, graduated sanctions, cheap conflict resolution, and recognition of the right to organise. Defection becomes visible and each member's compliance matters again. This does not refute Hume: it shows the "magistrate" can be a community institution rather than the state.</li><li><b>The expanding circle revisited.</b> The circle extends only as far as conventions can be sustained. Beyond small groups that requires institutions, and between nations there is no common magistrate. International cooperation, trade agreements included, must therefore be self-enforcing through repeated interaction. Section III's optimism holds where interdependence is strong and observable, and needs institutional support everywhere else.</li></ol><p class="note-ans">Suggested lines of argument, not settled answers.</p></details>
+</section>
+
+<section class="questions wrap">
+  <h2>Questions</h2>
+  <ol>
+    <li>Hume claims utility is the <i>sole</i> origin of justice. Which thought experiment is most convincing, and which is weakest? <span class="ref">M 3.1–3.17</span></li>
+    <li>If justice exists only where people can harm each other, what do we owe to those who cannot? <span class="ref">M 3.18</span></li>
+    <li>Hume concedes equality would raise total happiness, then rejects it as impracticable and dangerous. Rejection or tradeoff? <span class="ref">M 3.25–26</span></li>
+    <li>Is moral approval grounded in sympathy a reliable foundation, given that sympathy also fuels faction? <span class="ref">M 5.35</span></li>
+    <li>How does the general point of view compare with Smith's impartial spectator and Rawls's original position? <span class="ref">M 5.41–42</span></li>
+    <li>Two neighbours can drain a meadow; a thousand cannot. What does this imply about the limits of justice as convention? <span class="ref">T 3.2.7.8</span></li>
+  </ol>
+</section>
+
+</main>
+
+
+<script>
+(function(){
+  var NS="http://www.w3.org/2000/svg";
+  function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+  function pt(cx,cy,r,a){var t=a*Math.PI/180;return [cx+r*Math.cos(t),cy-r*Math.sin(t)];}
+  function stonePath(cx,cy,r1,r2,a1,a2){
+    var o1=pt(cx,cy,r2,a1),o2=pt(cx,cy,r2,a2),i2=pt(cx,cy,r1,a2),i1=pt(cx,cy,r1,a1);
+    return "M"+o1[0]+" "+o1[1]+" A"+r2+" "+r2+" 0 0 1 "+o2[0]+" "+o2[1]+" L"+i2[0]+" "+i2[1]+" A"+r1+" "+r1+" 0 0 0 "+i1[0]+" "+i1[1]+" Z";
+  }
+
+  // Hero vault
+  var hero=document.getElementById("heroVault");
+  var stones=[
+    ["#justice","Why justice"],["#property","Property"],["#power","Power"],["#source","Source"],
+    ["#source","Public|utility",true],
+    ["#constructs","Constructs"],["#utility","Sympathy"],["#appendix","Appendix"],["#coda","Coda"]
+  ];
+  var cx=300,cy=300,r1=140,r2=258,n=stones.length,step=180/n,gap=.7;
+  el("line",{x1:20,y1:301,x2:580,y2:301,"class":"ground"},hero);
+  stones.forEach(function(s,i){
+    var a1=180-i*step-gap,a2=180-(i+1)*step+gap,m=180-(i+.5)*step;
+    var a=el("a",{href:s[0],"class":s[2]?"key":""},hero);
+    a.setAttribute("aria-label",s[1].replace("|"," "));
+    el("path",{d:stonePath(cx,cy,r1,r2,a1,a2),"class":"st"},a);
+    var p=pt(cx,cy,(r1+r2)/2,m);
+    if(s[2]){
+      var parts=s[1].split("|");
+      parts.forEach(function(w,j){var t=el("text",{x:p[0],y:p[1]+(j-.5)*16,"text-anchor":"middle","dominant-baseline":"central"},a);t.textContent=w;});
+    } else {
+      var rot=m>90?180-m:-m;
+      var t=el("text",{x:p[0],y:p[1],"text-anchor":"middle","dominant-baseline":"central",transform:"rotate("+rot+" "+p[0]+" "+p[1]+")"},a);
+      t.textContent=s[1];
+    }
+  });
+
+  // Wall
+  var wall=document.getElementById("wallSvg");
+  var bw=36,bh=18,rows=7,cols=6,x0=12,y0=180;
+  el("line",{x1:0,y1:181,x2:240,y2:181,stroke:"var(--stone-edge)","stroke-width":1.5},wall);
+  for(var r=0;r<rows;r++){
+    var off=(r%2)?bw/2:0;
+    for(var c=0;c<cols;c++){
+      var x=x0+off+c*bw,y=y0-(r+1)*bh;
+      if(r%2 && c===cols-1) continue;
+      var cls="brick"+(r===rows-1&&c===2?" out":"");
+      el("rect",{x:x+1,y:y+1,width:bw-2,height:bh-2,rx:1.5,"class":cls},wall);
+    }
+  }
+
+  // Arch
+  var arch=document.getElementById("archSvg");
+  el("line",{x1:0,y1:181,x2:240,y2:181,stroke:"var(--stone-edge)","stroke-width":1.5},arch);
+  var an=7,as=180/an;
+  for(var k=0;k<an;k++){
+    var b1=180-k*as-.8,b2=180-(k+1)*as+.8;
+    var path=el("path",{d:stonePath(120,180,62,108,b1,b2),"class":"vstone"+(k===3?" keyst":"")},arch);
+    path.dataset.rot=((k-3)*9+(k%2?6:-6));
+  }
+  var fig=document.getElementById("wallVault"),btn=document.getElementById("stoneBtn"),status=document.getElementById("stoneStatus");
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  btn.addEventListener("click",function(){
+    var on=!fig.classList.contains("removed");
+    fig.classList.toggle("removed",on);
+    btn.setAttribute("aria-pressed",on?"true":"false");
+    btn.textContent=on?"Put the stone back":"Remove one stone";
+    status.textContent=on?"The wall is one stone lower. Without its keystone, the vault falls.":"Both structures are standing.";
+    arch.querySelectorAll(".vstone:not(.keyst)").forEach(function(p){
+      p.style.transform=on&&!reduce?"translateY(70px) rotate("+p.dataset.rot+"deg)":"";
+    });
+  });
+
+  // Thousand dots
+  var dots=document.getElementById("dots");
+  for(var j=0;j<1000;j++){
+    var cxx=8+(j%40)*7.1,cyy=8+Math.floor(j/40)*7;
+    el("circle",{cx:cxx,cy:cyy,r:2,fill:"var(--stone-edge)"},dots);
+  }
+  var lbl=el("text",{x:150,y:198,"text-anchor":"middle","font-family":"Libre Caslon Text, Georgia, serif","font-size":12,fill:"var(--muted)","font-style":"italic"},dots);
+  lbl.textContent="no one is pivotal";
+
+  // open all collapsible blocks when printing or saving as PDF
+  var opened=[];
+  window.addEventListener("beforeprint",function(){opened=[];document.querySelectorAll("details:not([open])").forEach(function(d){d.open=true;opened.push(d);});});
+  window.addEventListener("afterprint",function(){opened.forEach(function(d){d.open=false;});});
+})();
+</script>
+</body>
+</html>
