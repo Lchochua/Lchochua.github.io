@@ -213,6 +213,8 @@ footer{color:var(--muted);font-size:.85rem;padding:3rem 0 4rem;text-align:center
   a{text-decoration:none;color:inherit}
   footer{padding:1.5rem 0 0}
 }
+.dl{margin:1.4rem 0 0}
+@media print{.dl{display:none}}
 </style>
 </head>
 <body>
@@ -234,6 +236,8 @@ footer{color:var(--muted);font-size:.85rem;padding:3rem 0 4rem;text-align:center
     <li><a href="#appendix">Appendix III</a></li>
     <li><a href="#coda">The meadow</a></li>
   </ul>
+
+  <p class="dl"><button type="button" id="pdfBtn">Download as PDF</button></p>
 
   <div class="reminder wrap" style="text-align:left">
     <p><b>How to read the references.</b> M = <i>Enquiry</i> (section.paragraph; App3 = Appendix III), T = <i>Treatise</i> (book.part.section.paragraph). Every summary statement ends with the paragraphs it draws on.</p>
@@ -807,6 +811,8 @@ footer{color:var(--muted);font-size:.85rem;padding:3rem 0 4rem;text-align:center
   }
   var lbl=el("text",{x:150,y:198,"text-anchor":"middle","font-family":"Libre Caslon Text, Georgia, serif","font-size":12,fill:"var(--muted)","font-style":"italic"},dots);
   lbl.textContent="no one is pivotal";
+
+  document.getElementById("pdfBtn").addEventListener("click",function(){window.print();});
 
   // open all collapsible blocks when printing or saving as PDF
   var opened=[];

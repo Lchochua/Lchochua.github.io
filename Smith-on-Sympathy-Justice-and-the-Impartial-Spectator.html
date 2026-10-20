@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smith on Sympathy, Justice and the Impartial Spectator: an illustrated summary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECEFF1; --surface:#F8F9FA; --ink:#1C2633; --muted:#556273; --rule:#C5CDD5;
+  --stone:#C9D0D6; --stone-edge:#9AA5B0; --accent:#1F6B66; --accent-soft:#D6E7E4;
+  --ochre:#9A6A15; --ochre-soft:#F1E6CF; --danger:#8B2E2E;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#141A21; --surface:#1C242D; --ink:#E3E8ED; --muted:#9AA7B4; --rule:#2E3945;
+    --stone:#34404C; --stone-edge:#4D5B69; --accent:#5FB3AB; --accent-soft:#1E3533;
+    --ochre:#D9A84E; --ochre-soft:#33291A; --danger:#D98080;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#141A21; --surface:#1C242D; --ink:#E3E8ED; --muted:#9AA7B4; --rule:#2E3945;
+  --stone:#34404C; --stone-edge:#4D5B69; --accent:#5FB3AB; --accent-soft:#1E3533;
+  --ochre:#D9A84E; --ochre-soft:#33291A; --danger:#D98080;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Libre Caslon Text",Georgia,"Times New Roman",serif;font-size:1.0625rem;line-height:1.7;
+  -webkit-text-size-adjust:100%;}
+img,svg{max-width:100%}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+.wide{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+h1{font-size:clamp(2.3rem,6.5vw,4.1rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,4.2vw,2.6rem);margin-bottom:.6rem}
+h3{font-size:1.35rem;margin:2.2rem 0 .7rem}
+p{margin:0 0 1rem}
+
+/* hero */
+.hero{padding:3.5rem 0 1rem;text-align:center}
+.hero .sub{color:var(--muted);font-style:italic;margin:.9rem auto 0;max-width:34rem}
+.vault{display:block;margin:2.2rem auto 0;width:100%;max-width:680px;height:auto}
+.vault a .st{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:fill .2s}
+.vault a:hover .st,.vault a:focus-visible .st{fill:var(--accent-soft);stroke:var(--accent)}
+.vault a.key .st{fill:var(--accent);stroke:var(--accent)}
+.vault text{font-family:"Libre Caslon Text",Georgia,serif;font-size:14px;fill:var(--ink);pointer-events:none}
+.vault a.key text{fill:var(--paper);font-size:13px}
+.vault .ground{stroke:var(--stone-edge);stroke-width:1.5}
+.vault-cap{color:var(--muted);font-size:.92rem;font-style:italic;margin:.6rem auto 0;max-width:30rem}
+.toc{display:flex;flex-wrap:wrap;gap:.4rem .5rem;justify-content:center;list-style:none;padding:0;margin:1.6rem auto 0;max-width:46rem}
+.toc a{display:inline-block;text-decoration:none;color:var(--ink);border:1px solid var(--rule);background:var(--surface);
+  padding:.25rem .8rem;border-radius:3px;font-size:.92rem}
+.toc a:hover{border-color:var(--accent);color:var(--accent)}
+
+.reminder{margin:2.5rem auto 0;background:var(--surface);border-left:3px solid var(--ochre);padding:1rem 1.2rem;font-size:.97rem}
+.reminder p:last-child{margin:0}
+
+/* sections */
+.theme{padding:4.5rem 0 1rem;border-top:1px solid var(--rule);margin-top:3.5rem}
+.covers{color:var(--muted);font-size:.92rem;margin:0 0 .5rem;display:flex;align-items:center;gap:.55rem}
+.covers .mark{width:16px;height:13px;background:var(--accent);clip-path:polygon(0 0,100% 0,82% 100%,18% 100%);flex:none}
+.lede{font-size:1.15rem;line-height:1.6}
+
+.claims{list-style:none;padding:0;margin:1.4rem 0}
+.claims li{position:relative;padding-left:1.6rem;margin:0 0 1rem}
+.claims li::before{content:"";position:absolute;left:0;top:.62em;width:11px;height:9px;background:var(--stone-edge);
+  clip-path:polygon(0 0,100% 0,82% 100%,18% 100%)}
+.claims li strong{font-weight:700}
+.ref{display:inline-block;font-size:.76em;line-height:1.45;font-style:normal;font-weight:400;font-variant-numeric:lining-nums;
+  color:var(--accent);background:var(--accent-soft);padding:0 .55em;border-radius:999px;margin-left:.35em;white-space:nowrap;vertical-align:.08em}
+
+blockquote{margin:1.4rem 0;padding:.2rem 0 .2rem 1.1rem;border-left:2px solid var(--accent);font-style:italic;color:var(--ink)}
+blockquote .ref{font-style:normal}
+
+.figure{margin:2rem 0;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:1.3rem}
+.figure figcaption{color:var(--muted);font-size:.9rem;font-style:italic;margin-top:.8rem}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* circumstances grid */
+.circ{display:grid;grid-template-columns:7.2rem repeat(3,minmax(9rem,1fr));gap:6px;min-width:560px;font-size:.88rem;line-height:1.4}
+.circ .h{color:var(--muted);font-style:italic;display:flex;align-items:center;justify-content:center;text-align:center;padding:.3rem}
+.circ .rh{justify-content:flex-end;text-align:right}
+.circ .c{border:1px dashed var(--rule);border-radius:4px;padding:.6rem .65rem;min-height:5.2rem}
+.circ .c.on{border:1px solid var(--stone-edge);background:var(--paper)}
+.circ .c.mid{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.circ .c.mid .ref{background:var(--paper);color:var(--accent)}
+.circ .c b{display:block;font-weight:700;margin-bottom:.15rem}
+.circ .c.corner{background:var(--ochre-soft);border:1px solid var(--ochre)}
+.circ .empty{border:none}
+
+/* scarcity strip, rules, ledger */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.8rem}
+.strip div{border-top:3px solid var(--stone-edge);padding-top:.6rem;font-size:.93rem;line-height:1.5}
+.strip div.owned{border-top-color:var(--accent)}
+.strip b{display:block;font-weight:700}
+.strip .tag{display:block;color:var(--muted);font-style:italic;margin:.15rem 0 .25rem}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.8rem}
+.rules div{background:var(--paper);border-radius:4px;padding:.8rem .9rem;font-size:.95rem;line-height:1.5}
+.rules b{display:block;font-weight:700;margin-bottom:.2rem}
+.rules span{color:var(--muted)}
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media (max-width:640px){.ledger{grid-template-columns:1fr}}
+.ledger h4{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:1.15rem;margin:0 0 .5rem}
+.ledger ol{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.55}
+.ledger li{margin-bottom:.55rem}
+.ledger .pro h4{color:var(--accent)} .ledger .con h4{color:var(--ochre)}
+
+/* power spectrum */
+.spectrum{position:relative;padding-top:2.2rem}
+.spectrum .bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--accent),var(--stone-edge) 55%,var(--ochre))}
+.spectrum .ends{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem;font-style:italic;position:absolute;top:0;left:0;right:0}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem;font-size:.93rem;line-height:1.5}
+@media (max-width:640px){.zones{grid-template-columns:1fr}}
+.zones b{display:block;font-weight:700}
+
+/* tables */
+table{border-collapse:collapse;width:100%;font-size:.94rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.65rem .7rem;border-bottom:1px solid var(--rule)}
+th{font-weight:700;font-size:.9rem;color:var(--muted)}
+td.verdict{background:var(--accent-soft)}
+td.bad{background:var(--ochre-soft)}
+.t-wide{min-width:600px}
+
+/* nest/house */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
+@media (max-width:560px){.pair{grid-template-columns:1fr}}
+.pair svg{display:block;width:100%;height:auto;max-height:130px}
+.pair p{font-size:.94rem;margin:.6rem 0 0;line-height:1.5}
+
+/* escalation */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;align-items:end;min-height:16rem}
+.steps .s{display:flex;flex-direction:column;justify-content:flex-end;font-size:.86rem;line-height:1.4}
+.steps .col{border-radius:3px 3px 0 0;margin-bottom:.5rem}
+.steps .p .col{background:var(--accent)} .steps .n .col{background:var(--ochre)}
+.steps b{font-weight:700;display:block}
+@media (max-width:560px){.steps{grid-template-columns:repeat(2,1fr)}}
+
+/* wall & vault */
+.wv{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:end}
+.wv svg{width:100%;height:auto;display:block}
+.wv h4{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:1.2rem;margin:.6rem 0 .2rem}
+.wv p{font-size:.93rem;line-height:1.5;margin:0}
+.brick{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1}
+.brick.out{transition:opacity .5s} .removed .brick.out{opacity:0}
+.vstone{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:transform .8s cubic-bezier(.5,0,.75,0),opacity .8s;transform-box:fill-box;transform-origin:center}
+.vstone.keyst{fill:var(--accent);stroke:var(--accent);transition:opacity .4s}
+.removed .vstone.keyst{opacity:0}
+.removed .vstone:not(.keyst){opacity:.35}
+.btnrow{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:1.2rem}
+button{font:inherit;font-size:.95rem;background:var(--ink);color:var(--paper);border:0;border-radius:3px;padding:.5rem 1rem;cursor:pointer}
+button:hover{background:var(--accent)}
+.status{color:var(--muted);font-style:italic;font-size:.92rem}
+@media (prefers-reduced-motion: reduce){.vstone,.brick.out{transition:none}}
+
+/* coda */
+.coda-fig{display:grid;grid-template-columns:1fr 1.5fr;gap:1.4rem;align-items:center}
+@media (max-width:640px){.coda-fig{grid-template-columns:1fr}}
+.coda-fig svg{width:100%;height:auto;display:block}
+.coda-fig p{font-size:.93rem;line-height:1.5;margin:.5rem 0 0}
+
+/* boxes */
+.takeaway{margin:2rem 0;padding:1.2rem 1.3rem;background:var(--accent);color:var(--paper);border-radius:6px}
+.takeaway h3{margin:0 0 .5rem;font-size:1.25rem}
+.takeaway p:last-child,.takeaway ol:last-child{margin-bottom:0}
+.takeaway .ref{background:var(--paper);color:var(--accent)}
+.takeaway ol{padding-left:1.2rem;margin:.3rem 0 0}
+.takeaway li{margin-bottom:.4rem}
+details.discuss{margin:1.6rem 0 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+details.discuss summary{cursor:pointer;padding:.8rem 1.1rem;font-style:italic;color:var(--ochre)}
+details.discuss[open] summary{border-bottom:1px solid var(--rule)}
+details.discuss ul{margin:0;padding:1rem 1.1rem 1rem 2.2rem;font-size:.96rem;line-height:1.6}
+details.discuss li{margin-bottom:.6rem}
+
+details.answers{margin:.7rem 0 0;border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:6px;background:var(--surface)}
+details.answers summary{cursor:pointer;padding:.8rem 1.1rem;font-style:italic;color:var(--accent)}
+details.answers[open] summary{border-bottom:1px solid var(--rule)}
+details.answers ol{margin:0;padding:1rem 1.1rem 1rem 2.4rem;font-size:.96rem;line-height:1.6}
+details.answers li{margin-bottom:.8rem}
+details.answers li b{font-weight:700}
+.note-ans{color:var(--muted);font-size:.85rem;font-style:italic;padding:0 1.1rem 1rem;margin:0}
+.questions{margin-top:4.5rem;border-top:1px solid var(--rule);padding-top:3rem;padding-bottom:4rem}
+.questions ol{padding-left:1.4rem}
+.questions li{margin-bottom:.8rem}
+footer{color:var(--muted);font-size:.85rem;padding:3rem 0 4rem;text-align:center}
+
+@page{size:A4;margin:16mm 15mm 16mm 15mm}
+@media print{
+  :root,:root:not([data-theme="light"]){--paper:#FFFFFF;--surface:#F6F8F9;--ink:#1C2633;--muted:#556273;--rule:#C5CDD5;
+    --stone:#D3D9DE;--stone-edge:#9AA5B0;--accent:#1F6B66;--accent-soft:#DCEBE8;--ochre:#9A6A15;--ochre-soft:#F3E9D4;--danger:#8B2E2E;}
+  :root{padding:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:10.5pt;line-height:1.55;background:#fff}
+  .hero{padding-top:0}
+  .vault{max-width:520px;margin-top:1.2rem}
+  .toc,.btnrow{display:none}
+  .theme{break-before:page;border-top:none;margin-top:0;padding-top:0}
+  .questions{break-before:page;border-top:none;margin-top:0;padding-top:0}
+  .scroll{overflow:visible}
+  .figure,.takeaway,table,tr,.claims li,details li,.zones>div,.rules>div,.strip>div,.wv,.coda-fig{break-inside:avoid}
+  h2,h3,details summary,.covers{break-after:avoid}
+  .note-ans,details li:last-child{break-before:avoid}
+  details ul>li:first-child,details ol>li:first-child{break-before:avoid}
+  details summary{list-style:none;font-weight:700;font-style:normal}
+  details summary::-webkit-details-marker{display:none}
+  details.discuss summary{color:var(--ochre)} details.answers summary{color:var(--accent)}
+  a{text-decoration:none;color:inherit}
+  footer{padding:1.5rem 0 0}
+}
+
+/* ---- Smith additions ---- */
+@media (max-width:480px){h1{font-size:1.95rem}}
+/* hero facade */
+.facade{display:block;margin:2.2rem auto 0;width:100%;max-width:680px;height:auto}
+.facade .ped{fill:var(--surface);stroke:var(--stone-edge);stroke-width:1.2}
+.facade .orn{fill:none;stroke:var(--ochre);stroke-width:1.3}
+.facade .orn-dot{fill:var(--ochre)}
+.facade .beam,.facade .base{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1}
+.facade a .cl{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:fill .2s}
+.facade a:hover .cl,.facade a:focus-visible .cl{fill:var(--accent-soft);stroke:var(--accent)}
+.facade a.key .cl{fill:var(--accent);stroke:var(--accent)}
+.facade text{font-family:"Libre Caslon Text",Georgia,serif;font-size:13px;fill:var(--ink);pointer-events:none}
+.facade a.key text{fill:var(--paper);font-size:14px}
+.facade .pedtext{font-style:italic;fill:var(--ochre);font-size:12.5px}
+
+/* contagion vs projection */
+.routes{display:grid;grid-template-columns:1fr;gap:1.1rem}
+.routes svg{display:block;width:100%;height:auto}
+.routes p{font-size:.93rem;line-height:1.5;margin:.3rem 0 0}
+
+/* propriety widget */
+.seg{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem}
+.seg button{background:var(--paper);color:var(--ink);border:1px solid var(--rule);font-size:.88rem;padding:.35rem .75rem}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.seg button:hover{background:var(--accent-soft);color:var(--ink)}
+.seg button[aria-pressed="true"]:hover{background:var(--accent);color:var(--paper)}
+.meter{display:grid;grid-template-columns:8.5rem 1fr;gap:.5rem .8rem;align-items:center;font-size:.9rem}
+.meter .lab{color:var(--muted);font-style:italic;text-align:right;line-height:1.3}
+.meter .track{position:relative;height:16px;background:var(--paper);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.meter .fill{position:absolute;left:0;top:0;bottom:0;border-radius:2px;transition:width .25s}
+.meter .fill.ag{background:var(--ochre)} .meter .fill.sp{background:var(--accent)}
+.meter .band{position:absolute;top:0;bottom:0;background:var(--accent-soft);opacity:.85}
+.meter input[type=range]{width:100%;accent-color:var(--ochre);margin:0}
+.verdict-box{margin-top:1rem;padding:.75rem .9rem;border-left:3px solid var(--accent);background:var(--paper);font-size:.95rem;line-height:1.5;min-height:3.4rem}
+.verdict-box.off{border-left-color:var(--ochre)}
+@media (max-width:520px){.meter{grid-template-columns:1fr}.meter .lab{text-align:left}}
+
+/* pillar and ornament */
+.bldg-wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:1.4rem;align-items:center}
+@media (max-width:640px){.bldg-wrap{grid-template-columns:1fr}}
+.bldg{display:block;width:100%;height:auto}
+.bldg .part{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:transform .9s cubic-bezier(.5,0,.75,0),opacity .9s;transform-box:fill-box;transform-origin:center}
+.bldg .main{fill:var(--accent);stroke:var(--accent);transition:opacity .4s}
+.bldg .ornament{fill:none;stroke:var(--ochre);stroke-width:1.4;transition:opacity .5s}
+.bldg .ornament.dot{fill:var(--ochre);stroke:none}
+.no-orn .bldg .ornament{opacity:0}
+.no-pillar .bldg .main{opacity:0}
+.no-pillar .bldg .ornament{opacity:0}
+.tiers{display:flex;flex-direction:column;gap:.6rem;font-size:.93rem;line-height:1.45}
+.tiers div{padding:.55rem .75rem;border-radius:4px;background:var(--paper);border-left:3px solid var(--stone-edge)}
+.tiers div.hi{border-left-color:var(--accent)} .tiers div.lo{border-left-color:var(--ochre)}
+.tiers b{display:block;font-weight:700}
+.tiers .on{outline:2px solid var(--accent);outline-offset:1px}
+@media (prefers-reduced-motion: reduce){.bldg .part,.bldg .ornament,.meter .fill{transition:none}}
+
+/* balance */
+.balance{display:block;width:100%;max-width:560px;margin:0 auto;height:auto}
+.balance .beamg{transition:transform 1s cubic-bezier(.4,0,.2,1);transform-origin:280px 70px;transform-box:view-box}
+.balance text{font-family:"Libre Caslon Text",Georgia,serif;fill:var(--ink)}
+@media (prefers-reduced-motion: reduce){.balance .beamg{transition:none}}
+
+/* three acts */
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;counter-reset:act}
+@media (max-width:640px){.acts{grid-template-columns:1fr}}
+.acts div{border-top:3px solid var(--stone-edge);padding-top:.6rem;font-size:.93rem;line-height:1.5}
+.acts div:nth-child(1){border-top-color:var(--ochre)} .acts div:nth-child(3){border-top-color:var(--accent)}
+.acts b{display:block;font-weight:700}
+.acts .tag{display:block;color:var(--muted);font-style:italic;margin:.1rem 0 .3rem}
+
+@media print{
+  .facade{max-width:520px;margin-top:1.2rem}
+  .seg,.meter input{display:none}
+  .bldg-wrap,.acts,.routes,.meter{break-inside:avoid}
+}
+.balance #panL,.balance #panR{transition:transform 1s cubic-bezier(.4,0,.2,1)}
+@media (prefers-reduced-motion: reduce){.balance #panL,.balance #panR{transition:none}}
+
+.dl{margin:1.4rem 0 0}
+@media print{.dl{display:none}}
+</style>
+</head>
+<body>
+
+<header class="hero wide">
+  <h1>Smith on Sympathy, Justice<br>and the Impartial Spectator</h1>
+  <p class="sub">An illustrated guide for Meeting 2 of The Examined Society, following <i>The Theory of Moral Sentiments</i> (1759, sixth edition 1790): Part I Section I, Part II Section II, Part III chapters 1–3 (abridged) and Part IV chapter 1.</p>
+
+  <svg class="facade" id="heroFacade" viewBox="0 0 600 330" role="navigation" aria-label="Themes of the summary, arranged as the columns of a building"></svg>
+  <p class="vault-cap">Smith's own image: beneficence is the ornament that embellishes the building, justice the main pillar that upholds it <span class="ref">II.ii.3.4</span>. Select a column to jump to its theme.</p>
+
+  <ul class="toc">
+    <li><a href="#sympathy">Sympathy</a></li>
+    <li><a href="#propriety">Propriety</a></li>
+    <li><a href="#beneficence">Justice and beneficence</a></li>
+    <li><a href="#fairplay">Fair play</a></li>
+    <li><a href="#society">The pillar of society</a></li>
+    <li><a href="#causes">Why we punish</a></li>
+    <li><a href="#mirror">The mirror</a></li>
+    <li><a href="#within">The man within</a></li>
+    <li><a href="#system">The love of system</a></li>
+    <li><a href="#questions">Questions</a></li>
+  </ul>
+
+  <p class="dl"><button type="button" id="pdfBtn">Download as PDF</button></p>
+
+  <div class="reminder wrap" style="text-align:left">
+    <p><b>How to read the references.</b> Plain references are to the <i>Theory of Moral Sentiments</i>: Part.Section.Chapter.Paragraph in Parts I and II (II.ii.3.4), Part.Chapter.Paragraph in Parts III and IV (III.3.4). M = Hume's <i>Enquiry</i> as in Meeting 1 (section.paragraph; App3 = Appendix III); T = Hume's <i>A Treatise of Human Nature</i> (book.part.section). WN = <i>The Wealth of Nations</i> (1776). Every summary statement ends with the paragraphs it draws on. Links to modern economics and psychology are interpretive analogies, not claims that Smith anticipated or influenced that work.</p>
+    <p>Smith's "sympathy" is fellow-feeling with <i>any</i> passion (joy, gratitude, resentment), not only pity; it is closer to what we now call empathy. His "justice", like Hume's, is narrow: not injuring another person in life, property or rights.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 -->
+<section class="theme wrap" id="sympathy">
+  <p class="covers"><span class="mark"></span>Covers I.i.1.1–13</p>
+  <h2>Smith's emphasis on imagined situations</h2>
+  <p class="lede">Smith opens against the selfish system and then gives fellow-feeling a mechanism. We never feel what another person feels; we imagine ourselves in his situation. Because sympathy starts from the situation, the spectator can judge whether a feeling fits it, and the whole book grows from that possibility.</p>
+
+  <ul class="claims">
+    <li>"How selfish soever man may be supposed", some principles make others' fortunes matter to us "though he derives nothing from it except the pleasure of seeing it". The claim is weak and defensible: self-love may be strong, but even "the greatest ruffian" is not without pity. Moral theory starts from what everybody feels. <span class="ref">I.i.1.1</span></li>
+    <li>We have "no immediate experience of what other men feel". Our senses never carry us beyond our own person; only the imagination does, and it can copy only our own impressions. The result is a feeling "weaker in degree" but "not altogether unlike" the original. <span class="ref">I.i.1.2</span></li>
+    <li>The first evidence is bodily: we pull back our arm when a blow is about to fall on someone else's, and the crowd sways with the rope-dancer. These look automatic, closer to contagion (mirroring) than to deliberate imagination; Smith's reply is that imagination need not be slow or conscious. <span class="ref">I.i.1.3</span></li>
+    <li>The bystander feels what he imagines the sufferer <i>should</i> feel. That small word is where the normative side of the theory enters: once the two feelings can come apart, the spectator can judge one of them excessive or deficient. <span class="ref">I.i.1.4–5</span></li>
+  </ul>
+
+  <figure class="figure">
+    <div class="routes">
+      <div>
+        <svg viewBox="0 0 640 92" role="img" aria-label="Hume's route: from the signs of the agent's passion the spectator infers an idea of it, which is enlivened into an impression">
+          <g font-family="Libre Caslon Text, Georgia, serif" font-size="14" fill="var(--ink)">
+            <rect x="4" y="22" width="150" height="46" rx="4" fill="var(--paper)" stroke="var(--stone-edge)"/><text x="79" y="50" text-anchor="middle">Agent's passion</text>
+            <line x1="158" y1="45" x2="402" y2="45" stroke="var(--stone-edge)" stroke-width="1.5"/><path d="M402 39 L414 45 L402 51 Z" fill="var(--stone-edge)"/>
+            <text x="286" y="36" text-anchor="middle" font-style="italic" fill="var(--muted)" font-size="13">signs, inference, idea enlivened</text>
+            <rect x="418" y="22" width="218" height="46" rx="4" fill="var(--paper)" stroke="var(--stone-edge)"/><text x="527" y="50" text-anchor="middle">Spectator's impression</text>
+          </g>
+        </svg>
+        <p><b>Hume: communication of sentiments.</b> We observe the outward signs of another person's passion and form an idea of it. Through our relation to that person, especially resemblance and proximity, the idea gains vivacity and becomes an impression: a passion we ourselves feel. This process can be instantaneous; it need not involve conscious reflection. <span class="ref">T 2.1.11.3–8</span></p>
+      </div>
+      <div>
+        <svg viewBox="0 0 640 132" role="img" aria-label="Smith's route: the spectator imagines the agent's situation, forms his own feeling, and compares it with the agent's passion">
+          <g font-family="Libre Caslon Text, Georgia, serif" font-size="14" fill="var(--ink)">
+            <rect x="4" y="10" width="150" height="46" rx="4" fill="var(--accent-soft)" stroke="var(--accent)"/><text x="79" y="38" text-anchor="middle">Agent's situation</text>
+            <line x1="158" y1="33" x2="402" y2="33" stroke="var(--accent)" stroke-width="1.5"/><path d="M402 27 L414 33 L402 39 Z" fill="var(--accent)"/>
+            <text x="286" y="24" text-anchor="middle" font-style="italic" fill="var(--muted)" font-size="13">imagination: "what would I feel?"</text>
+            <rect x="418" y="10" width="218" height="46" rx="4" fill="var(--accent-soft)" stroke="var(--accent)"/><text x="527" y="38" text-anchor="middle">Spectator's own feeling</text>
+            <rect x="4" y="80" width="150" height="46" rx="4" fill="var(--paper)" stroke="var(--stone-edge)"/><text x="79" y="108" text-anchor="middle">Agent's passion</text>
+            <line x1="158" y1="103" x2="414" y2="103" stroke="var(--ochre)" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <line x1="527" y1="58" x2="527" y2="80" stroke="var(--ochre)" stroke-width="1.5" stroke-dasharray="5 4"/>
+            <rect x="418" y="80" width="218" height="46" rx="4" fill="var(--ochre-soft)" stroke="var(--ochre)"/><text x="527" y="108" text-anchor="middle">Compare: a verdict</text>
+          </g>
+        </svg>
+        <p><b>Smith: sympathy through imagining the situation.</b> We imagine ourselves in the other person's situation and form a feeling from it. Our feeling may differ from theirs, or arise when they feel nothing corresponding to it. This makes possible a comparison between their reaction and what a spectator can go along with. Both Hume and Smith involve imagination; Smith places greater emphasis on the situation. <span class="ref">I.i.1.2</span><span class="ref">I.i.1.10–13</span></p>
+      </div>
+    </div>
+    <figcaption>Smith concedes that some passions are "transfused" at once, before we know their cause. Anger is not: an angry stranger turns us against him until we know what provoked him. <span class="ref">I.i.1.6–8</span></figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>Anger points at another person whose interests are opposed, so nature makes us "averse to enter into this passion" until we know its cause. This plants the seed of the theory of justice: resentment wins sympathy only after it has been justified to a spectator who knows the facts. Hume's host (M 5.21) wins immediate indignation because he tells us the situation first. <span class="ref">I.i.1.7–8</span></li>
+    <li>Sympathy before we know the cause is "extremely imperfect"; our first question is "What has befallen you?" Hence the central conclusion: sympathy "does not arise so much from the view of the passion, as from that of the situation which excites it." <span class="ref">I.i.1.9–10</span></li>
+  </ul>
+
+  <h3>The spectator can feel what the agent does not</h3>
+  <figure class="figure">
+    <div class="strip">
+      <div class="owned"><b>The shameless man</b><span class="tag">He feels nothing</span>We blush for his rudeness, imagining how we would feel had we behaved so. There is nothing in him to catch. <span class="ref">I.i.1.10</span></div>
+      <div class="owned"><b>The loss of reason</b><span class="tag">He laughs and sings</span>Our compassion is a construction: we imagine his state while keeping our present reason, "what perhaps is impossible". <span class="ref">I.i.1.11</span></div>
+      <div class="owned"><b>The sick infant</b><span class="tag">It feels only the present</span>The mother adds her own foresight and fear, "the great tormentors of the human breast". <span class="ref">I.i.1.12</span></div>
+      <div class="owned"><b>The dead</b><span class="tag">They feel nothing at all</span>We lodge "our own living souls in their inanimated bodies", an illusion of the imagination that never wears off. <span class="ref">I.i.1.13</span></div>
+    </div>
+    <figcaption>Each case is evidence against pure contagion (mirroring): the spectator's feeling exceeds, or has no counterpart in, the feeling of the person observed.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>The madman raises a question still alive in welfare economics: if a person is content in a condition we regard as terrible, whose evaluation counts, his felt experience or the judgment of a spectator who sees his situation from outside? <span class="ref">I.i.1.11</span></li>
+    <li>The infant feels only "the uneasiness of the present instant"; the mother suffers from anticipation. The economic counterpart is anticipatory utility, savouring and dread (Loewenstein, 1987). <span class="ref">I.i.1.12</span></li>
+    <li>Hume's man on the cliff loses his fear through habit (M 5.14); Smith's dread of death never wears off. It is "the great poison to the happiness" of individuals but "the great restraint upon the injustice of mankind". An illusion that harms the individual protects society, a pattern that returns with the invisible hand. <span class="ref">I.i.1.13</span><span class="ref">IV.1.10</span></li>
+  </ul>
+
+  <div class="takeaway">
+    <h3>The key to everything that follows</h3>
+    <p>If sympathy came only from the passion, the spectator could do little more than mirror it. Because it comes from the situation, the spectator can ask whether the reaction is proportionate. That comparison is the raw material of propriety, of merit and demerit, and finally of conscience. <span class="ref">I.i.1.10</span></p>
+  </div>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Economists model other-regarding preferences by putting others' welfare in the utility function (Becker, 1974) or by adding a "warm glow" from giving (Andreoni, 1990). If my utility rises when you are happy, is my concern still selfish? How would Smith answer, given "except the pleasure of seeing it"? <span class="ref">I.i.1.1</span></li>
+    <li>Psychologists separate emotional contagion (mirroring) from perspective-taking. If sympathy depends on our own experience, can a person who has never been poor sympathize accurately with poverty? (Compare Loewenstein, "Hot-Cold Empathy Gaps and Medical Decision Making", <i>Health Psychology</i> 24(4, Suppl.), 2005.) <span class="ref">I.i.1.2</span></li>
+    <li>Smith's caution about the angry stranger looks like a psychological basis for "hear the other side". Does it fit how outrage spreads on social media? <span class="ref">I.i.1.7–8</span></li>
+    <li>If an illusion is socially useful, as the dread of death is, should a philosopher try to dispel it? <span class="ref">I.i.1.13</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Selfish utility?</b> Only in a trivial sense. Any motive can be written as utility, so "my utility rises" says nothing about what the utility is <i>about</i>. Smith's point is about the object: the pleasure comes from seeing you happy, not from anything you do for me. Becker's altruist fits this; Andreoni's warm glow, where the giver enjoys his own act of giving, is more self-regarding. It is not the same as Smith's love of praise, since it can operate privately, with no audience at all. One suggestive (not decisive) test is whether the pleasure survives if someone else makes you happy instead.</li><li><b>Sympathizing with poverty.</b> Only imperfectly, on Smith's account: we copy our own impressions, so feelings we have never had are reconstructed from weaker materials. Loewenstein's hot-cold empathy gap is related but broader: people misjudge feelings across affective states even when they have experienced those states before, so lack of experience is only part of the problem. This is an argument for listening to people's own accounts and for experience-based policy design, not for giving up on sympathy. It also explains why Smith later relies on a spectator who is "well-informed", not merely well-meaning.</li><li><b>Outrage online.</b> It suggests that some environments override the caution Smith describes. Online, the cause usually arrives in compressed and partisan form, so the spectator <i>thinks</i> he knows the situation; Smith's condition is met in appearance only. Add the pleasure of shared resentment from I.i.2.5, and anger spreads among allies before the facts are checked. Smith is right about the mechanism; what he did not foresee is how cheaply a one-sided "situation" can be supplied.</li><li><b>Dispelling useful illusions.</b> Smith's stance is to describe, not to dispel, and that has a cost: it can slide into complacency about illusions that benefit society at an individual's expense. A defence is that some illusions are not open to correction anyway (the imagination keeps putting us in the grave), so the philosopher's job is to understand their effects. A middle line is to dispel an illusion where it harms the person who holds it without serving anyone else.</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+
+<!-- 2 -->
+<section class="theme wrap" id="propriety">
+  <p class="covers"><span class="mark"></span>Covers I.i.2.1–6</p>
+  <h2>From shared feeling to propriety</h2>
+  <p class="lede">"Nothing pleases us more than to observe in other men a fellow-feeling with all the emotions of our own breast." Chapter 2 shows that this pleasure cannot be reduced to self-interest, and that the effort of agent and spectator to reach it produces a standard: propriety. <span class="ref">I.i.2.1</span></p>
+
+  <ul class="claims">
+    <li><strong>The joke nobody laughs at.</strong> The selfish account says we enjoy shared feeling as a signal of help to come. But the pleasure and pain arrive "so instantaneously, and often upon such frivolous occasions" that no calculation can lie behind them. A man whose joke falls flat is mortified though nothing is at stake. This is an argument from speed and stakes, close to Hume's <i>experimentum crucis</i> (M 5.17). <span class="ref">I.i.2.1</span></li>
+    <li><strong>Not mere amplification.</strong> A book that bores us pleases again when read aloud to a friend. But if sympathy only made our feeling livelier, it would make grief worse; in fact "sympathy … enlivens joy and alleviates grief". Hume objected by letter (28 July 1759) that sympathy with grief is painful; Smith's later footnote separates the painful sympathetic emotion from the always agreeable perception that our feelings correspond. <span class="ref">I.i.2.2</span></li>
+    <li>We are more eager to share sorrow than joy. Telling the story renews the tears, yet "the sweetness of his sympathy more than compensates the bitterness of that sorrow", an implicit cost-benefit structure. Failing to share a friend's joy is a "want of politeness"; ignoring his misfortune is "real and gross inhumanity". <span class="ref">I.i.2.3–4</span></li>
+    <li>We hardly care whether friends share our friendships, but "lose all patience" if they ignore our resentments. Painful passions need sympathy more. The result is the pressure to take sides: the friend of my enemy is my enemy, the glue of factions Hume also noticed (M 5.35). <span class="ref">I.i.2.5</span></li>
+  </ul>
+
+  <h3>Try it: the spectator's verdict</h3>
+  <figure class="figure" id="propFig">
+    <div class="seg" role="group" aria-label="Choose a situation">
+      <button type="button" data-k="great" aria-pressed="true">A great misfortune</button>
+      <button type="button" data-k="small" aria-pressed="false">A small misfortune</button>
+      <button type="button" data-k="luck" aria-pressed="false">A small piece of luck</button>
+      <button type="button" data-k="joke" aria-pressed="false">A joke</button>
+    </div>
+    <div class="meter">
+      <span class="lab">What the spectator imagines he would feel</span>
+      <div class="track"><div class="band" id="propBand"></div><div class="fill sp" id="propSp" style="width:70%"></div></div>
+      <label class="lab" for="propSlider">How strongly the agent shows his feeling</label>
+      <div><div class="track"><div class="fill ag" id="propAg" style="width:70%"></div></div>
+        <input type="range" id="propSlider" min="0" max="100" value="70" style="margin-top:.5rem"></div>
+    </div>
+    <div class="verdict-box" id="propVerdict" aria-live="polite"></div>
+    <figcaption>The shaded band is "concord": the two feelings never become identical, but close enough is enough. The words for excess are Smith's own <span class="ref">I.i.2.6</span>. To win sympathy the agent lowers his passion to a pitch the spectator can follow, while the spectator tries to raise his imagined feeling toward the agent's.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>The spectator, too, enjoys being able to sympathize and is hurt when he cannot. We run to congratulate and to console. When we cannot go along with someone, the discomfort becomes a judgment: "pusillanimity and weakness" for loud grief over a small loss, "levity and folly" for joy over a small piece of luck; even laughing too long at a joke "gives us the spleen". <span class="ref">I.i.2.6</span></li>
+    <li>This is the hinge between Smith's psychology and his ethics. The gap between the spectator's imagined feeling and the agent's actual one becomes a verdict, and the point where they meet becomes the standard Smith calls propriety. <span class="ref">I.i.2.6</span></li>
+    <li>Hume saw sympathy run both ways in the theatre (M 5.24–25). Smith turns this two-way traffic into the engine of ethics. Hume's standard comes instead from the "general point of view" that language and conversation impose (M 5.42): both are social standards, born of different interactions. <span class="ref">I.i.2.6</span></li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Economists now model a "preference for belief consonance" (Golman, Loewenstein, Moene and Zarri, 2016). Is this the pleasure of mutual sympathy in modern dress? What does it predict about how people choose friends and news sources? <span class="ref">I.i.2.1</span></li>
+    <li>Why do people pay therapists, join support groups, or write to strangers? Would telling a chatbot or a diary help less, or more, than telling a person? <span class="ref">I.i.2.3–4</span></li>
+    <li>Coalition models usually assume material payoffs. Smith adds a second motive: allies must share one's resentments. Where do loyalty tests ("with us or against us") shape alliances? <span class="ref">I.i.2.5</span></li>
+    <li>If propriety is set by what spectators can "go along with", whose spectators count? Grief that seems excessive in one culture is required in another. <span class="ref">I.i.2.6</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Belief consonance.</b> Largely yes, with a narrowing: the modern models concern shared <i>beliefs</i>, Smith's pleasure concerns shared <i>feelings</i> of every kind. The prediction is the same: people sort into groups that echo them, and pay a real price (in accuracy) to avoid dissonance. Smith adds what the models often leave out, the second-order judgment: we not only enjoy agreement, we start judging those who do not agree as lacking propriety.</li><li><b>Being heard.</b> On Smith's account the value lies in being entered into by someone who imagines one's situation, so the listener's own capacity to feel matters. A diary gives the relief of expression without the "sweetness" of another's sympathy. A chatbot is an interesting test case: if people find relief there, either the appearance of being understood is enough, or the benefit comes partly from organizing one's story. Smith would probably predict less relief than from a person, and the question is empirical.</li><li><b>Loyalty tests.</b> Examples include alliance politics where neutrality is treated as hostility, sanctions regimes that pressure third countries to cut ties with a target, and party discipline over a shared enemy. Smith's mechanism explains why such demands are felt as moral, not merely strategic: failing to share a resentment reads as a failure of sympathy. It also predicts that shared grievances bind coalitions more tightly than shared gains.</li><li><b>Whose spectators?</b> Chapter 2 alone makes propriety local: it is whatever the surrounding spectators can go along with. That is why Smith needs Part III. The impartial spectator is built from real spectators but corrected for partiality and ignorance, so it can, at least in principle, criticize local standards. Whether it ever fully escapes them is question 4 for the meeting.</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+
+<!-- 3 -->
+<section class="theme wrap" id="beneficence">
+  <p class="covers"><span class="mark"></span>Covers II.ii.1.1–10</p>
+  <h2>Justice and beneficence</h2>
+  <p class="lede">Both are virtues, but they differ in what their violation does. Failing to do good disappoints; doing harm injures. Only injury calls forth resentment, and so among equals only justice may be "extorted by force". The civil magistrate is the qualification: he may command some positive good offices, "to a certain degree" (below). <span class="ref">II.ii.1.5</span><span class="ref">II.ii.1.8</span></p>
+
+  <h3>What deserves reward and punishment</h3>
+  <figure class="figure">
+    <div class="scroll">
+      <table>
+        <thead><tr><th></th><th>Proper motive</th><th>Improper motive</th></tr></thead>
+        <tbody>
+          <tr><th>Beneficial effect</th><td class="verdict"><b>Reward.</b> An "approved object" of gratitude.</td><td>A good result from malice: no reward.</td></tr>
+          <tr><th>Hurtful effect</th><td>Harm by accident with good intentions: not fully punishable.</td><td class="bad"><b>Punishment.</b> An "approved object" of resentment.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>Two conditions, effect and motive. And "approved" matters: what counts is the gratitude or resentment a spectator can go along with <span class="ref">II.ii.1.1–2</span>. Hume set gratitude and revenge aside as noise (M 5.17); Smith makes them, filtered by the spectator, the foundation of merit and demerit.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>"Beneficence is always free, it cannot be extorted by force." Smith's example is deliberately hard: a man who refuses to help his own benefactor is guilty of "the blackest ingratitude", yet "he does no positive hurt to anybody". <span class="ref">II.ii.1.3</span></li>
+    <li>The argument turns on two feelings. <strong>Hatred</strong> answers improper conduct in general, and the ingrate earns it. <strong>Resentment</strong> answers only "real and positive hurt to some particular persons". Punishment follows resentment, so ingratitude cannot be punished; even so we speak of a "debt of gratitude", never of a debt of charity. <span class="ref">II.ii.1.3</span></li>
+    <li>Resentment "seems to have been given us by nature for defence, and for defence only". Smith names its purposes, repentance and deterrence, but this is what resentment is <i>for</i>, not what the angry victim is thinking about. The distinction returns in II.ii.3.5. <span class="ref">II.ii.1.4</span></li>
+    <li>Even the would-be offender "feels that force may, with the utmost propriety, be made use of" against him. The rules of justice are not imposed from outside; he recognizes them while breaking them. <span class="ref">II.ii.1.5</span></li>
+  </ul>
+
+  <figure class="figure">
+    <div class="scroll">
+      <table class="t-wide">
+        <thead><tr><th style="width:24%"></th><th>Beneficence</th><th>Justice</th></tr></thead>
+        <tbody>
+          <tr><td>Its absence does</td><td>No "real positive evil"; disappointment only <span class="ref">II.ii.1.3</span></td><td>Real and positive hurt to particular persons <span class="ref">II.ii.1.5</span></td></tr>
+          <tr><td>The feeling it provokes</td><td>Hatred, at most</td><td>Resentment, shared by the spectator</td></tr>
+          <tr><td>May force be used?</td><td class="bad">Never among equals: "the sufferer can only complain" <span class="ref">II.ii.1.7</span></td><td class="verdict">Yes, "with the approbation of all mankind", to punish and still more to prevent <span class="ref">II.ii.1.5</span></td></tr>
+          <tr><td>Reward and punishment</td><td>Great acts deserve the highest reward; mere want deserves no punishment</td><td>Observance "scarce" deserves reward; violation deserves punishment <span class="ref">II.ii.1.9</span></td></tr>
+          <tr><td>Kind of duty</td><td>Imperfect: latitude in when and to whom</td><td>Perfect: precise and enforceable (Grotius, Pufendorf, later Kant)</td></tr>
+          <tr><td>Smith's image</td><td>The ornament <span class="ref">II.ii.3.4</span></td><td>The main pillar <span class="ref">II.ii.3.4</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>Hume drew a similar line (M App3.2–3) on different grounds. Hume divides the virtues by how they produce good, act by act or as a system; Smith divides them by what their violation does.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>What is blamable is a shortfall from "that ordinary degree of proper beneficence which experience teaches us to expect of everybody". The benchmark is an empirical norm: a father who treats his son as most fathers do earns neither praise nor blame. <span class="ref">II.ii.1.6</span></li>
+    <li>Before government, each person may resist and punish injury, and "all the neighbours take the alarm". Smith agrees with Locke that this right precedes government, but insists there is no such right for failures of kindness. <span class="ref">II.ii.1.7</span></li>
+    <li>"We may often fulfil all the rules of justice by sitting still and doing nothing." Justice is a negative virtue, like Hume's "cautious, jealous virtue" (M 3.3). It is what the <i>Wealth of Nations</i> relies on: everyone free to pursue his own interest "as long as he does not violate the laws of justice". <span class="ref">II.ii.1.9</span><span class="ref">II.ii.1.5</span></li>
+    <li>"Retaliation seems to be the great law which is dictated to us by Nature." It resembles tit-for-tat in Axelrod's tournaments and the costly punishment found by Fehr and Gächter. Such evidence shows Smith's description fits much behaviour; it cannot show the disposition is innate rather than learned. <span class="ref">II.ii.1.10</span></li>
+  </ul>
+
+  <h3>The magistrate's hardest duty</h3>
+  <figure class="figure">
+    <div class="spectrum" aria-hidden="true">
+      <div class="ends"><span>Neglect it altogether</span><span>Push it too far</span></div>
+      <div class="bar"></div>
+    </div>
+    <div class="zones">
+      <div><b>Too little</b>The commonwealth suffers "gross disorders and shocking enormities".</div>
+      <div><b>"To a certain degree"</b>The magistrate may command mutual good offices: laws make parents maintain children and children parents. Britain's Poor Laws were compulsory beneficence financed by local rates.</div>
+      <div><b>Too much</b>"Destructive of all liberty, security, and justice."</div>
+    </div>
+    <figcaption>Of all a lawgiver's duties this one "requires the greatest delicacy and reserve" <span class="ref">II.ii.1.8</span>. Smith gives no formula for where the line falls; he leaves it to judgment.</figcaption>
+  </figure>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Psychologists find an "omission bias" (Ritov and Baron, 1990). Is Smith describing a bias or a sound principle? France and Germany impose a duty to rescue; the traditional common law did not. Which would Smith favour? <span class="ref">II.ii.1.3</span><span class="ref">II.ii.1.8</span></li>
+    <li>Does the tax-financed welfare state fall under the duty to "command mutual good offices to a certain degree", or does it risk becoming "destructive of all liberty"? What information would you need to decide? <span class="ref">II.ii.1.8</span></li>
+    <li>If the benchmark of blame is what people "commonly" do, does that make Smith's ethics conservative? (Compare Bicchieri, 2006, on norms as expectations.) <span class="ref">II.ii.1.6</span></li>
+    <li>Is there room in Smith's framework for distributive justice in Rawls's sense? <span class="ref">II.ii.1.9</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Omission bias and rescue.</b> Smith's line is principled where the omission leaves the victim no worse off than before; it looks like a bias where the omitter had a special position (sole witness, no cost). The drowning child is the hard case: the passer-by does no "positive hurt", so among equals Smith forbids force. But II.ii.1.8 lets the magistrate command beneficence "to a certain degree", and a narrow, low-cost duty to rescue is just the kind of measure that seems to fall inside it. A minimal statutory duty, enforced by modest penalties, fits Smith better than either extreme.</li><li><b>The welfare state.</b> Smith gives a criterion, not a line: compulsion for beneficence is legitimate when it serves "the prosperity of the commonwealth" and becomes illegitimate when it destroys liberty and security. Relevant information includes the incentive and administrative costs of transfers, whether they are general rules or discretionary seizures (III.3.6 forbids the latter), and whether ordinary private beneficence could do the job. The Poor Laws show Smith's own society already accepted some compulsory relief.</li><li><b>Conservative norms?</b> As a description of how praise and blame work, the reference point is unavoidable: we blame deviations from what we expect. As a standard of what is right, it would be conservative, which is why Smith later adds the impartial spectator, who can judge the norm itself. Norms also move: as expectations change, yesterday's praiseworthy act becomes today's ordinary duty, which is one way moral progress happens.</li><li><b>Distributive justice.</b> Not as enforceable justice. In Smith, enforceable justice is negative (not injuring); concern with the distribution of benefits falls under beneficence, which the magistrate may promote only with "delicacy and reserve". A Smithian can still support redistribution through taxation as a commanded good office, but would call it beneficence, not justice. The difference is not just verbal: it implies that claims on others' resources are weaker than claims against injury.</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+
+<!-- 4 -->
+<section class="theme wrap" id="fairplay">
+  <p class="covers"><span class="mark"></span>Covers II.ii.2.1–4</p>
+  <h2>Self-love and fair play</h2>
+  <p class="lede">Smith does not condemn self-love. He asks that it be humbled to a pitch other people can go along with, and that is precisely the line between competing and injuring.</p>
+
+  <ul class="claims">
+    <li>The only proper motive for hurting someone is "just indignation for evil which that other has done to us". Hurting him because his happiness stands in our way, or taking what would be "of equal or of more use to us", is something "no impartial spectator can go along with". <span class="ref">II.ii.2.1</span></li>
+    <li>Self-preference is legitimate within limits: "Every man is, no doubt, by nature, first and principally recommended to his own care", and since he is fitter to care for himself than for anyone else, "it is fit and right that it should be so". Smith gives a reason: each knows his own situation best. <span class="ref">II.ii.2.1</span></li>
+    <li>But each person, "the whole world to himself", is "to the rest of mankind … a most insignificant part of it". No one dares to "look mankind in the face" and avow pure self-preference. To win the spectator's sympathy he must "humble the arrogance of his self-love". <span class="ref">II.ii.2.1</span></li>
+  </ul>
+
+  <h3>The race for wealth, honours and preferments</h3>
+  <figure class="figure">
+    <div class="scroll">
+      <table class="t-wide">
+        <thead><tr><th style="width:30%">Conduct</th><th>Smith's spectators</th><th>A modern counterpart</th></tr></thead>
+        <tbody>
+          <tr><td>"Run as hard as he can, and strain every nerve and every muscle"</td><td class="verdict">Accept it, though the losers lose the prize</td><td>A rival loses customers because my product is better: competition on the merits</td></tr>
+          <tr><td>"Justle, or throw down" a competitor</td><td class="bad">"The indulgence of the spectators is entirely at an end. It is a violation of fair play."</td><td>I sabotage his shop or defraud his customers: exclusionary or fraudulent conduct</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>Winning the race does harm the other runners, yet the spectators call it fair. Smith's justice protects people from injury, not from losing a fair race <span class="ref">II.ii.2.1</span>. ("Justle" is an older spelling of "jostle".)</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li><strong>Hume connection.</strong> Hume says we are partial to ourselves "but are capable of learning the advantage resulting from a more equitable conduct" (M 3.12–13). Smith keeps the first half and changes the second: what humbles self-love is not learning the advantage of equity but seeing ourselves as "one of the multitude, in no respect better than any other in it". Hume's selfish man who will not tread on a stranger's gouty toes (M 5.39) is the weak benevolence Smith's runner goes beyond: he may want very much to win, and still must not trip his rival. <span class="ref">II.ii.2.1</span></li>
+  </ul>
+
+  <h3>Wrongs ranked by how gravely they are felt</h3>
+  <figure class="figure">
+    <div class="steps" role="img" aria-label="Bar chart: injuries to life and person are felt most gravely, then property, then broken promises" style="grid-template-columns:repeat(3,1fr);min-height:13rem">
+      <div class="s n"><div class="col" style="height:10.5rem"></div><b>Life and person</b>Death, "the greatest evil which one man can inflict upon another"</div>
+      <div class="s n"><div class="col" style="height:7rem"></div><b>Property</b>Being deprived of what we possess</div>
+      <div class="s n"><div class="col" style="height:4rem"></div><b>Promises</b>Being disappointed of what we only expected</div>
+    </div>
+    <figcaption>The greater and more irreparable the harm, the higher the victim's resentment, the spectator's indignation and the offender's own guilt <span class="ref">II.ii.2.2</span>. Property ranks above contract because "to be deprived of that which we are possessed of, is a greater evil than to be disappointed of what we have only the expectation": an observation that closely resembles what is now called loss aversion and the endowment effect (Kahneman and Tversky, 1979; Thaler, 1980).</figcaption>
+  </figure>
+
+  <h3>Remorse, and its opposite</h3>
+  <ul class="claims">
+    <li>Reflecting coolly, the violator of justice can no longer enter into his own motives. "By sympathizing with the hatred and abhorrence which other men must entertain for him, he becomes in some measure the object of his own hatred." Sympathy turned back on oneself anticipates Part III. He would flee to a desert, but solitude is worse, so he returns "loaded with shame and distracted with fear". <span class="ref">II.ii.2.3</span></li>
+  </ul>
+  <figure class="figure">
+    <div class="rules">
+      <div><b>Shame</b><span>from the sense that his past conduct was improper</span></div>
+      <div><b>Grief</b><span>for its effects</span></div>
+      <div><b>Pity</b><span>for those who suffer from it</span></div>
+      <div><b>Dread of punishment</b><span>from knowing he has justly provoked the resentment of "all rational creatures"</span></div>
+    </div>
+    <figcaption>Smith's four ingredients of remorse <span class="ref">II.ii.2.3</span>. Remorse is an internal sanction; economists now model part of it as guilt aversion (Battigalli and Dufwenberg, 2007). Smith's account separates the guilt of harming from the shame of seeing oneself through others' eyes.</figcaption>
+  </figure>
+  <ul class="claims">
+    <li>The generous man surveys his motive "in the light in which the indifferent spectator will survey it" and "applauds himself by sympathy with the approbation of this supposed impartial judge". This is the first time in the excerpt that an imagined judge is applied to one's own conduct. Remorse produces horror; the consciousness of merit produces "cheerfulness, serenity, and composure". <span class="ref">II.ii.2.4</span></li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Is the line between "running hard" and "justling" always clear? Judge aggressive price-cutting to drive out a rival, poaching a rival's best employees, and lobbying for regulations that raise rivals' costs. <span class="ref">II.ii.2.1</span></li>
+    <li>Breach of contract is usually remedied by damages and some defend "efficient breach"; theft is a crime. Does Smith's psychological ranking justify the difference, or should the law look only at the size of the harm? <span class="ref">II.ii.2.2</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Running or justling.</b> A workable Smithian test: does the rival lose because buyers or workers freely prefer what I offer, or because I damage him or deceive them? Poaching employees with better offers is running hard: the employee chooses. Price-cutting is running hard while prices stay above cost; below-cost pricing aimed at exit and later recoupment is closer to throwing a rival down, which is roughly how predatory-pricing law draws the line. Lobbying to raise rivals' costs is the clearest justle: it uses the state's force to handicap a competitor rather than to outrun him, the kind of conduct the <i>Wealth of Nations</i> condemns in merchants and manufacturers.</li><li><b>Contract and theft.</b> Smith's ranking supplies a reason the law can respect: the same money value hurts more when taken than when merely not received, so expectation damages may make the promisee nearly whole where restitution after theft does not. It also tracks the motive condition of II.ii.1.1–2: efficient breach with compensation shows no intent to injure, theft does. But the ranking is a tendency, not a rule; when breach destroys a reliance the victim built a life on, its harm can exceed a theft's, and the law of reliance damages reflects that.</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+
+<!-- 5 -->
+<section class="theme wrap" id="society">
+  <p class="covers"><span class="mark"></span>Covers II.ii.3.1–4</p>
+  <h2>The pillar of society</h2>
+  <p class="lede">Why did nature arrange our sentiments this way? Because "man, who can subsist only in society", needs others' help and is exposed to their injuries. Society can survive without love. It cannot survive without justice. <span class="ref">II.ii.3.1</span></p>
+
+  <ul class="claims">
+    <li>The ideal: help given "from love, from gratitude, from friendship, and esteem", so that society "flourishes and is happy", bound by "the agreeable bands of love and affection". <span class="ref">II.ii.3.1</span></li>
+    <li>The minimum: society "may subsist among different men, as among different merchants, from a sense of its utility, without any mutual love or affection", by "a mercenary exchange of good offices according to an agreed valuation". This is probably the most important sentence in the excerpt for economists: it describes a market society, seventeen years before the butcher, the brewer and the baker (WN I.ii.2). <span class="ref">II.ii.3.2</span></li>
+    <li>The qualification that is easy to miss: such a society is "less happy and agreeable". Exchange can hold society together; without mutual affection it is less happy, not incapable of happiness. <span class="ref">II.ii.3.2</span></li>
+    <li>"If there is any society among robbers and murderers, they must at least … abstain from robbing and murdering one another", the old observation of Plato's <i>Republic</i> (351c–352a). Hence "beneficence … is less essential to the existence of society than justice." <span class="ref">II.ii.3.3</span></li>
+  </ul>
+
+  <figure class="figure" id="pillarFig">
+    <div class="bldg-wrap">
+      <svg class="bldg" viewBox="0 0 300 222" role="img" aria-label="A classical building: a pediment with ornaments, columns, and one main central pillar">
+        <line x1="0" y1="211" x2="300" y2="211" stroke="var(--stone-edge)" stroke-width="1.5"/>
+        <rect x="18" y="197" width="264" height="13" rx="1.5" fill="var(--stone)" stroke="var(--stone-edge)"/>
+        <g id="bldgFalling">
+          <path class="part" data-rot="-6" d="M14 66 L150 20 L286 66 Z"/>
+          <rect class="part" data-rot="4" x="18" y="66" width="264" height="16" rx="1"/>
+          <rect class="part" data-rot="-14" x="34" y="83" width="18" height="113" rx="2"/>
+          <rect class="part" data-rot="10" x="84" y="83" width="18" height="113" rx="2"/>
+          <rect class="part" data-rot="-9" x="198" y="83" width="18" height="113" rx="2"/>
+          <rect class="part" data-rot="15" x="248" y="83" width="18" height="113" rx="2"/>
+        </g>
+        <rect class="main" x="136" y="83" width="28" height="113" rx="2"/>
+        <g>
+          <path class="ornament" d="M54 60 Q78 44 102 56 Q126 40 150 32 Q174 40 198 56 Q222 44 246 60"/>
+          <path class="ornament" d="M70 60 Q86 52 102 58 M198 58 Q214 52 230 60"/>
+          <circle class="ornament dot" cx="150" cy="46" r="5"/>
+          <circle class="ornament dot" cx="102" cy="56" r="3"/><circle class="ornament dot" cx="198" cy="56" r="3"/>
+          <path class="ornament" d="M14 66 L6 54 L18 60 M286 66 L294 54 L282 60 M150 20 L144 9 L150 13 L156 9 Z"/>
+          <path class="ornament" d="M24 74 h252" stroke-dasharray="3 5"/>
+        </g>
+        <text x="150" y="146" text-anchor="middle" font-family="Libre Caslon Text, Georgia, serif" font-size="11" fill="var(--paper)" transform="rotate(-90 150 146)">Justice</text>
+      </svg>
+      <div class="tiers" id="tiers">
+        <div class="hi on" data-t="0"><b>Love and justice</b>A happy society, bound by the agreeable bands of love and affection. <span class="ref">II.ii.3.1</span></div>
+        <div data-t="1"><b>Exchange and justice, without love</b>Viable, but "less happy and agreeable". <span class="ref">II.ii.3.2</span></div>
+        <div class="lo" data-t="2"><b>Injustice</b>No society at all: its members are "dissipated and scattered abroad". <span class="ref">II.ii.3.3</span></div>
+      </div>
+    </div>
+    <div class="btnrow">
+      <button id="ornBtn" type="button" aria-pressed="false">Remove the ornament</button>
+      <button id="pilBtn" type="button" aria-pressed="false">Remove the pillar</button>
+      <span class="status" id="bldgStatus" aria-live="polite">The building stands, ornamented.</span>
+    </div>
+    <figcaption>Beneficence "is the ornament which embellishes, not the foundation which supports, the building". Justice "is the main pillar that upholds the whole edifice"; remove it and "the great, the immense fabric of human society … must in a moment crumble into atoms" <span class="ref">II.ii.3.4</span>.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li><strong>Pillar and vault.</strong> Hume's images (M App3.5) make a different point. His vault is about <i>interdependence</i>: a just act's value comes from the whole system. Smith's pillar is about <i>priority</i>: justice is necessary for society, beneficence is not. <span class="ref">II.ii.3.4</span></li>
+    <li>Because justice is so necessary, nature did not leave it to choice. She "implanted in the human breast that consciousness of ill-desert, those terrors of merited punishment", to "protect the weak, to curb the violent, and to chastise the guilty". <span class="ref">II.ii.3.4</span></li>
+    <li>Why was this needed? Back to I.i.1.2: sympathy is real but weak. We feel "so little for another, with whom [we] have no particular connection", that without justice a man "would enter an assembly of men as he enters a den of lions". <span class="ref">II.ii.3.4</span></li>
+    <li><strong>Not Hume's instinct trap.</strong> Hume argued that justice cannot rest on instinct, since property would need "ten thousand different instincts" (M 3.40–46). Smith posits no instinct for any rule. He posits one general sentiment, resentment of injury shared by spectators. Nature supplies the sentiment that enforces justice; law, custom and Hume's "turns of the imagination" supply the rules it enforces. <span class="ref">II.ii.3.4</span></li>
+  </ul>
+
+  <div class="takeaway">
+    <h3>Hume and Smith on the origin of justice</h3>
+    <p>Both agree justice is essential to society. For Hume it is an "artificial" virtue whose authority rests on reflection about its usefulness. For Smith our attachment to it rests on a natural passion, resentment at injury as shared by the spectator, implanted to secure society's survival. They disagree about what produces the attachment, which is the subject of the next section. <span class="ref">II.ii.3.4</span></p>
+  </div>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Seabright's <i>The Company of Strangers</i> (2004) asks how humans came to trade with strangers they will never meet. Smith's answer is "a sense of its utility". What makes strangers trust each other enough to exchange? <span class="ref">II.ii.3.2–3</span></li>
+    <li>Hume's powerless creatures (M 3.18) are owed "gentle usage" but no justice, because they cannot make us feel their resentment. Smith's justice is also built on resentment. Does he face the same problem, or does the spectator's shared resentment give him a way out? <span class="ref">II.ii.3.4</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Trust among strangers.</b> Smith's answer is in the next paragraph: exchange presupposes justice. Strangers can trade because a background of rules against force and fraud, enforced by resentment that every spectator shares and eventually by the magistrate, makes it safe to deal with people one does not love. Utility explains why they <i>want</i> to trade; justice explains why they <i>can</i>. Modern accounts add reputation, repeated dealing and institutions such as courts, all ways of making the spectator's resentment effective at scale.</li><li><b>The powerless.</b> Smith has a way out that Hume lacks. For Hume justice exists where mutual restraint pays, so it stops where the other side cannot retaliate. For Smith the operative resentment is the <i>spectator's</i>, who enters into the victim's situation whether or not the victim can strike back; III.3.4 confirms that the man within forbids injuring even those with whom we have no connection. Smith's theory therefore extends justice to the weak in principle. In practice it depends on the spectator's sympathy reaching them, and Smith himself stresses how weak that sympathy is.</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+
+<!-- 6 -->
+<section class="theme wrap" id="causes">
+  <p class="covers"><span class="mark"></span>Covers II.ii.3.5–12</p>
+  <h2>Why we punish: two kinds of cause</h2>
+  <p class="lede">Justice is useful to society. That is its purpose, its final cause. What actually makes us approve of punishing injustice is resentment shared by the spectator, its efficient cause. Hume's mistake, on Smith's reading, is to take the purpose for the mechanism. <span class="ref">II.ii.3.5</span></p>
+
+  <figure class="figure">
+    <div class="pair">
+      <div>
+        <svg viewBox="0 0 220 110" role="img" aria-label="A spring and two interlocking gear wheels">
+          <g fill="none" stroke="var(--stone-edge)" stroke-width="2">
+            <path d="M30 55 m-4 0 a4 4 0 1 1 8 0 a8 8 0 1 1 -16 0 a12 12 0 1 1 24 0 a16 16 0 1 1 -32 0 a20 20 0 1 1 40 0"/>
+          </g>
+          <g fill="var(--stone)" stroke="var(--stone-edge)" stroke-width="1.5">
+            <circle cx="112" cy="55" r="26"/><circle cx="168" cy="55" r="20"/>
+          </g>
+          <g stroke="var(--stone-edge)" stroke-width="5" stroke-linecap="butt">
+            <path d="M112 25 v-6 M112 85 v6 M82 55 h-6 M142 55 h6 M91 34 l-4 -4 M133 34 l4 -4 M91 76 l-4 4 M133 76 l4 4"/>
+            <path d="M168 31 v-6 M168 79 v6 M144 55 h-6 M192 55 h6 M151 38 l-4 -4 M185 38 l4 -4 M151 72 l-4 4 M185 72 l4 4"/>
+          </g>
+          <circle cx="112" cy="55" r="4" fill="var(--ink)"/><circle cx="168" cy="55" r="4" fill="var(--ink)"/>
+        </svg>
+        <p><b>Efficient cause:</b> the spring moves the wheels, and the spring "intends the effect it produces as little as they do". <span class="ref">II.ii.3.5</span></p>
+      </div>
+      <div>
+        <svg viewBox="0 0 220 110" role="img" aria-label="A watch face showing the time">
+          <circle cx="110" cy="57" r="44" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="2"/>
+          <rect x="103" y="5" width="14" height="9" rx="2" fill="var(--accent)"/>
+          <g stroke="var(--accent)" stroke-width="2"><path d="M110 18 v7 M110 89 v7 M71 57 h7 M142 57 h7"/></g>
+          <g stroke="var(--ink)" stroke-linecap="round"><line x1="110" y1="57" x2="110" y2="30" stroke-width="2.4"/><line x1="110" y1="57" x2="130" y2="66" stroke-width="3"/></g>
+          <circle cx="110" cy="57" r="3" fill="var(--ink)"/>
+        </svg>
+        <p><b>Final cause:</b> telling the time. We attribute that intention to the watchmaker, never to the wheels. <span class="ref">II.ii.3.5</span></p>
+      </div>
+    </div>
+    <div class="scroll" style="margin-top:1.2rem">
+      <table class="t-wide">
+        <thead><tr><th style="width:22%"></th><th>Efficient cause (what produces it)</th><th>Final cause (what it serves)</th></tr></thead>
+        <tbody>
+          <tr><td>The body</td><td>Digestion, circulation</td><td>"The support of the individual, and the propagation of the species"</td></tr>
+          <tr><td>A watch</td><td>Spring and wheels</td><td>Pointing the hour</td></tr>
+          <tr><td>Our sense of justice</td><td class="verdict">Resentment and sympathy</td><td>The preservation of society</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>In explaining bodies we never confuse the two kinds of cause; in explaining the mind we often do. When sentiments promote what "a refined and enlightened reason would recommend", we credit reason with producing them, and "imagine that to be the wisdom of man, which in reality is the wisdom of God" <span class="ref">II.ii.3.5</span>.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>The logical point does not depend on theology. Any process that shapes sentiments to serve social ends without our understanding why (natural selection, cultural evolution, or design) fits the argument equally well. <span class="ref">II.ii.3.5</span></li>
+    <li><strong>The irony of "a single principle".</strong> Hume explained the appeal of the selfish system by its simplicity and refuted it (M 5.16), then used Newton's rule to extend utility to the other virtues (M 3.48). Smith's reply is that Hume made the selfish theorists' error: he found a principle that fits the purpose of justice and took it for the cause of our feelings. <span class="ref">II.ii.3.5</span></li>
+    <li>Later echoes: Ferguson's institutions that are "the result of human action, but not the execution of any human design", made central by Hayek; and Robert Frank's argument (1988) that anger and guilt may have evolved because they make threats and promises credible, a purpose the angry person never intends. <span class="ref">II.ii.3.5</span></li>
+  </ul>
+
+  <h3>Where utility does enter</h3>
+  <ul class="claims">
+    <li>Smith states the rival view fairly: we approve of punishment, even capital punishment, because injustice tends to destroy the society we love (Hume's M 3.10). This forward-looking view of punishment was soon developed by Beccaria and Bentham; note that Beccaria argued <i>against</i> the ordinary necessity and usefulness of the death penalty. Smith names no one. <span class="ref">II.ii.3.6</span></li>
+    <li>The view is partly true, at a precise moment. When the guilty man, his arrogance broken by fear, begins to inspire pity, the humane are tempted to pardon. They then "call to their assistance the consideration of the general interest of society": "mercy to the guilty is cruelty to the innocent". Utility <strong>corrects</strong> a feeling; it does not produce it. <span class="ref">II.ii.3.7</span></li>
+    <li>It also enters in debate. When "the young and the licentious" ridicule morality, "I hate this" does not feel like a sufficient reason, so we reach for consequences. Our stated reasons are not always our actual reasons. <span class="ref">II.ii.3.8</span></li>
+    <li>"All men, even the most stupid and unthinking, abhor fraud, perfidy and injustice … But few men have reflected upon the necessity of justice to the existence of society." If the feeling is universal and the reflection rare, the reflection cannot produce the feeling. <span class="ref">II.ii.3.9</span></li>
+    <li>Hume noticed the same fact (M 3.47): we blame injustice automatically, without being aware of any reflection on consequences. He explains this by education and acquired habit, which make the blame immediate, while the question "what must become of the world, if such practices prevail?" shows the consideration still at work. Smith attributes the immediacy instead to sympathetic resentment, and treats the appeal to consequences as something we reach for when challenged. The open question is whether acquired habit can account for the immediacy as well as natural resentment does. <span class="ref">II.ii.3.8–9</span></li>
+    <li><strong>The guinea.</strong> We do not care about one man because he is part of society, any more than about one guinea because it is part of a thousand: "our regard for the multitude is compounded and made up of the particular regards which we feel for the different individuals." Concern for society is built up from concern for individuals, not derived from it, the structure of a social welfare function and of Schelling's identified versus statistical lives. <span class="ref">II.ii.3.10</span></li>
+  </ul>
+
+  <h3>The crucial test: the sentinel</h3>
+  <figure class="figure">
+    <div class="scroll">
+      <table class="t-wide">
+        <thead><tr><th style="width:24%"></th><th>The sentinel asleep on watch</th><th>The "ungrateful murderer or parricide"</th></tr></thead>
+        <tbody>
+          <tr><td>Who is hurt?</td><td>No particular person; the danger lies in remote consequences</td><td>A particular victim</td></tr>
+          <tr><td>What supports punishment</td><td>Utility alone: "the many should be preferred to the one"</td><td>Resentment, shared by the spectator</td></tr>
+          <tr><td>How we feel</td><td class="bad">"Excessively severe"; a humane man must "make an effort"; the sentinel is "an unfortunate victim" we would gladly save</td><td class="verdict">The heart "applauds with ardour, and even with transport"</td></tr>
+          <tr><td>If he escapes</td><td>Relief</td><td>Rage, and a call on God "to avenge, in another world"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>Smith takes the different responses as evidence that utility does not explain all approval of punishment: "his approbation of the one is far from being founded upon the same principles with that of the other" <span class="ref">II.ii.3.11</span>. The structure is Hume's own <i>experimentum crucis</i> (M 5.17), turned against him. Note the limit of the argument: it challenges utility as the <i>explanation</i> of our approval, not utility as a <i>justification</i>. Smith himself holds that utility alone justifies the sentinel's punishment.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>Hume noticed the same fact from his side: what injures the community "without hurting any individual, is often more lightly thought of" (M App3.11). Hume treated it as a weakness in our feelings about public wrongs; Smith treats it as evidence about the source of our sense of justice. <span class="ref">II.ii.3.11</span></li>
+    <li><strong>Beyond the grave.</strong> Every religion has had a Tartarus and an Elysium. Belief in future punishment can of course deter present conduct. Smith's point is different: we want wrongdoing that escaped earthly justice to be punished beyond the grave, where its punishment serves no example to society, and that wish expresses a sense of desert rather than a concern for deterrence. Smith uses this as evidence about our sentiments, not about religion. Experiments on third-party punishment (Fehr and Fischbacher, 2004) and on assigned punishments (Carlsmith, Darley and Robinson, 2002) fit Smith better than pure deterrence, with the same two cautions as before: they describe, they do not prove innateness, and they say nothing about how punishment ought to be designed. <span class="ref">II.ii.3.12</span></li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Is utility-based economics guilty of explaining everything "from a single principle"? When economists say people follow rules "because" the rules are efficient, are they confusing final and efficient causes? <span class="ref">II.ii.3.5</span></li>
+    <li>Haidt (2001) argues that moral judgments are driven by quick intuitions, with reasoning arriving afterwards. How close is this to Smith? Does it make moral arguments mere rationalizations? <span class="ref">II.ii.3.8–9</span></li>
+    <li>Regulatory offences (mala prohibita) often have no identifiable victim, so Smith predicts weak public indignation. Is that what we observe, and what does it imply given Becker's (1968) criterion that penalties and enforcement should minimize the total social loss from crime, including the costs of enforcement and punishment, not track indignation? <span class="ref">II.ii.3.11</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>A single principle.</b> Sometimes. "People follow this rule because it is efficient" is a final-cause statement passed off as an efficient-cause one unless a mechanism is supplied: selection among firms, learning, imitation, or deliberate design. Good work in institutional and evolutionary economics supplies the mechanism and so escapes Smith's charge. Smith's warning is still useful as a refereeing question: showing that an institution is efficient does not show that efficiency is why it exists or why people support it.</li><li><b>Smith and Haidt.</b> Similar on the order of events, intuition first and reasons reached for when challenged, but not equivalent theories. But Smith does not conclude that reasoning is idle. In II.ii.3.7 reflection on the general interest stiffens resolve when pity threatens to weaken it, and Part III's impartial spectator corrects raw feeling. Once internalized, that correction need not be slow or deliberate each time; it can become as habitual as the visual correction of III.3.2. The fair reading is that reasoning rarely creates a moral judgment from nothing but can, over time, retrain the intuitions it starts from.</li><li><b>Victimless offences.</b> Largely yes: tax evasion, safety violations and environmental breaches attract less outrage than theft of the same value, and juries and voters are often reluctant to impose heavy penalties for them. In Becker's framework, minimizing social loss often calls for higher penalties where detection is unlikely, which is often the case for exactly these offences. Smith's psychology predicts the political resistance such penalties meet. Two responses suggest themselves: make the victims identifiable (name the people harmed by a pollutant), or rely on fines and administrative sanctions that do not need public indignation to be imposed.</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+
+<!-- 7 -->
+<section class="theme wrap" id="mirror">
+  <p class="covers"><span class="mark"></span>Covers III.1.1–7, III.2.1–8, III.2.25–33 (abridged)</p>
+  <h2>The mirror of society</h2>
+  <p class="lede">Parts I and II asked how we judge others. Part III, the part Smith revised most, asks how we judge ourselves. The answer: by "altogether the same" principle, turned inward. This is where the theory becomes a theory of conscience. <span class="ref">III.1.1–2</span></p>
+
+  <ul class="claims">
+    <li>We can never survey our own motives "unless we remove ourselves, as it were, from our own natural station", and view them "with the eyes of other people". The key move is distance. <span class="ref">III.1.2</span></li>
+    <li>A person raised "in some solitary place" could no more judge the beauty or deformity of his mind than of his face: he has no mirror. "Bring him into society, and he is immediately provided with the mirror which he wanted before", placed in the faces and reactions of those he lives with. Society also creates feelings about our feelings. <span class="ref">III.1.3</span></li>
+    <li>Rousseau (1755) said living "in the opinion of others" corrupts us. Smith, who reviewed Rousseau's <i>Discourse</i>, agrees we see ourselves through others' eyes but reverses the evaluation: the social mirror is the only way moral self-knowledge becomes possible. Hume's solitary loses pleasure (M 5.18); Smith's lacks self-knowledge. <span class="ref">III.1.3</span></li>
+    <li>We examine our looks "limb by limb" in a looking-glass, and our conduct by supposing "ourselves the spectators of our own behaviour", Cooley's "looking-glass self" (1902) more than a century early. Secure self-approval frees us from the world's opinion; doubt makes us crave approval. <span class="ref">III.1.4–5</span></li>
+    <li>"I divide myself, as it were, into two persons": the examiner and judge, and the agent judged. Economists' multiple-selves models (Thaler and Shefrin, 1981; Fudenberg and Levine, 2006) split the person too, but into planner and doer; Smith's split is moral. <span class="ref">III.1.6</span></li>
+  </ul>
+
+  <h3>Three spectators in one sentence</h3>
+  <figure class="figure">
+    <div class="steps" role="img" aria-label="Three levels of spectator, rising from actual to ideal" style="grid-template-columns:repeat(3,1fr);min-height:14rem">
+      <div class="s n"><div class="col" style="height:4rem"></div><b>"What are"</b>the judgments of the actual spectators around us</div>
+      <div class="s p"><div class="col" style="height:7.5rem;opacity:.7"></div><b>"What, upon a certain condition, would be"</b>their judgments if, for example, they were better informed <span class="ref">III.2.5</span></div>
+      <div class="s p"><div class="col" style="height:11rem"></div><b>"What, we imagine, ought to be"</b>the judgment of a fair and impartial spectator</div>
+    </div>
+    <figcaption>Our judgment of ourselves "must always bear some secret reference" to one of these <span class="ref">III.1.2</span>. The impartial spectator begins at the first level and is refined toward the third; the rest of Part III traces the refinement.</figcaption>
+  </figure>
+
+  <h3>Praise and praiseworthiness</h3>
+  <figure class="figure">
+    <div class="scroll">
+      <table>
+        <thead><tr><th></th><th>What others actually feel</th><th>What we deserve them to feel</th></tr></thead>
+        <tbody>
+          <tr><th>We desire</th><td>to be loved; <b>praise</b></td><td class="verdict">to be lovely; <b>praiseworthiness</b></td></tr>
+          <tr><th>We dread</th><td>to be hated; <b>blame</b></td><td class="bad">to be hateful; <b>blameworthiness</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>Praiseworthiness is to be "that thing which, though it should be praised by nobody, is, however, the natural and proper object of praise" <span class="ref">III.2.1</span>. Praise is a fact about other people; praiseworthiness is a fact about us. Yet even the ideal is framed as what others' sentiments "naturally ought to be": Smith never leaves the social world <span class="ref">III.2.25</span>.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>The cynic says we love praiseworthiness because it brings praise. Smith argues the reverse: admiring others makes us want to be admirable, and we value praise largely as <i>evidence</i> that we are. The unnamed target is Mandeville's claim that virtue is the offspring of flattery. <span class="ref">III.2.2–3</span></li>
+    <li>So undeserved praise should please little; it reminds us of "what we ought to be, but what we are not". To enjoy "groundless applause" is vanity, the root of "affectation and common lying". The foolish liar's mistake is to confuse the actual spectator with the well-informed one. <span class="ref">III.2.4</span></li>
+    <li>Men have "voluntarily thrown away life to acquire after death a renown which they could no longer enjoy". As with the dread of death (I.i.1.13), all the value lies in imagination. <span class="ref">III.2.5</span></li>
+  </ul>
+
+  <div class="takeaway">
+    <h3>Two desires, one moral hazard problem</h3>
+    <p>Nature gave man a desire to please and a desire to be "what ought to be approved of". "The first desire could only have made him wish to appear to be fit for society. The second was necessary in order to render him anxious to be really fit." <span class="ref">III.2.6–7</span></p>
+    <p>If people cared only for praise, they would behave well only when watched: the hidden-action problem. Love of praiseworthiness extends the incentive into the domain no one observes. It is, in effect, a fuller theory of the "inward peace of mind" to which Hume appealed against his sensible knave.</p>
+  </div>
+
+  <ul class="claims">
+    <li>Love of "just fame, of true glory" is "not unworthy even of a wise man", but self-approbation is "if not the only, … at least the principal object" of his anxiety. Smith is not a pure Stoic: external approval is a legitimate but secondary good. <span class="ref">III.2.8</span></li>
+    <li>In practice the motives are "blended", and how much each contributed "may frequently be unknown even to himself". Critics see vanity, admirers see virtue: "the imagination of the spectator throws upon it either the one colour or the other". <span class="ref">III.2.26</span></li>
+  </ul>
+
+  <h3>Three tribunals</h3>
+  <figure class="figure">
+    <div class="rules">
+      <div><b>The man without</b><span>Actual spectators, "the immediate judge of mankind", but "only in the first instance". Founded "altogether in the desire of actual praise, and in the aversion to actual blame". <span class="ref">III.2.31–32</span></span></div>
+      <div><b>The man within</b><span>"The supposed impartial and well-informed spectator … the great judge and arbiter", a court of appeal founded in praiseworthiness. A demigod, "partly of immortal, yet partly too of mortal extraction". <span class="ref">III.2.32</span></span></div>
+      <div><b>The all-seeing Judge</b><span>When even the man within is shaken, the appeal to a "still higher tribunal", "whose eye can never be deceived". <span class="ref">III.2.33</span></span></div>
+    </div>
+    <figcaption>The appeal works both ways: the man within humbles us when praised for what we did not do, and reassures us when blamed for it. But he can be "astonished and confounded by the vehemence and clamour of the man without": "we scarce dare to absolve ourselves, when all our brethren appear loudly to condemn us" <span class="ref">III.2.32</span>.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>The weakness is not a defect in the theory. The impartial spectator is built from real spectators, so it would be strange if it were immune to their verdicts; Asch's conformity experiments (1955) show how strong that clamour can be. <span class="ref">III.2.32</span></li>
+    <li>Smith describes "the virtuous man who has the misfortune to doubt" a future life and who wishes to believe it; he describes the belief's function without asserting its truth. And even theology answers to the moral sentiments: a doctrine of divine reward "in direct opposition to all our moral sentiments" invites the scoffer. <span class="ref">III.2.33</span></li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Economists distinguish image motivation from intrinsic motivation (Bénabou and Tirole, 2006; Ariely, Bracha and Meier, 2009). Is "love of praise" just image motivation, and "love of praiseworthiness" intrinsic motivation, or something more specific? <span class="ref">III.2.1</span></li>
+    <li>When praise is easy to get (inflated grades, inflated reference letters, "likes"), does it lose its value as evidence of praiseworthiness? What happens to an institution whose praise is no longer informative? <span class="ref">III.2.4</span></li>
+    <li>If love of praiseworthiness solves hidden action, why do organizations still monitor? Can incentives tied to observable measures (test scores, sales targets, publication counts) crowd it out? <span class="ref">III.2.6–7</span></li>
+    <li>If our moral sense is formed in society, will a person raised in a corrupt society have a corrupt moral sense? <span class="ref">III.1.3</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Image and intrinsic.</b> Love of praise maps well onto image motivation. Love of praiseworthiness is more specific than "intrinsic motivation" as economists use it: it is not enjoyment of the act itself but the desire to <i>deserve</i> approval by a standard the agent shares with an idealized observer. Bénabou and Tirole's self-signalling (acting well to confirm one's own type) is closer to Smith than plain intrinsic motivation, since it keeps the spectator but moves him inside.</li><li><b>Inflated praise.</b> Yes: praise is informative only if it discriminates. Once everyone gets top grades, the grade stops telling the student whether he is praiseworthy, so the conscientious ignore it and the vain enjoy it, which is Smith's vanity made institutional. Institutions respond by building new signals (rankings, private letters, coded language), and the inflation moves there. The informed reader then becomes Smith's "better informed" spectator, discounting what is said.</li><li><b>Monitoring and crowding out.</b> Monitoring is still needed because the man within is weak and the "well-formed mind" is not universal; Smith never claims otherwise. The experimental evidence shows that incentives can crowd out <i>image</i> motivation; whether they also crowd out Smithian conscience is a further, untested step. A plausible worry is that a scheme that pays only for what is observed tells people that only the observed counts, shifting attention from deserving approval to obtaining it. Classic examples are teaching to the test and salami-slicing publications. The Smithian design rule is to keep explicit incentives modest where the task has important unobservable parts, and to reward judgment by informed peers, not only counts.</li><li><b>A corrupt society.</b> To a large degree, yes: the first mirror is the society one lives in. Smith's resources against this are the conditional and ideal spectators: asking what others would think if better informed, and what an impartial judge with no stake would think. Sen's reading (2009) adds that the spectator can include voices from outside one's own society. Escape is possible but not guaranteed, which is why reformers so often draw on outsiders' views.</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+
+<!-- 8 -->
+<section class="theme wrap" id="within">
+  <p class="covers"><span class="mark"></span>Covers III.3.1–6</p>
+  <h2>The man within and the little finger</h2>
+  <p class="lede">Chapter 3 changes the question. Not how we judge our conduct, but how we weigh our own interests against other people's. Only by consulting "this judge within" can we see what relates to ourselves "in its proper shape and dimensions". <span class="ref">III.3.1</span></p>
+
+  <figure class="figure">
+    <svg viewBox="0 0 640 200" role="img" aria-label="From a desk, the window frame looks as large as the distant mountains seen through it" style="display:block;width:100%;height:auto">
+      <rect x="20" y="20" width="260" height="160" rx="3" fill="var(--paper)" stroke="var(--stone-edge)" stroke-width="2"/>
+      <path d="M20 150 L70 95 L105 128 L150 70 L205 125 L240 100 L280 140 L280 180 L20 180 Z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5"/>
+      <g fill="var(--accent)" opacity=".75"><circle cx="60" cy="160" r="9"/><circle cx="78" cy="164" r="7"/><circle cx="230" cy="162" r="8"/></g>
+      <line x1="150" y1="20" x2="150" y2="180" stroke="var(--stone-edge)" stroke-width="3"/>
+      <line x1="20" y1="100" x2="280" y2="100" stroke="var(--stone-edge)" stroke-width="3"/>
+      <g font-family="Libre Caslon Text, Georgia, serif" fill="var(--ink)" font-size="14">
+        <text x="310" y="50">From my desk, "an immense landscape of lawns,</text>
+        <text x="310" y="70">and woods, and distant mountains" seems no</text>
+        <text x="310" y="90">bigger than the little window I write by.</text>
+        <text x="310" y="128" fill="var(--muted)" font-style="italic">To judge their real sizes I must move, "at least</text>
+        <text x="310" y="148" fill="var(--muted)" font-style="italic">in fancy, to a different station". Habit makes</text>
+        <text x="310" y="168" fill="var(--muted)" font-style="italic">the correction so quick I scarcely notice it.</text>
+      </g>
+    </svg>
+    <figcaption>The "philosophy of vision" <span class="ref">III.3.2</span>. Hume makes a closely similar comparison in M 5.41; since the analogy was common in eighteenth-century writing on vision, this is best understood as a parallel rather than evidence of borrowing.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>"To the selfish and original passions of human nature", a small interest of our own outweighs "the greatest concern of another with whom we have no particular connection". The correction: view both "neither from our own place nor yet from his, … but from the place and with the eyes of a third person, who has no particular connection with either". This is the clearest definition of the impartial spectator in the excerpt. <span class="ref">III.3.3</span></li>
+    <li>Hume's "general point of view" (M 5.41–42) also corrects the inequalities of our sentiments, and Hume allows humanity real influence on action (M 5.39). The difference is the mechanism: Hume's correction works through general language and attention to effects on others; Smith's works through an imagined person whose sympathy we seek, and he gives a fuller account of how its verdict gains authority over action. <span class="ref">III.3.3</span></li>
+    <li>Later uses diverge. Rawls (1971, §30) argues the "impartial sympathetic spectator" leads to classical utilitarianism, and designs his original position to work differently. Sen (2009) revives Smith's spectator as "open impartiality", in which voices from outside one's own society can be heard. <span class="ref">III.3.3</span></li>
+  </ul>
+
+  <h3>The earthquake in China</h3>
+  <figure class="figure" id="balFig">
+    <svg class="balance" viewBox="0 0 560 230" role="img" aria-label="A balance with a little finger on one side and a hundred million people on the other">
+      <path d="M280 72 L262 200 L298 200 Z" fill="var(--stone)" stroke="var(--stone-edge)"/>
+      <line x1="210" y1="201" x2="350" y2="201" stroke="var(--stone-edge)" stroke-width="2"/>
+      <g class="beamg" id="balBeam">
+        <rect x="76" y="66" width="408" height="8" rx="4" fill="var(--ink)"/>
+      </g>
+      <circle cx="280" cy="70" r="7" fill="var(--ochre)"/>
+      <g id="panL">
+        <line x1="96" y1="70" x2="56" y2="140" stroke="var(--stone-edge)"/><line x1="96" y1="70" x2="136" y2="140" stroke="var(--stone-edge)"/>
+        <path d="M46 140 h100 q-6 18 -50 18 q-44 0 -50 -18 Z" fill="var(--ochre-soft)" stroke="var(--ochre)"/>
+        <text x="96" y="182" text-anchor="middle" font-size="13">his little finger</text>
+        <rect x="88" y="124" width="16" height="16" rx="7" fill="var(--ochre)"/>
+      </g>
+      <g id="panR">
+        <line x1="464" y1="70" x2="424" y2="140" stroke="var(--stone-edge)"/><line x1="464" y1="70" x2="504" y2="140" stroke="var(--stone-edge)"/>
+        <path d="M414 140 h100 q-6 18 -50 18 q-44 0 -50 -18 Z" fill="var(--accent-soft)" stroke="var(--accent)"/>
+        <g id="crowd" fill="var(--accent)"></g>
+        <text x="464" y="182" text-anchor="middle" font-size="13">a hundred million</text>
+        <text x="464" y="198" text-anchor="middle" font-size="13">"brethren"</text>
+      </g>
+    </svg>
+    <div class="btnrow">
+      <button id="balBtn" type="button" aria-pressed="false">Ask what he would do</button>
+      <span class="status" id="balStatus" aria-live="polite">Passive feelings: losing his finger tomorrow, "he would not sleep tonight"; over the ruin of a hundred million he "will snore with the most profound security".</span>
+    </div>
+    <figcaption>Would he sacrifice them to save his finger? "Human nature startles with horror at the thought." <span class="ref">III.3.4</span></figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>A "man of humanity in Europe" hears that China has been swallowed by an earthquake. He expresses sorrow, reflects on the precariousness of life, perhaps on European trade, then returns to "his business or his pleasure" (readers in 1759 remembered Lisbon, 1755). Hume made the first half of this point (M 5.31, M 5.43). <span class="ref">III.3.4</span></li>
+    <li>Smith's puzzle: "When our passive feelings are almost always so sordid and so selfish, how comes it that our active principles should often be so generous and so noble?" Hume's cautious sentence (M 5.39) covers the case where no private interest pulls the other way; Smith's experiment is aimed precisely at the case where one does. <span class="ref">III.3.4</span></li>
+    <li>The answer: "It is not the soft power of humanity, it is not that feeble spark of benevolence." It is "reason, principle, conscience, the inhabitant of the breast, the man within", who tells us "that we are but one of the multitude, in no respect better than any other in it", almost word for word II.ii.2.1. The motive engaged is "the love of what is honourable and noble". This "reason" works through the imagined spectator; it is not a rationalist faculty deducing morality from first principles. <span class="ref">III.3.4</span></li>
+    <li><strong>Preference and choice.</strong> Read his values off his feelings and he prizes his finger above a hundred million lives; read them off his choices and you see the opposite. A revealed-preference approach would register the refusal correctly; what the choice alone cannot reveal is the mechanism behind it, a moral principle overriding his felt preferences. <span class="ref">III.3.4</span></li>
+    <li><strong>An asymmetry.</strong> Smith asks whether the man would <i>harm</i> the Chinese to save his finger, not whether he would <i>give up</i> his finger to save them. That is the justice/beneficence line again, and the question Singer (1972) presses: Smith's European is not a monster, but is he good enough? <span class="ref">III.3.4</span></li>
+    <li>The principle is "deeply impressed upon every tolerably good soldier", who would become "the scorn of his companions" if he shrank from risk. Here the man within and the man without agree, as in ordinary life they usually do. <span class="ref">III.3.5</span></li>
+  </ul>
+
+  <div class="takeaway">
+    <h3>No case-by-case reallocation</h3>
+    <p>"One individual must never prefer himself so much even to any other individual, as to hurt or injure that other, in order to benefit himself, though the benefit to the one should be much greater than the hurt or injury to the other." "The poor man must neither defraud nor steal from the rich", even if diminishing marginal utility means the transfer would raise total welfare. Smith closes with the Stoic maxim from Cicero's <i>On Duties</i> (III.21): to gain by another's loss is "more contrary to nature, than death, than poverty, than pain". <span class="ref">III.3.6</span></p>
+    <p>Hume reaches the same rule (M App3.6) because the system of rules is useful; Smith because the impartial spectator cannot go along with injury for one's own benefit, and because the "sacred rules" carry society's security and peace.</p>
+  </div>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>The overriding motive is "the love of what is honourable and noble … of our own characters". Is that a selfish concern for self-image, or the love of praiseworthiness of III.2? <span class="ref">III.3.4</span></li>
+    <li>Hume lets the drowning man seize a plank (M 3.8). Smith's maxim admits no exceptions. Would Smith's spectator go along with the shipwrecked man? <span class="ref">III.3.6</span></li>
+    <li>Smith's rule binds the poor man. Does it bind the state? Compare II.ii.1.8 and the first maxim of taxation, contribution "in proportion to their respective abilities" (WN V.ii.b.3). <span class="ref">III.3.6</span></li>
+    <li>Could Hume's resources (general rules of justice and the habits they create) also explain why the European would not sacrifice China? <span class="ref">III.3.4</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>Self-image or praiseworthiness?</b> The phrase sounds self-regarding, but its content is not: the "character" in question is honourable only if it would be approved by an impartial judge, so the motive is to <i>deserve</i> approval, which is III.2's love of praiseworthiness. It is self-concern of a special kind, concern to be a certain sort of person. If one calls that selfish, the label no longer distinguishes the European who refuses the trade from one who accepts it.</li><li><b>The shipwreck.</b> Smith's spectator theory can find an answer, but must earn it. A spectator who enters the drowning man's situation may well go along with the seizure when both cannot survive and the plank's owner is not otherwise harmed in a way he would not be anyway; the spectator's verdict tracks situations, not formulas. The Stoic maxim then reads as a rule for ordinary life, which is what "the poor man" (poor, not shipwrecked) describes. Hume's utility theory handles the case more directly, which counts in its favour here.</li><li><b>Does it bind the state?</b> Not in the same way. III.3.6 forbids <i>individuals</i> from taking by force or fraud for their own benefit. Taxation by general rule, for public purposes, proportioned to ability and certain rather than arbitrary, is a different act, and II.ii.1.8 lets the magistrate command good offices "to a certain degree". It becomes something the spectator would call injury when it is discretionary, targets particular people for others' gain, or is pushed so far it destroys liberty and security.</li><li><b>Hume's resources.</b> Partly. Long habits of respecting justice and the general rules we have learned could make sacrificing millions unthinkable without any felt sympathy, and Hume himself points to automatic blame (M 3.47). Whether Hume's account adequately explains why moral judgment prevails over present self-interest remains disputed. Smith offers the man within and the love of praiseworthiness as that explanation; a good meeting question is whether this extra machinery is needed or only more vivid.</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+
+<!-- 9 -->
+<section class="theme wrap" id="system">
+  <p class="covers"><span class="mark"></span>Covers IV.1.1–11</p>
+  <h2>The love of system</h2>
+  <p class="lede">Part IV returns to Meeting 1's question: why does utility please? Smith accepts Hume's answer, sympathy with those who benefit, and then adds something he says nobody has noticed: we often love the fitness of the means more than the end they serve.</p>
+
+  <ul class="claims">
+    <li>"Utility is one of the principal sources of beauty": a convenient house pleases as much as a regular one, as Hume's ship and doors showed (M 5.1). <span class="ref">IV.1.1</span></li>
+    <li>"An ingenious and agreeable philosopher" is Hume, and Smith summarizes him fairly: utility pleases the owner by reminding him of its convenience, and the spectator by sympathy, as when we visit "the palaces of the great" (compare M 5.19). <span class="ref">IV.1.2</span></li>
+    <li>The new claim: "the exact adjustment of the means for attaining any conveniency or pleasure" is often "more regarded, than that very conveniency or pleasure", "both in the most frivolous and in the most important concerns of human life". Hume had said nothing pleases as a means when its end leaves us cold (M 5.17); Smith accepts this but adds that means can please <i>more</i> than their end. <span class="ref">IV.1.3</span></li>
+  </ul>
+
+  <h3>Paying more for the means than the end is worth</h3>
+  <figure class="figure">
+    <div class="scroll">
+      <table class="t-wide">
+        <thead><tr><th style="width:22%">Case</th><th>The end it serves</th><th>What is actually valued</th></tr></thead>
+        <tbody>
+          <tr><td>Chairs left in the middle of the room <span class="ref">IV.1.4</span></td><td>A free floor, a trifle; he could simply have sat down</td><td class="bad">"That arrangement of things which promotes it": he takes more trouble than the disorder ever cost him</td></tr>
+          <tr><td>A watch that loses two minutes a day <span class="ref">IV.1.5</span></td><td>Knowing the time; the owner is no more punctual than anyone</td><td class="bad">"The perfection of the machine": sold for a couple of guineas, replaced for fifty, about twenty-five times the price</td></tr>
+          <tr><td>The lovers of toys <span class="ref">IV.1.6</span></td><td>Occasional small conveniences</td><td class="bad">Pockets "loaded with a multitude of baubles"; people "ruin themselves" on them</td></tr>
+          <tr><td>Wealth and greatness <span class="ref">IV.1.8</span></td><td>"A few trifling conveniencies to the body"</td><td class="bad">"Enormous and operose machines", pursued for a lifetime</td></tr>
+          <tr><td>Public policy <span class="ref">IV.1.11</span></td><td>The happiness of those who live under it</td><td class="bad">The harmony of "the great system of government"</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <figcaption>"It is often the secret motive of the most serious and important pursuits of both private and public life" <span class="ref">IV.1.7</span>. In cost-benefit terms the chair-mover pays more than the benefit: either he is irrational, or he values order itself.</figcaption>
+  </figure>
+
+  <h3>The poor man's son, a story in three acts</h3>
+  <figure class="figure">
+    <div class="acts">
+      <div><b>Ambition</b><span class="tag">"Whom Heaven in its anger has visited with ambition"</span>He looks at the rich and imagines that with a carriage and servants "he would sit still contentedly, and be quiet".</div>
+      <div><b>The pursuit</b><span class="tag">"He serves those whom he hates"</span>In the first month he suffers more than the want of these things could have cost him in a lifetime, sacrificing "a real tranquillity that is at all times in his power".</div>
+      <div><b>Disillusion</b><span class="tag">"Mere trinkets of frivolous utility"</span>In old age, "his body wasted with toil and diseases", he finds that wealth keeps off "the summer shower, not the winter storm".</div>
+    </div>
+    <figcaption>Ambition is presented as a punishment <span class="ref">IV.1.8</span>. Wealth does not protect against "anxiety … fear … sorrow … diseases … danger, and … death".</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li><strong>Why envy the rich at all?</strong> Because wealth's conveniences are visible. Nobody admires a nail-clipper; everyone sees the palace. On a desert island a palace and a tweezer-case might be equally doubtful goods; in society there is "no comparison", because "we constantly pay more regard to the sentiments of the spectator, than to those of the person principally concerned". The spectator does not think the rich happier; he admires the "ingenious and artful adjustment" of their means. <span class="ref">IV.1.8</span></li>
+    <li>For economists, at least four connections: positional goods (Veblen, 1899; Hirsch, 1976; Frank, 1985); the Easterlin paradox (1974), still debated; the focusing illusion (Schkade and Kahneman, 1998); and the claim that we value the system of provision for itself. Hume's "frivolous vanity" (M 3.25) pointed toward equality; Smith's leads to the claim that vanity feeds the poor. <span class="ref">IV.1.8</span></li>
+    <li>This "splenetic philosophy" belongs to sickness and low spirits. In health the imagination expands, and we "confound" the trifling real satisfaction "with the order, the regular and harmonious movement of the system". Which view is correct? Smith does not give an explicit verdict. One reading is that the "abstract and philosophical light" is more accurate about real satisfaction, while the healthy view is the one we live by. <span class="ref">IV.1.9</span></li>
+  </ul>
+
+  <h3>The useful deception and the invisible hand</h3>
+  <figure class="figure">
+    <div class="pair">
+      <div>
+        <svg viewBox="0 0 220 110" role="img" aria-label="A wide field of grain">
+          <rect x="6" y="70" width="208" height="34" rx="2" fill="var(--ochre-soft)" stroke="var(--ochre)"/>
+          <g stroke="var(--ochre)" stroke-width="1.6" stroke-linecap="round" id="wheat"></g>
+        </svg>
+        <p><b>His eye:</b> "the proud and unfeeling landlord" surveys his fields and "in imagination consumes himself the whole harvest". <span class="ref">IV.1.10</span></p>
+      </div>
+      <div>
+        <svg viewBox="0 0 220 110" role="img" aria-label="One bowl and many small figures who share the rest">
+          <path d="M14 62 h44 q-4 20 -22 20 q-18 0 -22 -20 Z" fill="var(--ochre-soft)" stroke="var(--ochre)"/>
+          <g fill="var(--accent)" id="servants"></g>
+        </svg>
+        <p><b>His stomach:</b> "the eye is larger than the belly". The rest feeds those who cook, build and maintain his "baubles and trinkets". <span class="ref">IV.1.10</span></p>
+      </div>
+    </div>
+    <figcaption>"It is well that nature imposes upon us in this manner." The deception "rouses and keeps in continual motion the industry of mankind": it cleared forests, founded cities, and made the ocean "the great high road of communication to the different nations of the earth" <span class="ref">IV.1.10</span>.</figcaption>
+  </figure>
+
+  <ul class="claims">
+    <li>The rich "consume little more than the poor" and, "though they mean only their own conveniency", "are led by an invisible hand to make nearly the same distribution of the necessaries of life, which would have been made, had the earth been divided into equal portions among all its inhabitants". This is the first appearance of the phrase in a work Smith published; it recurs, in a different context, in WN IV.ii.9. <span class="ref">IV.1.10</span></li>
+    <li>"The beggar, who suns himself by the side of the highway, possesses that security which kings are fighting for", perhaps an echo of Diogenes asking Alexander to stand out of his sunlight. The pattern is the one first met with the dread of death: an illusion that harms the individual benefits society. <span class="ref">IV.1.10</span><span class="ref">I.i.1.13</span></li>
+  </ul>
+
+  <div class="takeaway">
+    <h3>How to read the invisible hand, carefully</h3>
+    <ol>
+      <li><b>What is distributed?</b> Necessaries, above all food, not income, wealth or power. The argument rests on a physical limit: one stomach.</li>
+      <li><b>How strong is the claim?</b> "Nearly the same distribution … as … equal portions" is a very strong empirical claim in a Scotland that still knew dearth. In WN Smith says landlords "love to reap where they never sowed" (WN I.vi.8).</li>
+      <li><b>Is Smith ironic?</b> Rothschild (2001, ch. 5) reads the image with considerable scepticism; others read it as providential. Note the jarring "When Providence divided the earth among a few lordly masters".</li>
+      <li><b>Compare Hume.</b> Hume argues equality cannot be achieved (M 3.25–26); Smith suggests that in what matters most it is largely achieved anyway. Hume had also defended luxury as a spur to industry; Smith's addition is the diagnosis that the rich pursue wealth under an illusion, and society gains from their mistake.</li>
+    </ol>
+  </div>
+
+  <h3>The same love of system in public life</h3>
+  <ul class="claims">
+    <li>A public-spirited man mends high roads, but not from "fellow-feeling with carriers and wagoners". Legislators grant "premiums" to linen and woollen manufactures, which WN would criticize at length, because they make the "wheels" of government seem to "move with more harmony and ease". <span class="ref">IV.1.11</span></li>
+    <li>Yet constitutions "are valued only in proportion as they tend to promote the happiness of those who live under them. This is their sole use and end." Public spirit and humanity come apart: Peter the Great had public spirit without humanity, James I humanity without public spirit. <span class="ref">IV.1.11</span></li>
+    <li>"Nothing tends so much to promote public spirit as the study of politics." But in the sixth edition Smith sharpens the warning: "the man of system" imagines he can arrange people "as easily as the hand arranges the different pieces upon a chess-board", forgetting each has "a principle of motion of its own" (VI.ii.2.17, not in the excerpt). A beautifully designed policy, or model, can be admired for its elegance apart from its effects on actual people. <span class="ref">IV.1.11</span></li>
+  </ul>
+
+  <details class="discuss"><summary>For discussion</summary><ul>
+    <li>Is the watch connoisseur irrational, or does he simply enjoy owning a well-made machine, in which case why call it "frivolous"? Think of a phone camera far better than its owner needs. <span class="ref">IV.1.5</span></li>
+    <li>The poor man's son is seen from disillusioned old age. Is that view more reliable than the ambitious young man's? <span class="ref">IV.1.8–9</span></li>
+    <li>Is "all the different ranks of life are nearly upon a level" a profound insight, a comforting rationalization of inequality, or both (a passage can console and defend an unequal order at once)? What evidence would test it today, and does the test concern the distribution of necessaries or happiness across ranks? <span class="ref">IV.1.10</span></li>
+    <li>If public spirit springs from love of the system, can studying elegant systems make us care less about people? How should a policy-maker guard against loving the machine more than its purpose? <span class="ref">IV.1.11</span></li>
+  </ul></details>
+  <details class="answers"><summary>Possible answers</summary><ol><li><b>The connoisseur.</b> On a revealed-preference view he is not irrational: he pays for what he values, and fine engineering is a legitimate good. Smith's claim is narrower and more interesting: the stated reason (knowing the time) is not the real one, and people systematically mistake their love of fitness for a demand for its product. That matters when the misattribution drives large, costly decisions, as with the poor man's son, rather than a hobby.</li><li><b>Youth or old age?</b> Each is biased in a predictable direction. The young man suffers a focusing illusion: he overweights the visible goods he is thinking about. The old man's view is coloured by sickness, which IV.1.9 calls "splenetic", and by hindsight. The best evidence is neither, but measured experience along the way. How much wealth adds to wellbeing is itself debated in the happiness literature, so the question cannot be settled by either character's testimony.</li><li><b>Nearly upon a level?</b> Possibly both, since the readings overlap. Smith makes two claims that need different evidence. The claim about necessaries can be tested with consumption, nutrition and health data and life expectancy by income; large gaps in life expectancy across income groups count against its strong version. The claim about "ease of the body and peace of the mind" concerns happiness across ranks and needs wellbeing data, where the evidence is contested. If true, it would suggest that the pursuit of wealth is largely futile for the individual rather than that inequality does not matter.</li><li><b>Loving the machine.</b> The risk is real: models and plans can become objects of aesthetic attachment. Guards include judging policies by their measured effects on the people they serve, asking who bears the costs (the carriers and wagoners, not the road), building in evaluation and reversibility, and remembering the chessboard: people respond, so a design that ignores their "principle of motion" fails. Smith's own remedy is study that is "just and reasonable and practicable".</li></ol><p class="note-ans">Suggested lines of argument for discussion. Several are contestable interpretations, not settled answers.</p></details>
+</section>
+<section class="questions wrap" id="questions">
+  <h2>Questions</h2>
+  <ol>
+    <li>Smith says sympathy arises "not so much from the view of the passion, as from that of the situation which excites it". How does this emphasis on the situation change Hume's account, especially when the spectator feels something the agent does not? <span class="ref">I.i.1.10</span><span class="ref">T 2.1.11</span></li>
+    <li>Is the line between not helping (beneficence) and harming (justice) as morally significant as Smith claims? Test it on Peter Singer's drowning child (1972) and on Smith's China earthquake. Note that the cases test different obligations: Singer challenges the line between obligatory help and optional charity, while Smith's case concerns restraint from sacrificing others. <span class="ref">II.ii.1.3</span><span class="ref">III.3.4</span></li>
+    <li>Does the sentinel case challenge Hume's explanation of our approval of justice, his justification of punishment, or both? How might Hume reply? <span class="ref">II.ii.3.11</span><span class="ref">M 3.1</span></li>
+    <li>The impartial spectator is built from real spectators but is supposed to be able to overrule them. Can it ever be fully independent of the society that formed it? <span class="ref">III.2.32</span></li>
+    <li>Is the invisible hand passage a defence of inequality, a consolation, or an ironic description, or more than one at once? What would it take to test its empirical claims, about the distribution of necessaries and about happiness across ranks? <span class="ref">IV.1.10</span></li>
+    <li>Hume and Smith both notice that we condemn injustice before we think of its consequences. Hume explains this by education and acquired habit. Can Hume's account of acquired habits explain the immediate condemnation that Smith attributes to sympathetic resentment? <span class="ref">M 3.47</span><span class="ref">II.ii.3.8–9</span></li>
+    <li>Smith warns that we often love the "system" more than the people it serves. Extending his warning beyond his own examples: does it apply to economists and their models? To policy-makers? <span class="ref">IV.1.11</span></li>
+  </ol>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var NS="http://www.w3.org/2000/svg";
+  function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+  var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Hero facade: pediment (ornament) over nine columns, the central one the main pillar
+  var hero=document.getElementById("heroFacade");
+  el("line",{x1:10,y1:319,x2:590,y2:319,stroke:"var(--stone-edge)","stroke-width":1.5},hero);
+  el("rect",{x:30,y:300,width:540,height:18,rx:2,"class":"base"},hero);
+  el("path",{d:"M24 112 L300 38 L576 112 Z","class":"ped"},hero);
+  el("path",{d:"M110 104 Q150 84 190 98 Q245 70 300 60 Q355 70 410 98 Q450 84 490 104","class":"orn"},hero);
+  el("path",{d:"M140 106 Q165 94 190 100 M410 100 Q435 94 460 106","class":"orn"},hero);
+  [[190,98,3.5],[410,98,3.5],[300,60,5]].forEach(function(c){el("circle",{cx:c[0],cy:c[1],r:c[2],"class":"orn-dot"},hero);});
+  el("path",{d:"M24 112 L14 96 L30 104 M576 112 L586 96 L570 104 M300 38 L293 24 L300 29 L307 24 Z","class":"orn"},hero);
+  var pt=el("text",{x:300,y:96,"text-anchor":"middle","class":"pedtext"},hero);pt.textContent="Beneficence: the ornament";
+  el("rect",{x:30,y:112,width:540,height:18,rx:1.5,"class":"beam"},hero);
+  var cols=[["#sympathy","Sympathy"],["#propriety","Propriety"],["#beneficence","Beneficence"],["#fairplay","Fair play"],
+    ["#society","Justice: the main pillar",true],
+    ["#causes","Why we punish"],["#mirror","The mirror"],["#within","The man within"],["#system","Love of system"]];
+  var w=36,wk=52,gap=(540-8*w-wk)/10,x=30+gap;
+  cols.forEach(function(c){
+    var cw=c[2]?wk:w;
+    var a=el("a",{href:c[0],"class":c[2]?"key":""},hero);
+    a.setAttribute("aria-label",c[1]);
+    el("rect",{x:x-3,y:131,width:cw+6,height:8,rx:1.5,"class":"cl"},a);
+    el("rect",{x:x,y:139,width:cw,height:153,rx:2,"class":"cl"},a);
+    el("rect",{x:x-3,y:292,width:cw+6,height:8,rx:1.5,"class":"cl"},a);
+    var cx=x+cw/2,cy=215;
+    var t=el("text",{x:cx,y:cy,"text-anchor":"middle","dominant-baseline":"central",transform:"rotate(-90 "+cx+" "+cy+")"},a);
+    t.textContent=c[1];
+    x+=cw+gap;
+  });
+
+  // Propriety widget
+  var data={
+    great:{sp:70,kind:"grief"},small:{sp:22,kind:"grief"},luck:{sp:22,kind:"joy"},joke:{sp:30,kind:"laugh"}
+  };
+  var cur="great",slider=document.getElementById("propSlider"),ag=document.getElementById("propAg"),
+      sp=document.getElementById("propSp"),band=document.getElementById("propBand"),verdict=document.getElementById("propVerdict");
+  var over={grief:"Too much. He laments more loudly than the spectator, imagining himself in the same misfortune, could feel: Smith's word is \"pusillanimity and weakness\".",
+            joy:"Too much. He is overjoyed by a small piece of luck: \"levity and folly\".",
+            laugh:"Too much. He laughs \"louder or longer at a joke than we think it deserves\", and we are put out of humour."};
+  function updateProp(){
+    var d=data[cur],v=+slider.value,lo=Math.max(0,d.sp-9),hi=Math.min(100,d.sp+9);
+    sp.style.width=d.sp+"%";ag.style.width=v+"%";band.style.left=lo+"%";band.style.width=(hi-lo)+"%";
+    var txt,off=true;
+    if(v>hi){txt=over[d.kind];}
+    else if(v<lo){txt="Too little. The spectator, entering into the situation, feels more than the agent shows. The gap is still a verdict, in the other direction.";}
+    else{txt="Concord. The two feelings are not identical, but the spectator can go along with him: this is propriety.";off=false;}
+    verdict.textContent=txt;verdict.classList.toggle("off",off);
+  }
+  document.querySelectorAll("#propFig .seg button").forEach(function(b){
+    b.addEventListener("click",function(){
+      cur=b.dataset.k;
+      document.querySelectorAll("#propFig .seg button").forEach(function(o){o.setAttribute("aria-pressed",o===b?"true":"false");});
+      updateProp();
+    });
+  });
+  slider.addEventListener("input",updateProp);updateProp();
+
+  // Pillar and ornament
+  var pf=document.getElementById("pillarFig"),ob=document.getElementById("ornBtn"),pb=document.getElementById("pilBtn"),
+      bs=document.getElementById("bldgStatus"),tiers=document.querySelectorAll("#tiers div");
+  function updateBldg(){
+    var noO=pf.classList.contains("no-orn"),noP=pf.classList.contains("no-pillar");
+    ob.textContent=noO?"Restore the ornament":"Remove the ornament";ob.setAttribute("aria-pressed",noO?"true":"false");
+    pb.textContent=noP?"Restore the pillar":"Remove the pillar";pb.setAttribute("aria-pressed",noP?"true":"false");
+    pf.querySelectorAll(".bldg .part").forEach(function(p){
+      p.style.transform=noP&&!reduce?"translateY(70px) rotate("+p.dataset.rot+"deg)":"";
+      p.style.opacity=noP?".35":"";
+    });
+    var t=noP?2:(noO?1:0);
+    tiers.forEach(function(d,i){d.classList.toggle("on",i===t);});
+    bs.textContent=noP?"Without its main pillar, the fabric \"must in a moment crumble into atoms\".":
+      (noO?"Plainer, \"less happy and agreeable\", but still standing.":"The building stands, ornamented.");
+  }
+  ob.addEventListener("click",function(){pf.classList.toggle("no-orn");updateBldg();});
+  pb.addEventListener("click",function(){pf.classList.toggle("no-pillar");updateBldg();});
+
+  // Balance
+  var crowd=document.getElementById("crowd");
+  for(var r=0;r<4;r++)for(var c=0;c<13;c++){el("circle",{cx:428+c*6+(r%2)*3,cy:120+r*5.5,r:2.1},crowd);}
+  var beam=document.getElementById("balBeam"),pl=document.getElementById("panL"),pr=document.getElementById("panR"),
+      bb=document.getElementById("balBtn"),bst=document.getElementById("balStatus"),acting=false;
+  var ang=10,dy=(184*Math.sin(ang*Math.PI/180)).toFixed(1);
+  function setBal(){
+    var s=acting?1:-1;
+    beam.style.transform="rotate("+(s*ang)+"deg)";
+    pl.style.transform="translateY("+(-s*dy)+"px)";pr.style.transform="translateY("+(s*dy)+"px)";
+    bb.textContent=acting?"Back to his feelings":"Ask what he would do";bb.setAttribute("aria-pressed",acting?"true":"false");
+    bst.textContent=acting?"Active principles: asked to sacrifice them to save his finger, \"human nature startles with horror\". The man within tells him he is \"but one of the multitude, in no respect better than any other in it\".":
+      "Passive feelings: losing his finger tomorrow, \"he would not sleep tonight\"; over the ruin of a hundred million he \"will snore with the most profound security\".";
+  }
+  bb.addEventListener("click",function(){acting=!acting;setBal();});setBal();
+
+  // Landlord's harvest
+  var wh=document.getElementById("wheat");
+  for(var i=0;i<24;i++){var wx=14+i*8.3;el("line",{x1:wx,y1:70,x2:wx+(i%2?2:-2),y2:38+(i%3)*4},wh);el("ellipse",{cx:wx+(i%2?2:-2),cy:36+(i%3)*4,rx:2.4,ry:5,fill:"var(--ochre)",stroke:"none"},wh);}
+  var sv=document.getElementById("servants");
+  for(var j=0;j<14;j++){var sx=82+(j%7)*19,sy=j<7?40:80;el("circle",{cx:sx,cy:sy-14,r:4.5},sv);el("rect",{x:sx-5,y:sy-8,width:10,height:16,rx:4},sv);}
+
+  document.getElementById("pdfBtn").addEventListener("click",function(){window.print();});
+
+  // open all collapsible blocks when printing or saving as PDF
+  var opened=[];
+  window.addEventListener("beforeprint",function(){opened=[];document.querySelectorAll("details:not([open])").forEach(function(d){d.open=true;opened.push(d);});});
+  window.addEventListener("afterprint",function(){opened.forEach(function(d){d.open=false;});});
+})();
+</script>
+</body>
+</html>
