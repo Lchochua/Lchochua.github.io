@@ -1,0 +1,319 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="A unified conceptual framework for Adam Smith’s moral philosophy and political economy, with illustrations and paragraph references."><title>Smith: Moral Life and Political Economy — One Conceptual Framework</title><style>
+:root{
+  color-scheme:light;
+  --paper:#ECEFF1; --surface:#F8F9FA; --ink:#1C2633; --muted:#556273; --rule:#C5CDD5;
+  --stone:#C9D0D6; --stone-edge:#9AA5B0; --accent:#1F6B66; --accent-soft:#D6E7E4;
+  --ochre:#9A6A15; --ochre-soft:#F1E6CF; --danger:#8B2E2E;
+}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Libre Caslon Text",Georgia,"Times New Roman",serif;font-size:1.0625rem;line-height:1.7;
+  -webkit-text-size-adjust:100%;}
+img,svg{max-width:100%}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem}
+.wide{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+h1{font-size:clamp(2.3rem,6.5vw,4.1rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,4.2vw,2.6rem);margin-bottom:.6rem}
+h3{font-size:1.35rem;margin:2.2rem 0 .7rem}
+p{margin:0 0 1rem}
+
+/* hero */
+.hero{padding:3.5rem 0 1rem;text-align:center}
+.hero .sub{color:var(--muted);font-style:italic;margin:.9rem auto 0;max-width:34rem}
+.vault{display:block;margin:2.2rem auto 0;width:100%;max-width:680px;height:auto}
+.vault a .st{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:fill .2s}
+.vault a:hover .st,.vault a:focus-visible .st{fill:var(--accent-soft);stroke:var(--accent)}
+.vault a.key .st{fill:var(--accent);stroke:var(--accent)}
+.vault text{font-family:"Libre Caslon Text",Georgia,serif;font-size:14px;fill:var(--ink);pointer-events:none}
+.vault a.key text{fill:var(--paper);font-size:13px}
+.vault .ground{stroke:var(--stone-edge);stroke-width:1.5}
+.vault-cap{color:var(--muted);font-size:.92rem;font-style:italic;margin:.6rem auto 0;max-width:30rem}
+.toc{display:flex;flex-wrap:wrap;gap:.4rem .5rem;justify-content:center;list-style:none;padding:0;margin:1.6rem auto 0;max-width:46rem}
+.toc a{display:inline-block;text-decoration:none;color:var(--ink);border:1px solid var(--rule);background:var(--surface);
+  padding:.25rem .8rem;border-radius:3px;font-size:.92rem}
+.toc a:hover{border-color:var(--accent);color:var(--accent)}
+
+.reminder{margin:2.5rem auto 0;background:var(--surface);border-left:3px solid var(--ochre);padding:1rem 1.2rem;font-size:.97rem}
+.reminder p:last-child{margin:0}
+
+/* sections */
+.theme{padding:4.5rem 0 1rem;border-top:1px solid var(--rule);margin-top:3.5rem}
+.covers{color:var(--muted);font-size:.92rem;margin:0 0 .5rem;display:flex;align-items:center;gap:.55rem}
+.covers .mark{width:16px;height:13px;background:var(--accent);clip-path:polygon(0 0,100% 0,82% 100%,18% 100%);flex:none}
+.lede{font-size:1.15rem;line-height:1.6}
+
+.claims{list-style:none;padding:0;margin:1.4rem 0}
+.claims li{position:relative;padding-left:1.6rem;margin:0 0 1rem}
+.claims li::before{content:"";position:absolute;left:0;top:.62em;width:11px;height:9px;background:var(--stone-edge);
+  clip-path:polygon(0 0,100% 0,82% 100%,18% 100%)}
+.claims li strong{font-weight:700}
+.ref{display:inline-block;font-size:.76em;line-height:1.45;font-style:normal;font-weight:400;font-variant-numeric:lining-nums;
+  color:var(--accent);background:var(--accent-soft);padding:0 .55em;border-radius:999px;margin-left:.35em;white-space:nowrap;vertical-align:.08em}
+
+blockquote{margin:1.4rem 0;padding:.2rem 0 .2rem 1.1rem;border-left:2px solid var(--accent);font-style:italic;color:var(--ink)}
+blockquote .ref{font-style:normal}
+
+.figure{margin:2rem 0;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:1.3rem}
+.figure figcaption{color:var(--muted);font-size:.9rem;font-style:italic;margin-top:.8rem}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* circumstances grid */
+.circ{display:grid;grid-template-columns:7.2rem repeat(3,minmax(9rem,1fr));gap:6px;min-width:560px;font-size:.88rem;line-height:1.4}
+.circ .h{color:var(--muted);font-style:italic;display:flex;align-items:center;justify-content:center;text-align:center;padding:.3rem}
+.circ .rh{justify-content:flex-end;text-align:right}
+.circ .c{border:1px dashed var(--rule);border-radius:4px;padding:.6rem .65rem;min-height:5.2rem}
+.circ .c.on{border:1px solid var(--stone-edge);background:var(--paper)}
+.circ .c.mid{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.circ .c.mid .ref{background:var(--paper);color:var(--accent)}
+.circ .c b{display:block;font-weight:700;margin-bottom:.15rem}
+.circ .c.corner{background:var(--ochre-soft);border:1px solid var(--ochre)}
+.circ .empty{border:none}
+
+/* scarcity strip, rules, ledger */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.8rem}
+.strip div{border-top:3px solid var(--stone-edge);padding-top:.6rem;font-size:.93rem;line-height:1.5}
+.strip div.owned{border-top-color:var(--accent)}
+.strip b{display:block;font-weight:700}
+.strip .tag{display:block;color:var(--muted);font-style:italic;margin:.15rem 0 .25rem}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:.8rem}
+.rules div{background:var(--paper);border-radius:4px;padding:.8rem .9rem;font-size:.95rem;line-height:1.5}
+.rules b{display:block;font-weight:700;margin-bottom:.2rem}
+.rules span{color:var(--muted)}
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media (max-width:640px){.ledger{grid-template-columns:1fr}}
+.ledger h4{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:1.15rem;margin:0 0 .5rem}
+.ledger ol{margin:0;padding-left:1.2rem;font-size:.95rem;line-height:1.55}
+.ledger li{margin-bottom:.55rem}
+.ledger .pro h4{color:var(--accent)} .ledger .con h4{color:var(--ochre)}
+
+/* power spectrum */
+.spectrum{position:relative;padding-top:2.2rem}
+.spectrum .bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--accent),var(--stone-edge) 55%,var(--ochre))}
+.spectrum .ends{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem;font-style:italic;position:absolute;top:0;left:0;right:0}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem;font-size:.93rem;line-height:1.5}
+@media (max-width:640px){.zones{grid-template-columns:1fr}}
+.zones b{display:block;font-weight:700}
+
+/* tables */
+table{border-collapse:collapse;width:100%;font-size:.94rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.65rem .7rem;border-bottom:1px solid var(--rule)}
+th{font-weight:700;font-size:.9rem;color:var(--muted)}
+td.verdict{background:var(--accent-soft)}
+td.bad{background:var(--ochre-soft)}
+.t-wide{min-width:600px}
+
+/* nest/house */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
+@media (max-width:560px){.pair{grid-template-columns:1fr}}
+.pair svg{display:block;width:100%;height:auto;max-height:130px}
+.pair p{font-size:.94rem;margin:.6rem 0 0;line-height:1.5}
+
+/* escalation */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;align-items:end;min-height:16rem}
+.steps .s{display:flex;flex-direction:column;justify-content:flex-end;font-size:.86rem;line-height:1.4}
+.steps .col{border-radius:3px 3px 0 0;margin-bottom:.5rem}
+.steps .p .col{background:var(--accent)} .steps .n .col{background:var(--ochre)}
+.steps b{font-weight:700;display:block}
+@media (max-width:560px){.steps{grid-template-columns:repeat(2,1fr)}}
+
+/* wall & vault */
+.wv{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:end}
+.wv svg{width:100%;height:auto;display:block}
+.wv h4{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:1.2rem;margin:.6rem 0 .2rem}
+.wv p{font-size:.93rem;line-height:1.5;margin:0}
+.brick{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1}
+.brick.out{transition:opacity .5s} .removed .brick.out{opacity:0}
+.vstone{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:transform .8s cubic-bezier(.5,0,.75,0),opacity .8s;transform-box:fill-box;transform-origin:center}
+.vstone.keyst{fill:var(--accent);stroke:var(--accent);transition:opacity .4s}
+.removed .vstone.keyst{opacity:0}
+.removed .vstone:not(.keyst){opacity:.35}
+.btnrow{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:1.2rem}
+button{font:inherit;font-size:.95rem;background:var(--ink);color:var(--paper);border:0;border-radius:3px;padding:.5rem 1rem;cursor:pointer}
+button:hover{background:var(--accent)}
+.status{color:var(--muted);font-style:italic;font-size:.92rem}
+@media (prefers-reduced-motion: reduce){.vstone,.brick.out{transition:none}}
+
+/* coda */
+.coda-fig{display:grid;grid-template-columns:1fr 1.5fr;gap:1.4rem;align-items:center}
+@media (max-width:640px){.coda-fig{grid-template-columns:1fr}}
+.coda-fig svg{width:100%;height:auto;display:block}
+.coda-fig p{font-size:.93rem;line-height:1.5;margin:.5rem 0 0}
+
+/* boxes */
+.takeaway{margin:2rem 0;padding:1.2rem 1.3rem;background:var(--accent);color:var(--paper);border-radius:6px}
+.takeaway h3{margin:0 0 .5rem;font-size:1.25rem}
+.takeaway p:last-child,.takeaway ol:last-child{margin-bottom:0}
+.takeaway .ref{background:var(--paper);color:var(--accent)}
+.takeaway ol{padding-left:1.2rem;margin:.3rem 0 0}
+.takeaway li{margin-bottom:.4rem}
+details.discuss{margin:1.6rem 0 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+details.discuss summary{cursor:pointer;padding:.8rem 1.1rem;font-style:italic;color:var(--ochre)}
+details.discuss[open] summary{border-bottom:1px solid var(--rule)}
+details.discuss ul{margin:0;padding:1rem 1.1rem 1rem 2.2rem;font-size:.96rem;line-height:1.6}
+details.discuss li{margin-bottom:.6rem}
+
+details.answers{margin:.7rem 0 0;border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:6px;background:var(--surface)}
+details.answers summary{cursor:pointer;padding:.8rem 1.1rem;font-style:italic;color:var(--accent)}
+details.answers[open] summary{border-bottom:1px solid var(--rule)}
+details.answers ol{margin:0;padding:1rem 1.1rem 1rem 2.4rem;font-size:.96rem;line-height:1.6}
+details.answers li{margin-bottom:.8rem}
+details.answers li b{font-weight:700}
+.note-ans{color:var(--muted);font-size:.85rem;font-style:italic;padding:0 1.1rem 1rem;margin:0}
+.questions{margin-top:4.5rem;border-top:1px solid var(--rule);padding-top:3rem;padding-bottom:4rem}
+.questions ol{padding-left:1.4rem}
+.questions li{margin-bottom:.8rem}
+footer{color:var(--muted);font-size:.85rem;padding:3rem 0 4rem;text-align:center}
+
+@page{size:A4;margin:16mm 15mm 16mm 15mm}
+@media print{
+  :root{--paper:#FFFFFF;--surface:#F6F8F9;--ink:#1C2633;--muted:#556273;--rule:#C5CDD5;
+    --stone:#D3D9DE;--stone-edge:#9AA5B0;--accent:#1F6B66;--accent-soft:#DCEBE8;--ochre:#9A6A15;--ochre-soft:#F3E9D4;--danger:#8B2E2E;}
+  :root{padding:0}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:10.5pt;line-height:1.55;background:#fff}
+  .hero{padding-top:0}
+  .vault{max-width:520px;margin-top:1.2rem}
+  .toc,.btnrow{display:none}
+  .theme{break-before:page;border-top:none;margin-top:0;padding-top:0}
+  .questions{break-before:page;border-top:none;margin-top:0;padding-top:0}
+  .scroll{overflow:visible}
+  .figure,.takeaway,table,tr,.claims li,details li,.zones>div,.rules>div,.strip>div,.wv,.coda-fig{break-inside:avoid}
+  h2,h3,details summary,.covers{break-after:avoid}
+  .note-ans,details li:last-child{break-before:avoid}
+  details ul>li:first-child,details ol>li:first-child{break-before:avoid}
+  details summary{list-style:none;font-weight:700;font-style:normal}
+  details summary::-webkit-details-marker{display:none}
+  details.discuss summary{color:var(--ochre)} details.answers summary{color:var(--accent)}
+  a{text-decoration:none;color:inherit}
+  footer{padding:1.5rem 0 0}
+}
+
+/* ---- Smith additions ---- */
+@media (max-width:480px){h1{font-size:1.95rem}}
+/* hero facade */
+.facade{display:block;margin:2.2rem auto 0;width:100%;max-width:680px;height:auto}
+.facade .ped{fill:var(--surface);stroke:var(--stone-edge);stroke-width:1.2}
+.facade .orn{fill:none;stroke:var(--ochre);stroke-width:1.3}
+.facade .orn-dot{fill:var(--ochre)}
+.facade .beam,.facade .base{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1}
+.facade a .cl{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:fill .2s}
+.facade a:hover .cl,.facade a:focus-visible .cl{fill:var(--accent-soft);stroke:var(--accent)}
+.facade a.key .cl{fill:var(--accent);stroke:var(--accent)}
+.facade text{font-family:"Libre Caslon Text",Georgia,serif;font-size:13px;fill:var(--ink);pointer-events:none}
+.facade a.key text{fill:var(--paper);font-size:14px}
+.facade .pedtext{font-style:italic;fill:var(--ochre);font-size:12.5px}
+
+/* contagion vs projection */
+.routes{display:grid;grid-template-columns:1fr;gap:1.1rem}
+.routes svg{display:block;width:100%;height:auto}
+.routes p{font-size:.93rem;line-height:1.5;margin:.3rem 0 0}
+
+/* propriety widget */
+.seg{display:flex;flex-wrap:wrap;gap:.4rem;margin:0 0 1rem}
+.seg button{background:var(--paper);color:var(--ink);border:1px solid var(--rule);font-size:.88rem;padding:.35rem .75rem}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.seg button:hover{background:var(--accent-soft);color:var(--ink)}
+.seg button[aria-pressed="true"]:hover{background:var(--accent);color:var(--paper)}
+.meter{display:grid;grid-template-columns:8.5rem 1fr;gap:.5rem .8rem;align-items:center;font-size:.9rem}
+.meter .lab{color:var(--muted);font-style:italic;text-align:right;line-height:1.3}
+.meter .track{position:relative;height:16px;background:var(--paper);border:1px solid var(--rule);border-radius:3px;overflow:hidden}
+.meter .fill{position:absolute;left:0;top:0;bottom:0;border-radius:2px;transition:width .25s}
+.meter .fill.ag{background:var(--ochre)} .meter .fill.sp{background:var(--accent)}
+.meter .band{position:absolute;top:0;bottom:0;background:var(--accent-soft);opacity:.85}
+.meter input[type=range]{width:100%;accent-color:var(--ochre);margin:0}
+.verdict-box{margin-top:1rem;padding:.75rem .9rem;border-left:3px solid var(--accent);background:var(--paper);font-size:.95rem;line-height:1.5;min-height:3.4rem}
+.verdict-box.off{border-left-color:var(--ochre)}
+@media (max-width:520px){.meter{grid-template-columns:1fr}.meter .lab{text-align:left}}
+
+/* pillar and ornament */
+.bldg-wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:1.4rem;align-items:center}
+@media (max-width:640px){.bldg-wrap{grid-template-columns:1fr}}
+.bldg{display:block;width:100%;height:auto}
+.bldg .part{fill:var(--stone);stroke:var(--stone-edge);stroke-width:1;transition:transform .9s cubic-bezier(.5,0,.75,0),opacity .9s;transform-box:fill-box;transform-origin:center}
+.bldg .main{fill:var(--accent);stroke:var(--accent);transition:opacity .4s}
+.bldg .ornament{fill:none;stroke:var(--ochre);stroke-width:1.4;transition:opacity .5s}
+.bldg .ornament.dot{fill:var(--ochre);stroke:none}
+.no-orn .bldg .ornament{opacity:0}
+.no-pillar .bldg .main{opacity:0}
+.no-pillar .bldg .ornament{opacity:0}
+.tiers{display:flex;flex-direction:column;gap:.6rem;font-size:.93rem;line-height:1.45}
+.tiers div{padding:.55rem .75rem;border-radius:4px;background:var(--paper);border-left:3px solid var(--stone-edge)}
+.tiers div.hi{border-left-color:var(--accent)} .tiers div.lo{border-left-color:var(--ochre)}
+.tiers b{display:block;font-weight:700}
+.tiers .on{outline:2px solid var(--accent);outline-offset:1px}
+@media (prefers-reduced-motion: reduce){.bldg .part,.bldg .ornament,.meter .fill{transition:none}}
+
+/* balance */
+.balance{display:block;width:100%;max-width:560px;margin:0 auto;height:auto}
+.balance .beamg{transition:transform 1s cubic-bezier(.4,0,.2,1);transform-origin:280px 70px;transform-box:view-box}
+.balance text{font-family:"Libre Caslon Text",Georgia,serif;fill:var(--ink)}
+@media (prefers-reduced-motion: reduce){.balance .beamg{transition:none}}
+
+/* three acts */
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;counter-reset:act}
+@media (max-width:640px){.acts{grid-template-columns:1fr}}
+.acts div{border-top:3px solid var(--stone-edge);padding-top:.6rem;font-size:.93rem;line-height:1.5}
+.acts div:nth-child(1){border-top-color:var(--ochre)} .acts div:nth-child(3){border-top-color:var(--accent)}
+.acts b{display:block;font-weight:700}
+.acts .tag{display:block;color:var(--muted);font-style:italic;margin:.1rem 0 .3rem}
+
+@media print{
+  .facade{max-width:520px;margin-top:1.2rem}
+  .seg,.meter input{display:none}
+  .bldg-wrap,.acts,.routes,.meter{break-inside:avoid}
+}
+.balance #panL,.balance #panR{transition:transform 1s cubic-bezier(.4,0,.2,1)}
+@media (prefers-reduced-motion: reduce){.balance #panL,.balance #panR{transition:none}}
+
+.dl{margin:1.4rem 0 0}
+@media print{.dl{display:none}}
+
+.eyebrow{display:block;font:700 .72rem/1.5 system-ui,sans-serif;letter-spacing:.12em;color:var(--accent);margin-bottom:.55rem}
+.tools{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin:1.6rem 0}.tools button{font-size:.82rem}
+.hero{padding-top:3rem}.hero h1{max-width:900px;margin:auto}.hero .sub{max-width:44rem}.hero .edition{font: .78rem/1.7 system-ui,sans-serif;color:var(--muted);margin-top:1rem}
+.cover-network{display:block;margin:2rem auto 0;width:100%;max-width:760px}.cover-network text{font-family:Georgia,serif;fill:var(--ink);font-size:16px}.cover-network .node{fill:var(--surface);stroke:var(--stone-edge)}.cover-network .line{stroke:var(--stone-edge);stroke-width:1.5;fill:none}.cover-network .hub{fill:var(--accent-soft);stroke:var(--accent)}.cover-network a:hover rect{stroke:var(--accent);stroke-width:2}
+.statpair{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;text-align:center}.statpair>div{padding:1rem .4rem}.statpair span,.statpair b{display:block}.statpair .big{font-family:Georgia,serif;font-size:clamp(2rem,7vw,3.6rem);line-height:1.2;margin-bottom:.6rem}.statpair b{font-size:.93rem}.statpair span:not(.big){font-size:.82rem;color:var(--muted)}.accentstat{background:var(--accent-soft);border-radius:5px}
+.flow{display:grid;gap:1rem;margin-top:1.4rem}.three{grid-template-columns:repeat(3,1fr)}.flow>div{font-size:.92rem;line-height:1.55;border-top:3px solid var(--accent);padding-top:.7rem}.flow b{display:block;margin-bottom:.3rem}
+.exchange{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center}.exchange h3,.fork h3{margin:0 0 .6rem}.exchange p,.fork p{font-size:.94rem;margin-bottom:0}.exchange-arrow{font-size:2rem;color:var(--accent)}
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem}.fork>div{border-top:3px solid var(--accent);padding-top:1rem}.fork>div+div{border-color:var(--ochre)}
+.loop{display:flex;flex-direction:column;align-items:center;gap:.35rem}.loop div{border:1px solid var(--rule);background:var(--paper);padding:.65rem 1rem;border-radius:4px;text-align:center;max-width:100%}.loop span{font-size:1.5rem;color:var(--accent)}
+.small{font-size:.84rem;color:var(--muted);line-height:1.55}.widget label{display:block;font-size:.95rem}.widget output{font-weight:bold;color:var(--accent)}input[type=range]{display:block;width:100%;accent-color:var(--accent);margin:1rem 0;height:24px}.capacity-track{height:18px;background:var(--paper);border:1px solid var(--rule);border-radius:4px;overflow:hidden}.capacity-track>div{height:100%;background:var(--accent);width:50%}
+.formula{font-size:1rem;text-align:center;padding:.6rem 0 1rem}.formula span{color:var(--accent);font-weight:bold;margin:0 .2rem}.price-diagram{position:relative;height:135px;background:var(--paper);border-radius:4px;margin-top:1rem;overflow:hidden}.natural-line{position:absolute;top:65px;left:0;right:0;border-top:1px dashed var(--muted);padding:5px 10px;font-size:.8rem;color:var(--muted)}.price-line{position:absolute;top:12px;left:12px;right:12px;height:30px;transition:top .3s;z-index:1}.price-line span{font-size:.8rem;background:var(--surface);padding:2px 5px}.price-line div{border-top:3px solid var(--accent);margin-top:3px}
+.duties{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}.duties>div{border-top:3px solid var(--stone-edge);padding-top:.8rem}.duties span{color:var(--accent);font:700 .8rem system-ui,sans-serif}.duties h3{margin:.6rem 0}.duties p{font-size:.9rem;margin:0}
+details.discuss ol{margin:0;padding:1rem 1.1rem 1rem 2.4rem}details.discuss li{font-size:.96rem;line-height:1.6}.source-library{margin:4rem auto}.source-paragraph{border-top:1px solid var(--rule);padding:.65rem 0}.source-paragraph summary{cursor:pointer;font-size:.9rem;color:var(--accent)}.source-paragraph p{font-size:.94rem;line-height:1.75;margin:.8rem 0}.source-paragraph:target{background:var(--accent-soft);padding:.8rem;border-radius:4px}.source-paragraph[hidden]{display:none}.source-search{width:100%;padding:.8rem;font:inherit;background:var(--surface);border:1px solid var(--rule);color:var(--ink);border-radius:4px;margin:1rem 0}.library-head{font-size:1.1rem;cursor:pointer}.source-note{font-size:.92rem;color:var(--muted)}.skip{position:absolute;left:-10000px}.skip:focus{position:fixed;top:8px;left:8px;background:var(--surface);z-index:100;padding:.7rem}.section-map{counter-reset:map}.section-map a{text-decoration:none}.section-map li{margin:.7rem 0}.up{display:block;text-align:center;font-size:.9rem;margin:2rem 0}
+@media(max-width:600px){.three,.fork,.duties{grid-template-columns:1fr}.exchange{grid-template-columns:1fr}.exchange-arrow{text-align:center}.cover-network text{font-size:17px}.figure{padding:1rem}.statpair{gap:.5rem}.hero{padding-top:2rem}}
+@media(prefers-reduced-motion:reduce){.price-line{transition:none}}
+@media print{.tools,.widget input,.source-search,.up{display:none}.cover-network{max-width:600px}.theme{break-before:page}.source-library{break-before:page}.statpair,.fork,.duties,.flow{break-inside:avoid}.source-paragraph{break-inside:auto}.source-paragraph p{font-size:9pt}.source-paragraph:not([open]){display:none} .price-line{transition:none}}
+
+.thesis{font-size:1.15rem;max-width:42rem;margin:1.6rem auto;text-align:left;border-left:3px solid var(--accent);padding:1rem 1.2rem;background:var(--surface)}.source-group{margin-top:1.5rem}.source-count{font-size:.86rem;color:var(--muted)}.loop{padding:.6rem 0}.takeaway{color:#fff}.takeaway .ref{background:#fff;color:#1F6B66}@media print{.source-paragraph[open]{display:block}.figure{break-inside:auto}}</style></head><body><a class="skip" href="#dependence">Skip to the guide</a><header class="hero" id="top"><div class="wide"><span class="eyebrow">THE EXAMINED SOCIETY · ADAM SMITH</span><h1>Moral Life &amp;<br>Political Economy</h1><p class="sub">One conceptual framework: the social formation and discipline of self-interest.</p><p class="edition">A companion to The Theory of Moral Sentiments and The Wealth of Nations</p><svg class="cover-network" viewBox="0 0 760 300" role="img" aria-labelledby="network-title network-desc"><title id="network-title">One framework for moral and economic life</title><desc id="network-desc">Partial and dependent people accommodate others through moral judgment and economic exchange, within justice. Social arrangements feed back into the formation of people.</desc><g class="line"><path d="M380 60 L150 140 L380 230 L610 140 Z M380 60 L380 230"/></g><a href="#dependence"><rect class="node" x="240" y="20" width="280" height="65" rx="5"/><text x="380" y="48" text-anchor="middle">Partial interests</text><text x="380" y="70" text-anchor="middle">&amp; mutual dependence</text></a><a href="#accommodation"><rect class="node" x="15" y="110" width="270" height="65" rx="5"/><text x="150" y="139" text-anchor="middle">Moral judgment</text><text x="150" y="160" text-anchor="middle">&amp; self-restraint</text></a><a href="#accommodation"><rect class="node" x="475" y="110" width="270" height="65" rx="5"/><text x="610" y="139" text-anchor="middle">Exchange</text><text x="610" y="160" text-anchor="middle">&amp; competition</text></a><a href="#justice"><rect class="hub" x="302" y="113" width="156" height="60" rx="5"/><text x="380" y="150" text-anchor="middle">Justice</text></a><a href="#formation"><rect class="node" x="215" y="210" width="330" height="65" rx="5"/><text x="380" y="238" text-anchor="middle">Social arrangements</text><text x="380" y="259" text-anchor="middle">shape human capacities ↺</text></a></svg><p class="vault-cap">Particular purposes, social cooperation, and the conditions that sustain both. Select a node to explore.</p><nav aria-label="Guide sections"><ul class="toc"><li><a href="#dependence">Dependence</a></li><li><a href="#accommodation">Accommodation</a></li><li><a href="#justice">Justice</a></li><li><a href="#consequences">Consequences</a></li><li><a href="#corruption">Corruption</a></li><li><a href="#formation">Human formation</a></li><li><a href="#framework">The framework</a></li><li><a href="#questions">Questions</a></li></ul></nav><div class="tools"><button id="print" type="button">Print / save as PDF</button></div><p class="thesis">Human beings begin with partial interests and limited understanding, but depend on others. Interaction can generate moral and economic order without anyone designing the whole—provided justice restrains injury and institutions sustain the capacities needed for cooperation.</p></div></header><main><aside class="wrap reminder"><p><b>How to read this guide.</b> This is a synthesis of the five supplied Smith documents. The framework is an interpretive reconstruction, not a formula Smith explicitly states. Moral judgment and market coordination remain distinct mechanisms.</p><p><b>References.</b> TMS means <i>The Theory of Moral Sentiments</i>; WN means <i>The Wealth of Nations</i>. Reference badges identify the book and paragraph in the assigned readings.</p><noscript><p>The guide remains readable without JavaScript; interactive examples require JavaScript.</p></noscript></aside><section class="theme" id="dependence" aria-labelledby="heading-dependence"><div class="wrap"><p class="covers"><span class="mark" aria-hidden="true"></span>01 · One framework, two domains</p><h2 id="heading-dependence">Partial people, mutual dependence</h2><p class="lede">We begin close to ourselves, yet cannot live by ourselves. Both books ask how cooperation becomes possible under that condition.</p><ul class="claims"><li><strong>Self-concern is natural, but does not exhaust motivation.</strong> Smith opens TMS with genuine concern for other people’s fortunes. Sympathy means fellow-feeling with any passion, not simply pity or generosity.<span class="ref">TMS I.i.1.1</span> <span class="ref">TMS I.i.1.5</span></li><li><strong>Our understanding of others is indirect.</strong> We imagine their situations using our own experience. This makes sympathy possible while leaving it limited and uneven.<span class="ref">TMS I.i.1.2</span> <span class="ref">TMS III.3.4</span></li><li><strong>Economic independence rests on social dependence.</strong> The ordinary labourer’s coat requires thousands of contributors. We need far more assistance than personal friendship could supply.<span class="ref">WN I.i.11</span> <span class="ref">WN I.ii.2</span></li></ul>
+<figure class="figure"><div class="fork"><div><h3>The moral problem</h3><p>How can I judge fairly when my own concerns feel disproportionately important?</p></div><div><h3>The economic problem</h3><p>How can I secure cooperation from people whose purposes differ from mine?</p></div></div><figcaption>The common starting point is partiality combined with dependence. The two problems require distinct forms of accommodation.</figcaption></figure>
+<div class="takeaway"><h3>The shared question</h3><p>How can people with limited knowledge and particular concerns live together in a sustainable and productive society?</p></div><a class="up" href="#top">↑ Back to the beginning</a></div></section><section class="theme" id="accommodation" aria-labelledby="heading-accommodation"><div class="wrap"><p class="covers"><span class="mark" aria-hidden="true"></span>02 · One framework, two domains</p><h2 id="heading-accommodation">Learning to accommodate others</h2><p class="lede">My desire alone does not establish a claim on another person. Cooperation requires me to attend to their standpoint or purpose.</p><p>In moral life, I examine conduct by imaginatively changing places with another person. I then learn to view myself through the eyes of a fair and impartial spectator. In economic life, I appeal to a trading partner’s advantage: an offer must give that person a reason to agree.<span class="ref">TMS III.1.2</span> <span class="ref">TMS III.1.5</span> <span class="ref">WN I.ii.2</span></p>
+<figure class="figure"><div class="scroll"><table class="t-wide"><caption class="small">Two forms of reciprocal accommodation</caption><thead><tr><th>Element</th><th>Moral life</th><th>Economic life</th></tr></thead><tbody><tr><th>Initial purpose</th><td>Express feelings; receive approval</td><td>Obtain goods, income, or improvement</td></tr><tr><th>Resistance</th><td>Others cannot necessarily share my feelings or approve my motives</td><td>Others have their own interests and alternatives</td></tr><tr><th>Adjustment</th><td>Examine and moderate unjustifiable self-preference</td><td>Offer something others want; adjust production and terms</td></tr><tr><th>Possible result</th><td>Propriety, conscience, restraint</td><td>Exchange, specialization, coordination</td></tr></tbody></table></div><figcaption>A structural comparison, not an identification of conscience with the market.</figcaption></figure>
+<p>Price differences can encourage entry or withdrawal and adjust the allocation of resources, where movement is possible. This is a different process from judging whether a motive deserves approval.<span class="ref">WN I.vii.12</span> <span class="ref">WN I.vii.13</span> <span class="ref">WN I.vii.14</span> <span class="ref">WN I.vii.15</span></p>
+<div class="reminder"><p><b>Keep the distinction.</b> Understanding the baker’s interest helps me make an effective offer. It does not establish that my motives are virtuous. Likewise, a successful sale is not a verdict from the impartial spectator.</p></div><details class="discuss"><summary>For discussion</summary><ul><li>Does taking another person’s interest into account necessarily mean caring about that person?</li></ul></details><details class="answers"><summary>A possible answer</summary><ol><li>No. An effective bargain may require understanding another’s purpose without benevolence. Moral judgment asks further questions about motives, propriety, and injury. The overlap concerns attention to others; it does not make all cooperation morally equivalent.</li></ol><p class="note-ans">An interpretation for discussion, not a quotation from Smith.</p></details><a class="up" href="#top">↑ Back to the beginning</a></div></section><section class="theme" id="justice" aria-labelledby="heading-justice"><div class="wrap"><p class="covers"><span class="mark" aria-hidden="true"></span>03 · One framework, two domains</p><h2 id="heading-justice">Justice: the indispensable foundation</h2><p class="lede">Smith permits energetic pursuit of advantage within boundaries that protect other people from injustice.</p><blockquote>“In the race for wealth, for honours, and preferments, he may run as hard as he can” — but he may not “justle, or throw down” his competitors.<span class="ref">TMS II.ii.2.1</span></blockquote>
+<p>The corresponding condition in WN is explicit: a person remains free to pursue their interest “as long as he does not violate the laws of justice.” Justice frames economic liberty; it is not a benefit that commerce can substitute for.<span class="ref">WN IV.ix.51</span></p>
+<figure class="figure"><div class="tiers"><div class="hi"><b>Justice: the foundation</b>Restraint against injury to person, property, and rights; its observance may be enforced.</div><div><b>Exchange: cooperation among strangers</b>Mutual assistance can occur without mutual affection.</div><div class="lo"><b>Beneficence: a fuller social life</b>Love, gratitude, friendship, and generosity make association happier and more agreeable.</div></div><figcaption>An analytical layering of TMS II.ii. Society can subsist without mutual love; pervasive injustice destroys its basis.</figcaption></figure>
+<p>TMS already describes society subsisting through exchange among people without mutual affection. It also insists that injustice is destructive. This makes the butcher passage compatible with Smith’s moral psychology.<span class="ref">TMS II.ii.3.1</span> <span class="ref">TMS II.ii.3.2</span> <span class="ref">TMS II.ii.3.3</span> <span class="ref">TMS II.ii.3.4</span></p>
+<p>Justice does not mean that nobody may ever lose a sale or a competition. Nor does the distinction from beneficence exclude all public provision: Smith allows a carefully limited public role in requiring mutual services, and assigns the sovereign duties in WN.<span class="ref">TMS II.ii.1.8</span> <span class="ref">WN IV.ix.51</span></p><a class="up" href="#top">↑ Back to the beginning</a></div></section><section class="theme" id="consequences" aria-labelledby="heading-consequences"><div class="wrap"><p class="covers"><span class="mark" aria-hidden="true"></span>04 · One framework, two domains</p><h2 id="heading-consequences">Motives and consequences are different questions</h2><p class="lede">People can contribute to an extensive social result without intending or understanding it. The mechanism connecting action to outcome must still be explained.</p><p>Smith distinguishes efficient causes—what produces an action or sentiment—from final causes—the purpose it serves. The usefulness of justice does not establish that reflection on social usefulness originally produces our resentment of injury.<span class="ref">TMS II.ii.3.5</span></p>
+<p>Likewise, people did not invent exchange after calculating the prosperity that the division of labour would eventually create. The wider result develops through activities directed at nearer purposes.<span class="ref">WN I.ii.1</span></p>
+<figure class="figure"><div class="flow three"><div><b>Immediate motive</b>Resentment, desire for approval, security, or gain</div><div><b>Specified mechanism</b>Sympathetic judgment, exchange, expenditure, or investment</div><div><b>Wider consequence</b>Restraint of injury, coordination, distribution, or greater production</div></div><figcaption>Ask separately what moves people, how their actions interact, and what follows.</figcaption></figure>
+<h3>The two invisible hands</h3><div class="fork"><div><h3>TMS: necessities</h3><p>Limited consumption by rich landowners, together with their expenditures, supports the distribution of necessities. Smith’s claim is not an equal distribution of wealth or power.</p><span class="ref">TMS IV.1.10</span></div><div><h3>WN: domestic investment</h3><p>Security encourages investment close to home; the pursuit of gain directs it toward valuable production. The argument has a particular setting in the discussion of import restraints.</p><span class="ref">WN IV.ii.5</span> <span class="ref">WN IV.ii.9</span></div></div>
+<div class="takeaway"><h3>Unintended does not mean beneficial</h3><p>A social outcome needs an explanation and an evaluation. Emergence alone supplies neither a guarantee of public benefit nor a moral justification.</p></div><a class="up" href="#top">↑ Back to the beginning</a></div></section><section class="theme" id="corruption" aria-labelledby="heading-corruption"><div class="wrap"><p class="covers"><span class="mark" aria-hidden="true"></span>05 · One framework, two domains</p><h2 id="heading-corruption">When partiality acquires excessive authority</h2><p class="lede">The processes that sustain cooperation can also distort judgment and concentrate power.</p><p>Public approval helps form moral judgment, but the desire to deserve approval is distinct from the desire to receive it. Conscience can challenge the crowd, yet its confidence can also be shaken by public condemnation.<span class="ref">TMS III.2.1</span> <span class="ref">TMS III.2.2</span> <span class="ref">TMS III.2.32</span></p>
+<p>In economic life, producers may gain by narrowing competition or securing monopoly. Merchants’ knowledge of their own interests gives them political influence without ensuring that their proposals serve society.<span class="ref">WN I.vii.26</span> <span class="ref">WN I.vii.28</span> <span class="ref">WN I.xi.p.10</span></p>
+<figure class="figure"><div class="fork"><div><h3>A moral distortion</h3><p>Actual applause or blame is mistaken for deserved approval or condemnation.</p></div><div><h3>An economic distortion</h3><p>A producer’s advantage is presented as the public interest, and privilege weakens competition.</p></div></div><figcaption>The family resemblance is the unwarranted authority of a partial standpoint. The institutional remedies are not identical.</figcaption></figure>
+<p>The comparison also has a limit: markets register demand supported by purchasing power. A market signal does not establish whose needs matter most morally.<span class="ref">WN I.vii.8</span></p><details class="discuss"><summary>For discussion</summary><ul><li>Can a profitable and popular activity still fail Smith’s moral test?</li></ul></details><details class="answers"><summary>A possible answer</summary><ol><li>Yes. Profit and applause answer different questions from justice and praiseworthiness. We must examine whether the activity violates rights, relies on privilege, or wins approval through mistaken judgments. Neither commercial success nor popularity settles those questions.</li></ol><p class="note-ans">An interpretation for discussion, not a quotation from Smith.</p></details><a class="up" href="#top">↑ Back to the beginning</a></div></section><section class="theme" id="formation" aria-labelledby="heading-formation"><div class="wrap"><p class="covers"><span class="mark" aria-hidden="true"></span>06 · One framework, two domains</p><h2 id="heading-formation">Society forms the people who sustain it</h2><p class="lede">Individuals create social arrangements, and those arrangements develop—or damage—their capacities. This feedback completes the framework.</p><p>In TMS, society supplies the mirror through which we learn to examine ourselves. In WN, habit, education, and occupation help produce differences of talent that can appear natural.<span class="ref">TMS III.1.3</span> <span class="ref">WN I.ii.4</span></p>
+<p>The division of labour can increase skill in a narrow task while impoverishing general understanding and the capacity for generous or tender sentiment. Greater productive power and diminished human capacities can coexist.<span class="ref">WN V.i.f.50</span> <span class="ref">WN V.i.f.51</span></p>
+<figure class="figure"><div class="loop"><div>People with particular concerns and developing capacities</div><span aria-hidden="true">↓</span><div>Interaction, cooperation, and social arrangements</div><span aria-hidden="true">↓</span><div>Institutions and occupations shape people’s capacities</div><span aria-hidden="true">↺</span><div>Those capacities affect the next round of judgment and cooperation</div></div><figcaption>A feedback loop reconstructed from the two books, rather than a diagram supplied by Smith.</figcaption></figure>
+<p>Public education addresses a failure of ordinary commercial life to develop the capacities society requires. Smith supports basic instruction and values intellectual development even apart from its advantages to the state.<span class="ref">WN V.i.f.49</span> <span class="ref">WN V.i.f.54</span> <span class="ref">WN V.i.f.55</span> <span class="ref">WN V.i.f.61</span></p>
+<div class="reminder"><p><b>An interpretive connection.</b> Because moral judgment involves imagination and perspective-taking, the mental narrowing described in WN may threaten capacities central to TMS. Your commentaries suggest this connection cautiously. Smith does not explicitly derive his education policy from the impartial spectator in these passages.</p></div><a class="up" href="#top">↑ Back to the beginning</a></div></section><section class="theme" id="framework" aria-labelledby="heading-framework"><div class="wrap"><p class="covers"><span class="mark" aria-hidden="true"></span>07 · One framework, two domains</p><h2 id="heading-framework">Putting the framework to work</h2><p class="lede">Read a moral practice or an economic institution by tracing purposes, accommodation, rules, consequences, and the formation of people.</p><figure class="figure"><ol class="section-map"><li><b>Purposes:</b> What moves the participants? Distinguish concern for gain, approval, deserved approval, and others’ well-being.</li><li><b>Dependence:</b> Whose assistance, judgment, or agreement do they need?</li><li><b>Accommodation:</b> What makes them attend to other people’s perspectives or purposes?</li><li><b>Justice:</b> Which rights and restraints make cooperation legitimate and sustainable?</li><li><b>Consequences:</b> What wider outcomes follow, and by what mechanism? Who gains and who bears the costs?</li><li><b>Formation:</b> What kinds of judgment, character, and capability does the arrangement develop?</li><li><b>Correction:</b> Where do distorted judgment, privilege, or diminished capacities require reform?</li></ol><figcaption>These questions are an analytical reconstruction for using the framework, not Smith’s own checklist.</figcaption></figure>
+<div class="takeaway"><h3>The central proposition</h3><p>People’s particular purposes can sustain cooperation when interaction accommodates others, justice restrains injury, and institutions preserve the capacities cooperation requires. The same processes can undermine those conditions, making criticism and public action part of the account.</p></div>
+<p>TMS explains how people become capable of judging and restraining themselves. WN explains how their activities become interdependent and productive, and how the resulting arrangements can strengthen or damage them.</p><details class="discuss"><summary>For discussion</summary><ul><li>A factory increases output while making work more repetitive. What does the unified framework ask us to assess?</li></ul></details><details class="answers"><summary>A possible answer</summary><ol><li>Assess the gains in production and the distribution of their benefits, the conditions of exchange and justice, and the effects of work on general human capacities. Smith’s education argument shows why increased output alone cannot settle the evaluation. This does not imply that specialization should simply be abolished.</li></ol><p class="note-ans">An interpretation for discussion, not a quotation from Smith.</p></details><a class="up" href="#top">↑ Back to the beginning</a></div></section><section class="wrap questions" id="questions"><h2>Questions for the meeting</h2><ol><li>What distinguishes accommodating another person’s interest from morally respecting that person?</li><li>Why can exchange operate without love, while social life cannot survive pervasive injustice?</li><li>When can the desire for approval support conscience, and when can it undermine it?</li><li>What must be shown before an unintended consequence can be called beneficial?</li><li>How does public education connect the productivity of a commercial society to the formation of its members?</li><li>Which features of this framework are explicit in Smith, and which are interpretations connecting the two books?</li></ol></section></main><footer class="wrap">The Examined Society · Adam Smith<br>A unified reading framework · Diagrams are explanatory reconstructions.</footer><script>
+const $=s=>document.querySelector(s);
+$('#print').addEventListener('click',()=>window.print());let prior=[];window.addEventListener('beforeprint',()=>{prior=[...document.querySelectorAll('details.discuss,details.answers')].map(d=>[d,d.open]);prior.forEach(([d])=>d.open=true);});window.addEventListener('afterprint',()=>prior.forEach(([d,o])=>d.open=o));
+</script></body></html>
